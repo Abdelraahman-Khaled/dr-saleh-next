@@ -32,7 +32,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative max-h-[58vh] flex items-center overflow-hidden">
+        <section className="relative min-h-[90vh] lg:min-h-screen flex items-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
@@ -109,7 +109,7 @@ export default function HeroSection() {
                             <div className="absolute -inset-4 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-2xl"></div>
 
                             {/* Image Container */}
-                            <div className="relative w-[360px] h-[480px] sm:w-[440px] sm:h-[580px] lg:w-[520px] lg:h-[680px] xl:w-[580px] xl:h-[760px]">
+                            <div className="relative w-[300px] h-[400px] xs:w-[340px] xs:h-[450px] sm:w-[380px] sm:h-[500px] lg:w-[520px] lg:h-[680px] xl:w-[580px] xl:h-[760px]">
                                 <img
                                     src="/dr/1.png"
                                     alt="د. صالح الخلف"

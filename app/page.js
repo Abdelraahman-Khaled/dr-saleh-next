@@ -23,18 +23,11 @@ export default function HomePage() {
     { id: 4, url: 'https://www.youtube.com/embed/z5Nu7chU6nA?autoplay=1' },
   ];
 
-  const tickerItems = [
-    'جراحة تجميلية',
-    'جراحة ترميمية',
-    'جراحة الحروق',
-    'جراحة اليد',
-    'الأمان والشفافية',
-  ];
-
+  
   return (
     <div className="min-h-screen bg-white" dir="rtl">
       <HeroSection />
-      <ScrollingTicker items={tickerItems} />
+      <ScrollingTicker />
       <DoctorIntroSection />
       <AboutSection />
       <ServicesSection />
