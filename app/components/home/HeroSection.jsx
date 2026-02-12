@@ -32,7 +32,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative min-h-[90vh] lg:min-h-screen flex items-center overflow-hidden">
+        <section className="relative min-h-screen sm:min-h-[85vh] lg:max-h-[58vh] flex items-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
@@ -44,25 +44,25 @@ export default function HeroSection() {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute top-20 right-20 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 left-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-40 h-40 sm:w-72 sm:h-72 bg-white/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-52 h-52 sm:w-96 sm:h-96 bg-white/5 rounded-full blur-3xl"></div>
 
-            <div className="container mx-auto px-4 relative z-10 pt-24">
-                <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center min-h-[calc(100vh-120px)]">
+            <div className="container mx-auto px-3 sm:px-4 relative z-10 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-0">
+                <div className="grid lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-center min-h-[calc(100vh-8rem)] sm:min-h-[calc(100vh-120px)]">
                     {/* Content */}
-                    <div className="text-white order-2 lg:order-1 lg:col-span-5">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full mb-5">
-                            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-                            <span className="text-sm font-medium">استشاري جراحة التجميل والترميم</span>
+                    <div className="text-white order-2 lg:order-1 lg:col-span-5 px-2 sm:px-0">
+                        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/15 backdrop-blur-sm rounded-full mb-3 sm:mb-5">
+                            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                            <span className="text-xs sm:text-sm font-medium">استشاري جراحة التجميل والترميم</span>
                         </div>
 
-                        <h1 className={`text-3xl lg:text-4xl xl:text-5xl font-bold mb-5 leading-tight transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+                        <h1 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-5 leading-tight transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
                             {heroTexts[textIndex].title}
                             <br />
                             <span className="text-white/90">{heroTexts[textIndex].subtitle}</span>
                         </h1>
 
-                        <p className={`text-base lg:text-lg mb-6 leading-relaxed text-white/90 max-w-md transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+                        <p className={`text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 leading-relaxed text-white/90 max-w-md transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
                             {heroTexts[textIndex].description}
                         </p>
 
@@ -86,18 +86,18 @@ export default function HeroSection() {
                         </div>
 
                         {/* Stats */}
-                        <div className="flex flex-wrap gap-6 pt-5 border-t border-white/20">
+                        <div className="flex flex-wrap justify-center xs:justify-start gap-4 sm:gap-6 pt-4 sm:pt-5 border-t border-white/20">
                             <div className="text-center">
-                                <div className="text-2xl lg:text-3xl font-bold text-white">+15</div>
-                                <div className="text-xs text-white/70">سنة خبرة</div>
+                                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">+15</div>
+                                <div className="text-[10px] sm:text-xs text-white/70">سنة خبرة</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-2xl lg:text-3xl font-bold text-white">+5000</div>
-                                <div className="text-xs text-white/70">عملية ناجحة</div>
+                                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">+5000</div>
+                                <div className="text-[10px] sm:text-xs text-white/70">عملية ناجحة</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-2xl lg:text-3xl font-bold text-white">100%</div>
-                                <div className="text-xs text-white/70">رضا المرضى</div>
+                                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">100%</div>
+                                <div className="text-[10px] sm:text-xs text-white/70">رضا المرضى</div>
                             </div>
                         </div>
                     </div>
@@ -106,10 +106,10 @@ export default function HeroSection() {
                     <div className="relative order-1 lg:order-2 lg:col-span-7 flex justify-center lg:justify-end">
                         <div className="relative">
                             {/* Decorative Circle */}
-                            <div className="absolute -inset-4 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-2xl"></div>
+                            <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-2xl"></div>
 
                             {/* Image Container */}
-                            <div className="relative w-[300px] h-[400px] xs:w-[340px] xs:h-[450px] sm:w-[380px] sm:h-[500px] lg:w-[520px] lg:h-[680px] xl:w-[580px] xl:h-[760px]">
+                            <div className="relative w-[280px] h-[380px] xs:w-[320px] xs:h-[420px] sm:w-[380px] sm:h-[500px] md:w-[440px] md:h-[580px] lg:w-[520px] lg:h-[680px] xl:w-[580px] xl:h-[760px]">
                                 <img
                                     src="/dr/1.png"
                                     alt="د. صالح الخلف"
@@ -118,27 +118,27 @@ export default function HeroSection() {
                             </div>
 
                             {/* Floating Badge */}
-                            <div className="absolute -left-2 lg:-left-10 top-1/4 bg-white rounded-2xl p-3 lg:p-4 shadow-2xl hidden sm:block">
-                                <div className="flex items-center gap-2 lg:gap-3">
-                                    <div className="w-10 h-10 lg:w-12 lg:h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center">
-                                        <i className="ri-award-line text-[#17a2b8] text-xl lg:text-2xl"></i>
+                            <div className="absolute -left-1 xs:-left-2 sm:-left-2 lg:-left-10 top-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl">
+                                <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center">
+                                        <i className="ri-award-line text-[#17a2b8] text-base sm:text-xl lg:text-2xl"></i>
                                     </div>
                                     <div>
-                                        <div className="text-xs lg:text-sm font-bold text-gray-900">معادلة البورد السعودي</div>
-                                        <div className="text-[10px] lg:text-xs text-gray-500">جراحة التجميل</div>
+                                        <div className="text-[10px] sm:text-xs lg:text-sm font-bold text-gray-900 leading-tight">معادلة البورد السعودي</div>
+                                        <div className="text-[8px] sm:text-[10px] lg:text-xs text-gray-500">جراحة التجميل</div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Floating Badge 2 */}
-                            <div className="absolute -right-2 lg:-right-8 bottom-1/4 bg-white rounded-2xl p-3 lg:p-4 shadow-2xl hidden sm:block">
-                                <div className="flex items-center gap-2 lg:gap-3">
-                                    <div className="w-10 h-10 lg:w-12 lg:h-12 bg-emerald-100 rounded-full flex items-center justify-center">
-                                        <i className="ri-verified-badge-line text-emerald-500 text-xl lg:text-2xl"></i>
+                            <div className="absolute -right-1 xs:-right-2 sm:-right-2 lg:-right-8 bottom-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl">
+                                <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                                        <i className="ri-verified-badge-line text-emerald-500 text-base sm:text-xl lg:text-2xl"></i>
                                     </div>
                                     <div>
-                                        <div className="text-xs lg:text-sm font-bold text-gray-900">البورد الألماني</div>
-                                        <div className="text-[10px] lg:text-xs text-gray-500">معتمد دولياً</div>
+                                        <div className="text-[10px] sm:text-xs lg:text-sm font-bold text-gray-900 leading-tight">البورد الألماني</div>
+                                        <div className="text-[8px] sm:text-[10px] lg:text-xs text-gray-500">معتمد دولياً</div>
                                     </div>
                                 </div>
                             </div>

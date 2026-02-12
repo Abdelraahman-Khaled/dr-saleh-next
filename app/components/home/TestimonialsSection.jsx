@@ -6,10 +6,13 @@ import 'swiper/css/navigation';
 
 export default function TestimonialsSection({ title, desc, bg = "bg-white" }) {
     return (
-        <section className={`py-20 ${bg}`}>
+        <section className={`py-16 lg:py-20 ${bg}`}>
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">آراء المرضى</span>
+                {/* Header */}
+                <div className="text-center mb-12 lg:mb-16">
+                    <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
+                        آراء المرضى
+                    </span>
                     <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                         {title}
                     </h2>
@@ -17,15 +20,18 @@ export default function TestimonialsSection({ title, desc, bg = "bg-white" }) {
                         {desc}
                     </p>
                 </div>
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+                {/* Content */}
+                <div className="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                    {/* Before/After Images - Shows second on mobile, first on desktop */}
                     <div className="order-2 lg:order-1">
-                        <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-xl">
+                        <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-xl max-w-lg mx-auto lg:max-w-none">
                             <div className="grid grid-cols-2">
                                 <div className="relative">
                                     <img
                                         src="https://dr-saaleh.netlify.app/assets/img/after1.webp"
                                         alt="Before"
-                                        className="w-full h-72 object-cover"
+                                        className="w-full h-64 sm:h-72 object-cover"
                                     />
                                     <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-full text-sm font-bold text-gray-900">
                                         قبل
@@ -35,7 +41,7 @@ export default function TestimonialsSection({ title, desc, bg = "bg-white" }) {
                                     <img
                                         src="https://dr-saaleh.netlify.app/assets/img/before1.webp"
                                         alt="After"
-                                        className="w-full h-72 object-cover"
+                                        className="w-full h-64 sm:h-72 object-cover"
                                     />
                                     <div className="absolute bottom-4 right-4 bg-[#17a2b8] px-4 py-2 rounded-full text-sm font-bold text-white">
                                         بعد
@@ -45,6 +51,7 @@ export default function TestimonialsSection({ title, desc, bg = "bg-white" }) {
                         </div>
                     </div>
 
+                    {/* Testimonials - Shows first on mobile, second on desktop */}
                     <div className="order-1 lg:order-2">
                         <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
                             آراء المرضى
