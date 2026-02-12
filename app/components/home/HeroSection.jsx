@@ -118,7 +118,7 @@ export default function HeroSection() {
                             </div>
 
                             {/* Floating Badge */}
-                            <div className="absolute -left-1 xs:-left-2 sm:-left-2 lg:-left-10 top-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl">
+                            <div className="absolute -left-1 xs:-left-2 sm:-left-10 lg:-left-10 top-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl">
                                 <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center">
                                         <i className="ri-award-line text-[#17a2b8] text-base sm:text-xl lg:text-2xl"></i>
