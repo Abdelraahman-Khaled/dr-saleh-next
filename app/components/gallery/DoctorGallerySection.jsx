@@ -8,12 +8,12 @@ export default function DoctorGallerySection() {
     const imagesPerPage = 9;
 
     const galleryImages = [
-        { id: 1, src: '/dr/1.png', alt: 'د. صالح الغامدي - صورة 1', title: 'د. صالح الغامدي في عيادته' },
-        { id: 2, src: '/dr/2.png', alt: 'د. صالح الغامدي - صورة 2', title: 'لقاء إعلامي' },
-        { id: 3, src: '/dr/3.png', alt: 'د. صالح الغامدي - صورة 3', title: 'مؤتمر طبي' },
-        { id: 4, src: '/dr/4.png', alt: 'د. صالح الغامدي - صورة 4', title: 'جلسة استشارية' },
-        { id: 5, src: '/dr/5.png', alt: 'د. صالح الغامدي - صورة 5', title: 'ورشة عمل طبية' },
-        { id: 6, src: '/dr/6.png', alt: 'د. صالح الغامدي - صورة 6', title: 'مشاركة علمية' },
+        { id: 1, src: '/doctor/pic-22.jpg', alt: 'د. صالح الغامدي - صورة 1', title: 'د. صالح الغامدي في عيادته' },
+        { id: 2, src: '/doctor/pic-2.jpg', alt: 'د. صالح الغامدي - صورة 2', title: 'لقاء إعلامي' },
+        { id: 3, src: '/doctor/pic-7.jpg', alt: 'د. صالح الغامدي - صورة 3', title: 'مؤتمر طبي' },
+        { id: 4, src: '/doctor/pic-14.jpg', alt: 'د. صالح الغامدي - صورة 4', title: 'جلسة استشارية' },
+        { id: 5, src: '/doctor/pic-24.jpeg', alt: 'د. صالح الغامدي - صورة 5', title: 'ورشة عمل طبية' },
+        { id: 6, src: '/doctor/pic-6.jpg', alt: 'د. صالح الغامدي - صورة 6', title: 'مشاركة علمية' },
     ];
 
     const totalPages = Math.ceil(galleryImages.length / imagesPerPage);

@@ -84,11 +84,11 @@ export default function PhilosophySection() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="flex justify-end">
                         <img
-                            src="/dr/6.png"
+                            src="/doctor/pic-6.jpg"
                             alt="Vision"
-                            className="w-full rounded-3xl shadow-xl"
+                            className="w-[63%] rounded-3xl shadow-xl"
                         />
                     </div>
                 </div>

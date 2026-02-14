@@ -77,11 +77,11 @@ export default function ReconstructiveSurgerySection() {
                             <i className="ri-calendar-check-line"></i>
                         </Link>
                     </div>
-                    <div className="lg:w-1/2">
+                    <div className="lg:w-1/2  ">
                         <div className="relative">
                             <div className="absolute -bottom-4 -left-4 w-full h-full bg-[#17a2b8]/10 rounded-3xl"></div>
                             <img
-                                src="/dr/5.png"
+                                src="/doctor/pic-15.jpeg"
                                 alt="جراحات ترميمية"
                                 className="relative z-10 w-full rounded-3xl shadow-2xl"
                             />

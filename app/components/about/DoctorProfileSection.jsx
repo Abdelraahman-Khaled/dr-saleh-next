@@ -16,7 +16,7 @@ export default function DoctorProfileSection() {
                     <div className="lg:col-span-2">
                         <div className="bg-gray-50 rounded-3xl p-6 text-center sticky top-24">
                             <img
-                                src="https://dr-saaleh.netlify.app/assets/img/about-img1.png"
+                                src="/doctor/pic-9.jpg"
                                 alt="د. صالح الخلف"
                                 className="w-full max-w-sm mx-auto rounded-2xl mb-6"
                             />

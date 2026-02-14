@@ -11,6 +11,7 @@ import OperationsCTASection from '../components/operations/OperationsCTASection'
 import SurgicalCareIntroSection from '../components/operations/SurgicalCareIntroSection';
 import DoctorIntroOperationsSection from '../components/operations/DoctorIntroOperationsSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
+import AppointmentCTA from '../components/AppointmentCTA';
 export default function OperationsPage() {
 
 
@@ -27,7 +28,7 @@ export default function OperationsPage() {
       <OperationsGallerySection />
       <PrivacySection />
       <WhyChooseUsSection />
-      <OperationsCTASection />
+      <AppointmentCTA />
     </>
   );
 }

@@ -8,7 +8,7 @@ export default function ServicesSection() {
                     <div className="order-2 lg:order-1 flex justify-start">
                         <div className="w-full max-w-md">
                             <img
-                                src="/dr/3.png"
+                                src="/doctor/pic-23.jpg"
                                 alt="Services"
                                 className="w-full h-auto rounded-3xl shadow-xl"
                             />

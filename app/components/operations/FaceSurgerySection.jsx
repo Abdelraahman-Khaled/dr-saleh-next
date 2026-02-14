@@ -130,7 +130,7 @@ export default function FaceSurgerySection() {
                         <div className="relative">
                             <div className="absolute -top-4 -right-4 w-full h-full bg-[#17a2b8]/10 rounded-3xl"></div>
                             <img
-                                src="/dr/6.png"
+                                src="/doctor/pic-23.jpg"
                                 alt="جراحات تجميل الوجه"
                                 className="relative z-10 w-full rounded-3xl shadow-2xl"
                             />

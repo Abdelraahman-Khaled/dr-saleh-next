@@ -92,7 +92,7 @@ export default function AboutSection() {
                     <div className="flex justify-end">
                         <div className="w-full max-w-md">
                             <img
-                                src="/dr/4.png"
+                                src="/doctor/pic-24.jpeg"
                                 alt="Doctor"
                                 className="w-full h-auto rounded-3xl shadow-xl"
                             />

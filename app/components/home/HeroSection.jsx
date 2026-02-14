@@ -32,7 +32,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative min-h-screen sm:min-h-[85vh] lg:max-h-[58vh] flex items-center overflow-hidden">
+        <section className="relative min-h-screen sm:min-h-[65vh] lg:max-h-[58vh] flex items-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
@@ -47,10 +47,10 @@ export default function HeroSection() {
             <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-40 h-40 sm:w-72 sm:h-72 bg-white/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-52 h-52 sm:w-96 sm:h-96 bg-white/5 rounded-full blur-3xl"></div>
 
-            <div className="container mx-auto px-3 sm:px-4 relative z-10 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-0">
+            <div className="container mx-auto px-3 sm:px-4 relative z-10 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-0 lg:pb-0">
                 <div className="grid lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-center min-h-[calc(100vh-8rem)] sm:min-h-[calc(100vh-120px)]">
                     {/* Content */}
-                    <div className="text-white order-2 lg:order-1 lg:col-span-5 px-2 sm:px-0">
+                    <div className="text-white order-1 lg:order-1 lg:col-span-5 px-2 sm:px-0">
                         <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/15 backdrop-blur-sm rounded-full mb-3 sm:mb-5">
                             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-emerald-400 rounded-full animate-pulse"></span>
                             <span className="text-xs sm:text-sm font-medium">استشاري جراحة التجميل والترميم</span>
@@ -103,15 +103,15 @@ export default function HeroSection() {
                     </div>
 
                     {/* Doctor Image */}
-                    <div className="relative order-1 lg:order-2 lg:col-span-7 flex justify-center lg:justify-end">
+                    <div className="relative order-2 lg:order-2 lg:col-span-7 flex justify-center lg:justify-end">
                         <div className="relative">
                             {/* Decorative Circle */}
                             <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-2xl"></div>
 
                             {/* Image Container */}
-                            <div className="relative w-[280px] h-[380px] xs:w-[320px] xs:h-[420px] sm:w-[380px] sm:h-[500px] md:w-[440px] md:h-[580px] lg:w-[520px] lg:h-[680px] xl:w-[580px] xl:h-[760px]">
+                            <div className="relative w-[400px] h-[380px] xs:w-[320px] xs:h-[420px] sm:w-[380px] sm:h-[500px] md:w-[440px] md:h-[580px] lg:w-[520px] lg:h-[680px] xl:w-[580px] xl:h-[760px]">
                                 <img
-                                    src="/dr/1.png"
+                                    src="/doctor/pic-20.png"
                                     alt="د. صالح الخلف"
                                     className="w-full h-full object-contain drop-shadow-2xl"
                                 />

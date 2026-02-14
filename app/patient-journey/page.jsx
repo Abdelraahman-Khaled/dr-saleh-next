@@ -328,18 +328,7 @@ export default function PatientJourneyPage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
               <h4 className="text-white font-bold text-lg mb-6">كيفية الحجز</h4>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <a
-                  href="tel:966508277780"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[#17a2b8] rounded-2xl font-bold hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer"
-                >
-                  <div className="w-10 h-10 bg-[#17a2b8]/10 rounded-full flex items-center justify-center">
-                    <i className="ri-phone-line text-[#17a2b8] text-xl"></i>
-                  </div>
-                  <div className="text-right">
-                    <span className="block text-xs text-gray-500">اتصل بنا</span>
-                    <span className="block text-[#17a2b8]">الاتصال الهاتفي بالعيادة</span>
-                  </div>
-                </a>
+
                 <a
                   href="https://wa.me/966508277780"
                   target="_blank"
@@ -354,6 +343,18 @@ export default function PatientJourneyPage() {
                     <span className="block">التواصل المباشر عبر واتساب</span>
                   </div>
                 </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#17a2b8] text-white rounded-2xl font-bold hover:bg-[#138496] transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                    <i className="ri-customer-service-2-line text-white text-xl"></i>
+                  </div>
+                  <div className="text-right">
+                    <span className="block text-xs text-white/80">تواصل معنا</span>
+                    <span className="block">صفحة التواصل</span>
+                  </div>
+                </Link>
               </div>
               <p className="text-white/70 text-sm mt-6">
                 سيقوم فريقنا بإرشادك إلى الخطوات التالية ومتطلبات التحضير.
