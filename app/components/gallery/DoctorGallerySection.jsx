@@ -1,146 +1,189 @@
 'use client';
-import { useState } from 'react';
+import { useState, useContext, useRef } from 'react';
 import Image from 'next/image';
+import { useQuery } from '@tanstack/react-query';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import { getGalleries } from '../../../lib/api/galleries';
+import { LanguageContext } from '../../../context/LanguageContext';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function DoctorGallerySection() {
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [currentPage, setCurrentPage] = useState(1);
-    const imagesPerPage = 9;
+    const [selectedGallery, setSelectedGallery] = useState(null);
+    const swiperRef = useRef(null);
 
-    const galleryImages = [
-        { id: 1, src: '/doctor/pic-22.jpg', alt: 'د. صالح الغامدي - صورة 1', title: 'د. صالح الغامدي في عيادته' },
-        { id: 2, src: '/doctor/pic-2.jpg', alt: 'د. صالح الغامدي - صورة 2', title: 'لقاء إعلامي' },
-        { id: 3, src: '/doctor/pic-7.jpg', alt: 'د. صالح الغامدي - صورة 3', title: 'مؤتمر طبي' },
-        { id: 4, src: '/doctor/pic-14.jpg', alt: 'د. صالح الغامدي - صورة 4', title: 'جلسة استشارية' },
-        { id: 5, src: '/doctor/pic-24.jpeg', alt: 'د. صالح الغامدي - صورة 5', title: 'ورشة عمل طبية' },
-        { id: 6, src: '/doctor/pic-6.jpg', alt: 'د. صالح الغامدي - صورة 6', title: 'مشاركة علمية' },
-    ];
+    const { language } = useContext(LanguageContext);
 
-    const totalPages = Math.ceil(galleryImages.length / imagesPerPage);
-    const indexOfLastImage = currentPage * imagesPerPage;
-    const indexOfFirstImage = indexOfLastImage - imagesPerPage;
-    const currentImages = galleryImages.slice(indexOfFirstImage, indexOfLastImage);
+    // Helper to get language-specific content
+    const getLang = (arValue, enValue) => language === 'ar' ? arValue : enValue;
 
-    const handleModalClose = (e) => {
-        if (e.target.closest('.modal-content')) return;
-        setSelectedImage(null);
-    };
+    const { data: galleriesData = [], isLoading } = useQuery({
+        queryKey: ['galleries'],
+        queryFn: getGalleries,
+        refetchInterval: 5000,
+    });
 
-    const goToPage = (pageNumber) => {
-        setCurrentPage(pageNumber);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+    // Map API data to usable format
+    const galleries = galleriesData.map(gallery => ({
+        id: gallery.id,
+        title: getLang(gallery.title_ar, gallery.title_en),
+        cover: gallery.photos && gallery.photos.length > 0 ? gallery.photos[0].url : '/assets/images/placeholder.jpg',
+        photos: gallery.photos.map(photo => ({
+            id: photo.id,
+            url: photo.url,
+            alt: photo.alt || getLang(gallery.title_ar, gallery.title_en)
+        }))
+    }));
+
+    if (isLoading) {
+        return (
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <div className="h-4 bg-gray-200 w-32 mx-auto rounded mb-3 animate-pulse"></div>
+                        <div className="h-10 bg-gray-200 w-1/2 max-w-lg mx-auto rounded mb-4 animate-pulse"></div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[1, 2, 3, 4].map((i) => (
+                            <div key={i} className="bg-gray-100 rounded-2xl h-[400px] animate-pulse"></div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        );
+    }
 
     return (
         <>
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
+            <section className="py-20 bg-white relative overflow-hidden">
+                <div className="container mx-auto px-4 relative z-10">
                     <div className="text-center mb-16">
                         <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
-                            معرض الصور
+                            {getLang('معرض الصور', 'Photo Gallery')}
                         </span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                            د. صالح الغامدي
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 font-heading">
+                            {getLang('جولة في عيادتنا ونتائجنا', 'Our Clinic & Results Tour')}
                         </h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            صور من مسيرة د. صالح الغامدي المهنية والأكاديمية
-                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {currentImages.map((image) => (
-                            <div
-                                key={image.id}
-                                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer"
-                                onClick={() => setSelectedImage(image.src)}
-                            >
-                                <div className="relative aspect-[4/5] overflow-hidden">
-                                    <Image
-                                        src={image.src}
-                                        alt={image.alt}
-                                        fill
-                                        className="object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
-                                    />
-                                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                                            <i className="ri-zoom-in-line text-[#17a2b8] text-xl"></i>
+                    <div className="relative group">
+                        <Swiper
+                            modules={[Navigation, Autoplay, Pagination]}
+                            spaceBetween={24}
+                            slidesPerView={1}
+                            navigation={{
+                                prevEl: '.gallery-prev',
+                                nextEl: '.gallery-next',
+                            }}
+                            pagination={{
+                                clickable: true,
+                                bulletClass: 'swiper-pagination-bullet !bg-gray-300 !opacity-100',
+                                bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#17a2b8]',
+                            }}
+                            autoplay={{ delay: 3000, disableOnInteraction: false }}
+                            breakpoints={{
+                                640: { slidesPerView: 2 },
+                                1024: { slidesPerView: 3 },
+                                1280: { slidesPerView: 4 },
+                            }}
+                            className="!pb-14"
+                        >
+                            {galleries.map((gallery) => (
+                                <SwiperSlide key={gallery.id}>
+                                    <div
+                                        className="group/card cursor-pointer relative rounded-2xl overflow-hidden h-[400px] shadow-lg hover:shadow-xl transition-all duration-500"
+                                        onClick={() => setSelectedGallery(gallery)}
+                                    >
+                                        <img
+                                            src={gallery.cover}
+                                            alt={gallery.title}
+                                            className="object-cover transition-transform duration-700 group-hover/card:scale-110 w-full h-full"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover/card:opacity-100 transition-opacity" />
+
+                                        <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover/card:translate-y-0 transition-transform duration-500">
+                                            <h3 className="text-xl font-bold text-white mb-2">
+                                                {gallery.title}
+                                            </h3>
+                                            <div className="flex items-center gap-2 text-white/80 text-sm">
+                                                <i className="ri-image-line"></i>
+                                                <span>{gallery.photos.length} {getLang('صورة', 'Photos')}</span>
+                                            </div>
+                                        </div>
+
+                                        <div className="absolute top-4 right-4 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-[-10px] group-hover:translate-y-0">
+                                            <i className="ri-fullscreen-line text-white"></i>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="p-4 bg-gradient-to-b from-[#17a2b8] to-[#138496]">
-                                    <h3 className="text-white font-bold text-center">{image.title}</h3>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Pagination */}
-                    {totalPages > 1 && (
-                        <div className="flex items-center justify-center gap-2 mt-12">
-                            <button
-                                onClick={() => goToPage(currentPage - 1)}
-                                disabled={currentPage === 1}
-                                className={`px-4 py-2 rounded-lg font-medium transition-colors ${currentPage === 1
-                                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                                    : 'bg-white text-[#17a2b8] hover:bg-[#17a2b8] hover:text-white cursor-pointer'
-                                    }`}
-                            >
-                                <i className="ri-arrow-right-s-line"></i>
-                            </button>
-
-                            {[...Array(totalPages)].map((_, index) => (
-                                <button
-                                    key={index + 1}
-                                    onClick={() => goToPage(index + 1)}
-                                    className={`px-4 py-2 rounded-lg font-medium transition-colors cursor-pointer ${currentPage === index + 1
-                                        ? 'bg-[#17a2b8] text-white'
-                                        : 'bg-white text-gray-700 hover:bg-gray-100'
-                                        }`}
-                                >
-                                    {index + 1}
-                                </button>
+                                </SwiperSlide>
                             ))}
+                        </Swiper>
 
-                            <button
-                                onClick={() => goToPage(currentPage + 1)}
-                                disabled={currentPage === totalPages}
-                                className={`px-4 py-2 rounded-lg font-medium transition-colors ${currentPage === totalPages
-                                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                                    : 'bg-white text-[#17a2b8] hover:bg-[#17a2b8] hover:text-white cursor-pointer'
-                                    }`}
-                            >
-                                <i className="ri-arrow-left-s-line"></i>
-                            </button>
-                        </div>
-                    )}
+                        {/* Custom Navigation */}
+                        <button className="gallery-prev absolute top-1/2 -left-4 z-20 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:bg-[#17a2b8] hover:text-white transition-all transform -translate-y-1/2 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 duration-300 hidden md:flex cursor-pointer">
+                            <i className={language === 'ar' ? "ri-arrow-right-s-line text-2xl" : "ri-arrow-left-s-line text-2xl"}></i>
+                        </button>
+                        <button className="gallery-next absolute top-1/2 -right-4 z-20 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:bg-[#17a2b8] hover:text-white transition-all transform -translate-y-1/2 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 duration-300 hidden md:flex cursor-pointer">
+                            <i className={language === 'ar' ? "ri-arrow-left-s-line text-2xl" : "ri-arrow-right-s-line text-2xl"}></i>
+                        </button>
+                    </div>
                 </div>
             </section>
 
-            {/* Image Modal */}
-            {selectedImage && (
-                <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-                    onClick={handleModalClose}
-                >
-                    <div className="relative max-w-5xl w-full modal-content">
-                        <button
-                            className="absolute -top-12 left-0 text-white text-xl hover:text-[#17a2b8] transition-colors cursor-pointer"
-                            onClick={() => setSelectedImage(null)}
+            {/* Lightbox Modal */}
+            {selectedGallery && (
+                <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center fade-in">
+                    <button
+                        className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors z-[60]"
+                        onClick={() => setSelectedGallery(null)}
+                    >
+                        <i className="ri-close-line text-4xl"></i>
+                    </button>
+
+                    <div className="w-full h-full max-w-[90vw] max-h-[85vh] relative">
+                        <Swiper
+                            modules={[Navigation, Pagination]}
+                            navigation
+                            pagination={{ clickable: true, type: 'fraction' }}
+                            className="h-full w-full gallery-lightbox-swiper"
+                            spaceBetween={30}
                         >
-                            <i className="ri-close-line text-3xl"></i>
-                        </button>
-                        <div className="relative w-full">
-                            <Image
-                                src={selectedImage}
-                                alt="صورة مكبرة"
-                                width={1200}
-                                height={1500}
-                                className="w-full h-auto rounded-2xl"
-                            />
-                        </div>
+                            {selectedGallery.photos.map((photo) => (
+                                <SwiperSlide key={photo.id} className="flex items-center justify-center bg-black">
+                                    <div className="relative w-full h-full flex items-center justify-center">
+                                        <img
+                                            src={photo.url}
+                                            alt={photo.alt || selectedGallery.title}
+                                            className="object-contain"
+                                            sizes="90vw"
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+
+                    <div className="absolute bottom-6 left-0 right-0 text-center text-white z-[60]">
+                        <h3 className="text-xl font-bold mb-1">{selectedGallery.title}</h3>
                     </div>
                 </div>
             )}
+
+            <style jsx global>{`
+                .gallery-lightbox-swiper .swiper-button-next,
+                .gallery-lightbox-swiper .swiper-button-prev {
+                    color: white !important; 
+                }
+                .gallery-lightbox-swiper .swiper-pagination-fraction {
+                     color: white;
+                     bottom: 20px;
+                }
+            `}</style>
         </>
     );
 }

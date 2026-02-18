@@ -1,14 +1,20 @@
 "use client"
 import Image from 'next/image'
+import { useTranslation } from '../../../context/useTranslation';
+import { useLanguage } from '../../../context/LanguageContext';
+import { useMemo } from 'react';
 
 const ScrollTicker = () => {
-    const items = [
+    const t = useTranslation('home');
+    const { language } = useLanguage();
+
+    const items = useMemo(() => t.scrollingTicker?.items || [
         'جراحة تجميلية',
         'جراحة ترميمية',
         'جراحة الحروق',
         'جراحة اليد',
         'الأمان والشفافية',
-    ];
+    ], [t, language]);
 
     const TickerItems = () => (
         <>

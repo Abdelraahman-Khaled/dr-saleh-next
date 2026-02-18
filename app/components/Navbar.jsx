@@ -1,12 +1,16 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
+import { useLanguage } from '../../context/LanguageContext';
+import { useTranslation } from '../../context/useTranslation';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { language, toggleLanguage } = useLanguage();
+  const t = useTranslation('navbar');
   const isHome = pathname === '/';
 
   // Update scrolled state on window scroll
@@ -19,17 +23,19 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { path: '/', label: 'الرئيسية' },
-    { path: '/about', label: 'عن الدكتور' },
-    { path: '/operations', label: 'الجراحات' },
-    { path: '/blogs', label: 'المدونة' },
-    { path: '/media', label: 'الظهور الإعلامي' },
-    { path: '/gallery', label: 'معرض الصور' },
-    { path: '/patient-journey', label: 'رحلة المريض' },
-    { path: '/faqs', label: 'الأسئلة الشائعة' },
-    { path: '/contact', label: 'تواصل معنا' },
-  ];
+
+  // Make navLinks reactive to language changes
+  const navLinks = useMemo(() => [
+    { path: '/', label: t.links?.home || 'الرئيسية' },
+    { path: '/about', label: t.links?.about || 'عن الدكتور' },
+    { path: '/operations', label: t.links?.operations || 'الجراحات' },
+    { path: '/blogs', label: t.links?.blogs || 'المدونة' },
+    { path: '/media', label: t.links?.media || 'الظهور الإعلامي' },
+    { path: '/gallery', label: t.links?.gallery || 'معرض الصور' },
+    { path: '/patient-journey', label: t.links?.patientJourney || 'رحلة المريض' },
+    { path: '/faqs', label: t.links?.faqs || 'الأسئلة الشائعة' },
+    { path: '/contact', label: t.links?.contact || 'تواصل معنا' },
+  ], [t, language]); // Re-create when language or translations change
 
   // Show transparent navbar only on home page when not scrolled
   const showTransparent = isHome && !scrolled;
@@ -69,14 +75,17 @@ export default function Navbar() {
 
             {/* Desktop right‑side actions */}
             <div className="hidden lg:flex items-center gap-4">
-              <button className="px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap cursor-pointer text-white hover:text-white/80">
-                English
+              <button
+                onClick={toggleLanguage}
+                className="px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap cursor-pointer text-white hover:text-white/80"
+              >
+                {language === 'ar' ? 'English' : 'العربية'}
               </button>
               <Link
                 href="/contact"
                 className="px-6 py-2 bg-[#17a2b8] text-white rounded-full text-sm font-medium hover:bg-[#138496] transition-colors whitespace-nowrap"
               >
-                حجز استشارة
+                {t.buttons?.bookConsultation || 'حجز استشارة'}
               </Link>
             </div>
 
@@ -130,7 +139,7 @@ export default function Navbar() {
                 className="block w-full text-center px-6 py-3 bg-[#17a2b8] text-white rounded-full font-medium hover:bg-[#138496] transition-colors mt-6 whitespace-nowrap"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                حجز استشارة
+                {t.buttons?.bookConsultation || 'حجز استشارة'}
               </Link>
             </div>
           </div>

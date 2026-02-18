@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # These build args are REQUIRED at build time for Next.js
+      # NEXT_PUBLIC_* variables are inlined into the JavaScript bundle
+      args:
+        - NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}
+    container_name: Dr.saleh
+    restart: always
+    ports:
+      - "9105:3000"
+    # Optional: Use .env file if deploying locally
+    # env_file:
+    #   - .env
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}

@@ -1,10 +1,12 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
+import { useTranslation } from '../../../context/useTranslation';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function TestimonialsSection({ title, desc, bg = "bg-white" }) {
+    const t = useTranslation('home');
     return (
         <section className={`py-16 lg:py-20 ${bg}`}>
             <div className="container mx-auto px-4">
@@ -34,7 +36,7 @@ export default function TestimonialsSection({ title, desc, bg = "bg-white" }) {
                                         className="w-full h-64 sm:h-72 object-cover"
                                     />
                                     <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-full text-sm font-bold text-gray-900">
-                                        قبل
+                                        {t.testimonials?.before || 'قبل'}
                                     </div>
                                 </div>
                                 <div className="relative">
@@ -44,7 +46,7 @@ export default function TestimonialsSection({ title, desc, bg = "bg-white" }) {
                                         className="w-full h-64 sm:h-72 object-cover"
                                     />
                                     <div className="absolute bottom-4 right-4 bg-[#17a2b8] px-4 py-2 rounded-full text-sm font-bold text-white">
-                                        بعد
+                                        {t.testimonials?.after || 'بعد'}
                                     </div>
                                 </div>
                             </div>
@@ -54,10 +56,10 @@ export default function TestimonialsSection({ title, desc, bg = "bg-white" }) {
                     {/* Testimonials - Shows first on mobile, second on desktop */}
                     <div className="order-1 lg:order-2">
                         <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
-                            آراء المرضى
+                            {t.testimonials?.label || 'آراء المرضى'}
                         </span>
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-                            تجارب حقيقية. انطباعات صادقة.
+                            {t.testimonials?.title || 'تجارب حقيقية. انطباعات صادقة.'}
                         </h2>
 
                         <div className="relative">

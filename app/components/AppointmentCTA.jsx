@@ -1,6 +1,9 @@
+'use client';
 import Link from 'next/link';
+import { useTranslation } from '../../context/useTranslation';
 
 export default function AppointmentCTA() {
+    const t = useTranslation('home');
     return (
         <section
             className="md:py-8 lg:py-16 xl:py-24 bg-[#17a2b8] overflow-visible relative flex items-center"
@@ -51,12 +54,11 @@ export default function AppointmentCTA() {
                     <div className="order-2 text-white">
                         <div className="relative z-10 text-center lg:text-right">
                             <span className="inline-block py-2 px-6 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-semibold mb-6 shadow-lg">
-                                كيف تحجز موعدك؟
+                                {t.appointment?.title || 'جاهز لبدء رحلتك؟'}
                             </span>
 
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                                ببساطة. مباشرة. <br />
-                                <span className="text-white/80">وبأمان تام.</span>
+                                {t.appointment?.description || 'احجز استشارتك الآن واحصل على خطة علاج مخصصة'}
                             </h2>
 
                             <p className="text-lg text-white/90 mb-8 leading-relaxed max-w-lg mx-auto lg:mr-0 lg:ml-auto">
@@ -68,7 +70,7 @@ export default function AppointmentCTA() {
                                     href="/contact"
                                     className="px-8 py-4 bg-white text-[#17a2b8] rounded-full font-bold hover:bg-gray-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2 group"
                                 >
-                                    <span>احجز موعد الآن</span>
+                                    <span>{t.appointment?.button || 'احجز موعدك'}</span>
                                     <i className="ri-calendar-check-line text-xl group-hover:scale-110 transition-transform"></i>
                                 </Link>
 

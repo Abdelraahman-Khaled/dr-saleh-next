@@ -1,15 +1,18 @@
+'use client';
 import Link from 'next/link';
+import { useTranslation } from '../../../context/useTranslation';
 
 export default function MediaSection({ videos, onVideoClick }) {
+    const t = useTranslation('home');
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
-                        الإعلام والصحافة
+                        {t.media?.title || 'الإعلام والصحافة'}
                     </span>
                     <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                        الحضور المهني والمشاركة الأكاديمية
+                        {t.media?.subtitle || 'الحضور المهني والمشاركة الأكاديمية'}
                     </h2>
                 </div>
 
@@ -41,7 +44,7 @@ export default function MediaSection({ videos, onVideoClick }) {
                         href="/media"
                         className="inline-flex items-center gap-2 px-8 py-3 bg-[#17a2b8] text-white rounded-full font-medium hover:bg-[#138496] transition-colors whitespace-nowrap"
                     >
-                        مزيد من الفيديوهات
+                        {t.media?.viewAll || 'مزيد من الفيديوهات'}
                         <i className="ri-arrow-left-line"></i>
                     </Link>
                 </div>

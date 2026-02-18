@@ -1,12 +1,16 @@
 'use client';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import { useTranslation } from '../../../context/useTranslation';
+import { useLanguage } from '../../../context/LanguageContext';
 
 export default function HeroSection() {
     const [textIndex, setTextIndex] = useState(0);
     const [fade, setFade] = useState(true);
+    const t = useTranslation('home');
+    const { language } = useLanguage();
 
-    const heroTexts = [
+    const heroTexts = useMemo(() => t.hero?.texts || [
         {
             title: 'دقة تمنحك الطمأنينة…',
             subtitle: 'وبالنتيجة تشبهك!',
@@ -17,7 +21,7 @@ export default function HeroSection() {
             subtitle: 'ونحن هنا من أجلك!',
             description: 'كل مريض يصل وهو يحمل أسئلة. بعضهم يصل بتردد. يؤمن د. صالح الخلف أن النتائج المتميزة تبدأ قبل الجراحة بوقت طويل — بالاستماع الجيد، والصدق، والحكم الطبي السليم.'
         }
-    ];
+    ], [t, language]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -29,7 +33,7 @@ export default function HeroSection() {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [heroTexts]);
 
     return (
         <section className="relative min-h-screen sm:min-h-[65vh] lg:max-h-[58vh] flex items-center overflow-hidden">
@@ -53,7 +57,7 @@ export default function HeroSection() {
                     <div className="text-white order-1 lg:order-1 lg:col-span-5 px-2 sm:px-0">
                         <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/15 backdrop-blur-sm rounded-full mb-3 sm:mb-5">
                             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-                            <span className="text-xs sm:text-sm font-medium">استشاري جراحة التجميل والترميم</span>
+                            <span className="text-xs sm:text-sm font-medium">{t.hero?.badge || 'استشاري جراحة التجميل والترميم'}</span>
                         </div>
 
                         <h1 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-5 leading-tight transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
@@ -72,7 +76,7 @@ export default function HeroSection() {
                                 className="px-6 py-3 bg-white text-[#17a2b8] rounded-full font-bold hover:bg-gray-100 transition-all duration-300 inline-flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105 whitespace-nowrap text-sm"
                             >
                                 <i className="ri-calendar-check-line text-lg"></i>
-                                احجز استشارة
+                                {t.hero?.buttons?.bookConsultation || 'احجز استشارة'}
                             </Link>
                             <a
                                 href="https://wa.me/966508277780"
@@ -81,7 +85,7 @@ export default function HeroSection() {
                                 className="px-6 py-3 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white rounded-full font-bold hover:bg-white hover:text-[#17a2b8] transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap text-sm"
                             >
                                 <i className="ri-whatsapp-line text-lg"></i>
-                                تحدث مع العيادة
+                                {t.hero?.buttons?.contactClinic || 'تحدث مع العيادة'}
                             </a>
                         </div>
 
@@ -89,15 +93,15 @@ export default function HeroSection() {
                         <div className="flex flex-wrap justify-center xs:justify-start gap-4 sm:gap-6 pt-4 sm:pt-5 border-t border-white/20">
                             <div className="text-center">
                                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">+15</div>
-                                <div className="text-[10px] sm:text-xs text-white/70">سنة خبرة</div>
+                                <div className="text-[10px] sm:text-xs text-white/70">{t.hero?.stats?.experience || 'سنة خبرة'}</div>
                             </div>
                             <div className="text-center">
                                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">+5000</div>
-                                <div className="text-[10px] sm:text-xs text-white/70">عملية ناجحة</div>
+                                <div className="text-[10px] sm:text-xs text-white/70">{t.hero?.stats?.operations || 'عملية ناجحة'}</div>
                             </div>
                             <div className="text-center">
                                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">100%</div>
-                                <div className="text-[10px] sm:text-xs text-white/70">رضا المرضى</div>
+                                <div className="text-[10px] sm:text-xs text-white/70">{t.hero?.stats?.satisfaction || 'رضا المرضى'}</div>
                             </div>
                         </div>
                     </div>
@@ -124,8 +128,8 @@ export default function HeroSection() {
                                         <i className="ri-award-line text-[#17a2b8] text-base sm:text-xl lg:text-2xl"></i>
                                     </div>
                                     <div>
-                                        <div className="text-[10px] sm:text-xs lg:text-sm font-bold text-gray-900 leading-tight">معادلة البورد السعودي</div>
-                                        <div className="text-[8px] sm:text-[10px] lg:text-xs text-gray-500">جراحة التجميل</div>
+                                        <div className="text-[10px] sm:text-xs lg:text-sm font-bold text-gray-900 leading-tight">{t.hero?.badges?.saudiBoard || 'معادلة البورد السعودي'}</div>
+                                        <div className="text-[8px] sm:text-[10px] lg:text-xs text-gray-500">{t.hero?.badges?.specialty || 'جراحة التجميل'}</div>
                                     </div>
                                 </div>
                             </div>
@@ -137,8 +141,8 @@ export default function HeroSection() {
                                         <i className="ri-verified-badge-line text-emerald-500 text-base sm:text-xl lg:text-2xl"></i>
                                     </div>
                                     <div>
-                                        <div className="text-[10px] sm:text-xs lg:text-sm font-bold text-gray-900 leading-tight">البورد الألماني</div>
-                                        <div className="text-[8px] sm:text-[10px] lg:text-xs text-gray-500">معتمد دولياً</div>
+                                        <div className="text-[10px] sm:text-xs lg:text-sm font-bold text-gray-900 leading-tight">{t.hero?.badges?.germanBoard || 'البورد الألماني'}</div>
+                                        <div className="text-[8px] sm:text-[10px] lg:text-xs text-gray-500">{t.hero?.badges?.certified || 'معتمد دولياً'}</div>
                                     </div>
                                 </div>
                             </div>

@@ -1,6 +1,9 @@
+'use client';
 import Link from 'next/link';
+import { useTranslation } from '../../../context/useTranslation';
 
 export default function ServicesSection() {
+    const t = useTranslation('home');
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
@@ -121,7 +124,7 @@ export default function ServicesSection() {
                             href="/contact"
                             className="mt-8 inline-flex items-center gap-2 px-8 py-3 bg-[#17a2b8] text-white rounded-full font-medium hover:bg-[#138496] transition-colors whitespace-nowrap"
                         >
-                            احجز استشارة
+                            {t.services?.button || 'احجز استشارة'}
                             <i className="ri-calendar-check-line"></i>
                         </Link>
                     </div>
