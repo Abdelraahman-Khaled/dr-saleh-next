@@ -75,12 +75,12 @@ export default function Navbar() {
 
             {/* Desktop right‑side actions */}
             <div className="hidden lg:flex items-center gap-4">
-              <button
+              {/* <button
                 onClick={toggleLanguage}
                 className="px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap cursor-pointer text-white hover:text-white/80"
               >
                 {language === 'ar' ? 'English' : 'العربية'}
-              </button>
+              </button> */}
               <Link
                 href="/contact"
                 className="px-6 py-2 bg-[#17a2b8] text-white rounded-full text-sm font-medium hover:bg-[#138496] transition-colors whitespace-nowrap"
