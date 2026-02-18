@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import { useState, useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
@@ -7,7 +8,7 @@ import { useTranslation } from '../../../context/useTranslation';
 
 export default function OperationsGallerySection() {
     const { language } = useContext(LanguageContext);
-    const t = useTranslation('home'); // Using home translations for now, or could add specific ones
+    const t = useTranslation('home');
 
     const { data: operations = [], isLoading, error } = useQuery({
         queryKey: ['operations'],
@@ -16,6 +17,8 @@ export default function OperationsGallerySection() {
     });
 
     const [activeCategory, setActiveCategory] = useState('all');
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 8;
 
     // Helper to get language-specific content
     const getLang = (arValue, enValue) => language === 'ar' ? arValue : enValue;
@@ -28,16 +31,48 @@ export default function OperationsGallerySection() {
         { id: 'hand', name: getLang('جراحة اليد', 'Hand Surgery') },
     ];
 
+    const handleCategoryChange = (id) => {
+        setActiveCategory(id);
+        setCurrentPage(1);
+    };
+
     const filteredOperations = activeCategory === 'all'
         ? operations
         : operations.filter(op => op.category === activeCategory);
 
+    const totalPages = Math.ceil(filteredOperations.length / itemsPerPage);
+    const currentOperations = filteredOperations.slice(
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+    );
+
     if (isLoading) {
         return (
             <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 text-center">
-                    <div className="inline-block w-8 h-8 border-4 border-[#17a2b8] border-t-transparent rounded-full animate-spin"></div>
-                    <p className="mt-4 text-gray-600">{getLang('جاري تحميل العمليات...', 'Loading operations...')}</p>
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <div className="h-4 bg-gray-200 w-32 mx-auto rounded mb-3 animate-pulse"></div>
+                        <div className="h-10 bg-gray-200 w-1/2 max-w-lg mx-auto rounded mb-4 animate-pulse"></div>
+                        <div className="h-4 bg-gray-200 w-2/3 max-w-2xl mx-auto rounded animate-pulse"></div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                            <div key={i} className="bg-white rounded-2xl shadow-lg overflow-hidden animate-pulse border border-gray-100">
+                                <div className="h-48 bg-gray-200 w-full relative">
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="w-12 h-12 bg-gray-300 rounded-full opacity-50"></div>
+                                    </div>
+                                </div>
+                                <div className="p-5">
+                                    <div className="h-4 bg-gray-200 w-1/3 rounded mb-3"></div>
+                                    <div className="h-6 bg-gray-200 w-3/4 rounded mb-2"></div>
+                                    <div className="h-4 bg-gray-200 w-full rounded mb-2"></div>
+                                    <div className="h-4 bg-gray-200 w-2/3 rounded"></div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
         );
@@ -69,7 +104,7 @@ export default function OperationsGallerySection() {
                         {categories.map((cat) => (
                             <button
                                 key={cat.id}
-                                onClick={() => setActiveCategory(cat.id)}
+                                onClick={() => handleCategoryChange(cat.id)}
                                 className={`px-6 py-3 rounded-full font-medium transition-all whitespace-nowrap cursor-pointer ${activeCategory === cat.id
                                     ? 'bg-[#17a2b8] text-white shadow-lg'
                                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -82,28 +117,16 @@ export default function OperationsGallerySection() {
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {filteredOperations.map((operation) => {
+                    {currentOperations.map((operation) => {
                         const title = getLang(operation.title_ar, operation.title_en);
-                        const description = getLang(operation.description_ar, operation.description_en) || operation.description; // Fallback for description if not localized
+                        const description = getLang(operation.description_ar, operation.description_en) || operation.description;
 
-                        // Look for landing photo first, then language specific, then first photo
                         const photo = operation.photos?.find(p => p.is_landing) ||
                             operation.photos?.find(p => p.is_arabic === (language === 'ar')) ||
                             operation.photos?.[0];
 
-                        const imageUrl = photo?.url || operation.image; // Fallback to operation.image if exists
+                        const imageUrl = photo?.url || operation.image;
                         const slug = language === 'ar' ? (operation.slug_ar || operation.slug) : (operation.slug || operation.slug_ar);
-
-                        // Category display text
-                        const getCategoryLabel = (cat) => {
-                            switch (cat) {
-                                case 'face': return getLang('الوجه', 'Face');
-                                case 'body': return getLang('الجسم', 'Body');
-                                case 'reconstructive': return getLang('ترميمية', 'Reconstructive');
-                                case 'hand': return getLang('جراحة اليد', 'Hand Surgery');
-                                default: return cat || getLang('عام', 'General');
-                            }
-                        };
 
                         return (
                             <div
@@ -130,11 +153,6 @@ export default function OperationsGallerySection() {
                                     </div>
                                 </div>
                                 <div className="p-5">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <span className="px-2 py-1 bg-[#17a2b8]/10 text-[#17a2b8] text-xs font-medium rounded-full capitalize">
-                                            {getCategoryLabel(operation.category)}
-                                        </span>
-                                    </div>
                                     <Link href={`/operations/${slug}`}>
                                         <h3 className="text-lg font-bold text-gray-900 mb-2 hover:text-[#17a2b8] transition-colors">{title}</h3>
                                     </Link>
@@ -146,6 +164,40 @@ export default function OperationsGallerySection() {
                         );
                     })}
                 </div>
+
+                {/* Pagination Controls */}
+                {totalPages > 1 && (
+                    <div className="flex justify-center items-center gap-2 mt-12" dir="ltr">
+                        <button
+                            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                            disabled={currentPage === 1}
+                            className="w-10 h-10 rounded-full flex items-center justify-center border border-gray-200 text-gray-600 hover:bg-[#17a2b8] hover:text-white hover:border-[#17a2b8] disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-gray-600 transition-colors"
+                        >
+                            <i className="ri-arrow-left-s-line text-xl"></i>
+                        </button>
+
+                        {[...Array(totalPages)].map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => setCurrentPage(i + 1)}
+                                className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${currentPage === i + 1
+                                    ? 'bg-[#17a2b8] text-white border-[#17a2b8]'
+                                    : 'border-gray-200 text-gray-600 hover:border-[#17a2b8] hover:text-[#17a2b8]'
+                                    }`}
+                            >
+                                {i + 1}
+                            </button>
+                        ))}
+
+                        <button
+                            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                            disabled={currentPage === totalPages}
+                            className="w-10 h-10 rounded-full flex items-center justify-center border border-gray-200 text-gray-600 hover:bg-[#17a2b8] hover:text-white hover:border-[#17a2b8] disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-gray-600 transition-colors"
+                        >
+                            <i className="ri-arrow-right-s-line text-xl"></i>
+                        </button>
+                    </div>
+                )}
             </div>
         </section>
     );

@@ -96,13 +96,13 @@ export default function BlogsPage() {
                         alt={photo?.alt || title}
                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                       />
-                      {blog.category && (
+                      {/* {blog.category && (
                         <div className="absolute top-4 right-4">
                           <span className="px-3 py-1 bg-[#17a2b8] text-white text-xs font-medium rounded-full">
                             {blog.category}
                           </span>
                         </div>
-                      )}
+                      )} */}
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#17a2b8] transition-colors">
