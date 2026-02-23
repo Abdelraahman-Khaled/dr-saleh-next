@@ -1,0 +1,819 @@
+{
+  "footer": {
+    "description": "The official website of Dr. Saleh Al-Khalaf. Consultant of Plastic and Reconstructive Surgery. We aim to provide the best aesthetic medical care with an artistic touch and global expertise.",
+    "quickLinks": "Quick Links",
+    "operations": "Surgical Operations",
+    "socialMedia": "Connect With Us",
+    "rights": "All Rights Reserved © Dr. Saleh Al-Khalaf 2024",
+    "operationList": [
+      "Rhinoplasty",
+      "Facelift",
+      "Liposuction",
+      "Burn Reconstruction",
+      "Hand Surgery",
+      "Otoplasty"
+    ]
+  },
+  "home": {
+    "hero": {
+      "badge": "Specialized Medical Consultations",
+      "texts": [
+        {
+          "title": "Dr. Saleh Al-Khalaf",
+          "subtitle": "Senior Consultant of Plastic & Reconstructive Surgery",
+          "description": "German specialized expertise in rhinoplasty, facelift, and burn reconstruction using the latest international techniques."
+        },
+        {
+          "title": "Diagnostic Precision",
+          "subtitle": "Natural & Safe Results",
+          "description": "We combine art and science to achieve your goals in reaching the best version of yourself with precise surgical touches."
+        }
+      ],
+      "buttons": {
+        "bookConsultation": "Book a Consultation",
+        "contactClinic": "Contact Clinic"
+      },
+      "stats": {
+        "experience": "Years of Experience",
+        "operations": "Successful Operations",
+        "satisfaction": "Patient Satisfaction"
+      },
+      "badges": {
+        "saudiBoard": "Saudi Board",
+        "specialty": "Plastic Surgery",
+        "germanBoard": "German Board",
+        "certified": "Certified Surgeon"
+      }
+    },
+    "scrollingTicker": {
+      "items": [
+        "Advanced Cosmetic Surgery",
+        "Natural and Harmonious Results",
+        "Distinguished Personal Care",
+        "Modern and Innovative Techniques",
+        "Over 15 Years of Experience"
+      ]
+    },
+    "doctorIntro": {
+      "title": "About Dr. Saleh Al-Khalaf",
+      "subtitle": "Professor & Senior Consultant of Plastic, Reconstructive & Hand Surgery",
+      "description": "Dr. Saleh Al-Khalaf is considered one of the leading national talents in the field of complex plastic and reconstructive surgeries, with extensive scientific and practical experience gained through working in the most prestigious medical centers and university hospitals in Germany and Saudi Arabia. His approach focuses on combining precise medical standards with a natural aesthetic touch.",
+      "button": "Read more about scientific biography",
+      "whatsapp": "Contact via WhatsApp"
+    },
+    "about": {
+      "badge": "About the Clinic",
+      "title": "Excellence in Healthcare",
+      "description": "We provide advanced cosmetic surgery services in a safe and comfortable environment, focusing on achieving the best results for each patient.",
+      "button": "Book Initial Consultation",
+      "features": [
+        {
+          "title": "Extensive Experience",
+          "items": [
+            "Over 15 years in cosmetic surgery",
+            "Certified Saudi and German Board",
+            "International medical and scientific meetings",
+            "Latest surgical techniques",
+            "Natural and stable results"
+          ]
+        },
+        {
+          "title": "Artistic and Medical Vision",
+          "items": [
+            "Focus on fine details",
+            "Respect for patient identity and beauty",
+            "Balance between function and beauty",
+            "Customized treatment plans"
+          ]
+        }
+      ]
+    },
+    "services": {
+      "title": "Our Distinguished Services",
+      "subtitle": "Comprehensive Medical Care with Highest Standards",
+      "description": "Every operation — whether aesthetic or functional — is performed with the same level of attention to detail, focus on precision, and respect for the patient.",
+      "bookNow": "Book Your Appointment Now",
+      "reconstructive": {
+        "title": "Reconstructive Surgery",
+        "items": [
+          "Reconstruction after accidents and trauma",
+          "Treatment of congenital deformities",
+          "Reconstruction after tumor resection",
+          "Scar correction and complex wound treatment"
+        ]
+      },
+      "hand": {
+        "title": "Hand Surgery & Microsurgery",
+        "items": [
+          "Repair of tendons and nerves",
+          "Complex hand injuries",
+          "Micro-reconstructive surgeries",
+          "Function restoration after trauma"
+        ]
+      },
+      "burns": {
+        "title": "Burn Reconstruction & Scar Treatment",
+        "items": [
+          "Function restoration",
+          "Scar improvement and adjustment",
+          "Improvement of movement and appearance over time",
+          "Considering psychological aspects and quality of life"
+        ]
+      }
+    },
+    "patientJourney": {
+      "title": "Recovery Journey",
+      "subtitle": "How does the patient journey start with Dr. Saleh?",
+      "steps": [
+        {
+          "title": "Initial Consultation",
+          "description": "Comprehensive evaluation and precise understanding of your goals"
+        },
+        {
+          "title": "Customized Treatment Plan",
+          "description": "Designing the appropriate procedure for your case"
+        },
+        {
+          "title": "Preparation for Surgery",
+          "description": "Full guidelines to ensure your safety"
+        },
+        {
+          "title": "Surgical Procedure",
+          "description": "With the latest technologies and international standards"
+        },
+        {
+          "title": "Follow-up & Results",
+          "description": "Continuous care until your recovery"
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Your Privacy is Our Priority",
+      "description": "We are committed to protecting your personal and medical information with the highest standards of confidentiality and security.",
+      "button": "Read Privacy Policy"
+    },
+    "testimonials": {
+      "label": "What They Say About Us",
+      "title": "Our Patients Success Stories",
+      "subtitle": "Patient Reviews",
+      "description": "Here is what our patients have to say about their experience.",
+      "before": "Before",
+      "after": "After",
+      "items": [
+        {
+          "text": "Excellent service, commitment to appointments and great attention to detail. Thank you for the quality of work",
+          "author": "Raneem Al-Ateeq",
+          "role": "Patient"
+        },
+        {
+          "text": "Bless your hands for the excellent work. Cleanliness, precision, and full commitment to the appointment. Thank you.",
+          "author": "Abdulaziz Al-Qahtani",
+          "role": "Patient"
+        }
+      ]
+    },
+    "appointment": {
+      "title": "Book Your Consultation Now",
+      "description": "Your first step towards beauty and confidence starts here. Book your appointment now for a specialized consultation.",
+      "subdescription": "We are here to facilitate your therapeutic journey. Contact us directly through official channels for a quick and reliable consultation.",
+      "button": "Book an Appointment",
+      "whatsapp": "Contact via WhatsApp"
+    },
+    "media": {
+      "title": "Media Gallery",
+      "subtitle": "View our results and procedures",
+      "viewAll": "View All"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Latest Articles and Tips",
+      "readMore": "Read More",
+      "viewAll": "View All Articles"
+    },
+    "common": {
+      "scrollToTop": "Back to Top",
+      "scrollDown": "Scroll Down"
+    }
+  },
+  "navbar": {
+    "links": {
+      "home": "Home",
+      "about": "About Doctor",
+      "operations": "Operations",
+      "blogs": "Blog",
+      "media": "Media Appearances",
+      "gallery": "Gallery",
+      "patientJourney": "Patient Journey",
+      "faqs": "FAQs",
+      "contact": "Contact Us"
+    },
+    "buttons": {
+      "bookConsultation": "Book Consultation"
+    }
+  },
+  "blogDetail": {
+    "breadcrumb": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "error": "Failed to load article",
+    "noContent": "No content available",
+    "faqs": "FAQs",
+    "cta": {
+      "title": "Have a question?",
+      "description": "Book your consultation now for a personalized assessment",
+      "button": "Book Consultation"
+    },
+    "backToBlog": "Back to Blog"
+  },
+  "blogsPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "title": "Latest Articles",
+    "subtitle": "Explore the latest articles and information about plastic surgery and aesthetic care",
+    "readMore": "Read More",
+    "error": "Failed to load blogs",
+    "noBlogs": "No articles available",
+    "newsletter": {
+      "label": "Newsletter",
+      "title": "Stay Updated with Latest Articles",
+      "description": "Subscribe to our newsletter to get the latest articles and medical tips",
+      "placeholder": "Enter your email",
+      "button": "Subscribe Now"
+    }
+  },
+  "operationDetail": {
+    "breadcrumb": {
+      "home": "Home",
+      "operations": "Operations"
+    },
+    "faqs": "Frequently Asked Questions about the Procedure",
+    "cta": {
+      "title": "Do you have an inquiry about this procedure?",
+      "description": "We are here to answer all your questions and help you make the right decision.",
+      "button": "Book a Consultation Appointment"
+    },
+    "backToOperations": "Back to All Operations"
+  },
+  "aboutPage": {
+    "hero": {
+      "subtitle": "A surgeon driven by science, judgment and responsibility"
+    },
+    "doctorProfile": {
+      "sidebar": {
+        "name": "About Dr. Saleh Al-Khalaf",
+        "tagline": "A surgeon driven by science, judgment and responsibility"
+      },
+      "details": {
+        "title": "Senior Consultant Plastic and Reconstructive Surgery",
+        "heading": "About Dr. Saleh Al-Khalaf",
+        "bio": {
+          "p1": "Dr. Saleh Al-Ghamdi is a professor and senior consultant in plastic and reconstructive surgery and cosmetic surgery, with extensive experience in both precise cosmetics and complex reconstructive care. His practice is based on the firm conviction that plastic surgery is not about fashion or excessive change, but about precision, balance, and long-term function. Each patient is treated as an individual through careful assessment, honest discussion, and thoughtful planning. Patients choose Dr. Al-Ghamdi for his clear communication and commitment to natural, stable, and appropriate results — without exaggeration.",
+          "p2": "Dr. Al-Ghamdi completed the plastic surgery residency program at the Military Hospitals in Riyadh, then obtained the board and advanced professional certifications from the Saudi Commission for Health Specialties, being recognized at the level of consultant in plastic and reconstructive surgery. He also expanded his experience through international fellowships in Germany at the Munich Bogenhausen University Hospital of the Technical University of Munich, where he completed advanced programs in craniofacial surgery, reconstructive microsurgery, hand surgery, and burn reconstruction. This advanced European experience has shaped his precise surgical style and deep understanding of anatomy, tissue behavior, and long-term functional results."
+        },
+        "cta": {
+          "whatsapp": "Connect via WhatsApp"
+        }
+      },
+      "whyChoose": {
+        "heading": "Why Choose Dr. Saleh Al-Khalaf?",
+        "items": {
+          "precision": {
+            "title": "Science-Driven Precision",
+            "subtitle": "And care governed by responsibility"
+          },
+          "experience": {
+            "title": "Dual Expertise",
+            "subtitle": "Plastic and reconstructive surgery"
+          },
+          "integrity": {
+            "title": "Professional Integrity",
+            "subtitle": "Honest consultation and ethical practice"
+          },
+          "development": {
+            "title": "Continuous Development",
+            "subtitle": "Pursuing the latest medical innovations globally"
+          }
+        }
+      }
+    },
+    "academic": {
+      "leadership": {
+        "title": "Academic Leadership & Educational Roles",
+        "tagline": "A surgeon who teaches and leads",
+        "description": "Dr. Al-Ghamdi has held several prominent academic and leadership positions, including:",
+        "roles": {
+          "r1": "Professor of Plastic and Reconstructive Surgery",
+          "r2": "Head of Plastic Surgery departments in several regional hospitals",
+          "r3": "Director of the Saudi Board Program for Plastic Surgery (Eastern Province)",
+          "r4": "Evaluator of PhD programs at the Saudi Commission for Health Specialties",
+          "r5": "Head of academic and educational departments in major health institutions"
+        }
+      },
+      "research": {
+        "title": "Scientific Research & Academic Contribution",
+        "tagline": "Developing knowledge through clinical research",
+        "description": "Dr. Al-Ghamdi has actively contributed to clinical research related to reconstructive surgery, medical imaging, and burn care. Among his prominent research contributions:",
+        "items": {
+          "i1": "Multicenter research in burn treatment using MEBO and MEBT protocols",
+          "i2": "Research on non-invasive imaging of musculoskeletal and ligament injuries",
+          "i3": "Participation as a co-author in the (Atlas of MEBO)"
+        },
+        "footer": "These researches reflect his focus on improving patient outcomes, enhancing safety, and evidence-based surgical planning."
+      }
+    },
+    "certifications": {
+      "label": "Certifications & Professional Accreditations",
+      "heading": "Dr. Al-Ghamdi holds several high-level certifications and accreditations, reflecting his commitment to the highest standards of international surgical competence.",
+      "items": {
+        "c1": {
+          "title": "Saudi Board Equivalence",
+          "subtitle": "Plastic and Reconstructive Surgery"
+        },
+        "c2": {
+          "title": "German Board (FACHARZT)",
+          "subtitle": "Plastic and Aesthetic Surgery"
+        },
+        "c3": {
+          "title": "Certificate of Recognition from the Bavarian Medical Association – Germany (Bayerische Landesärztekammer)",
+          "subtitle": "Specialist in Plastic and Reconstructive Surgery (Germany, 2010)",
+          "detail": "Considered one of the strongest professional certificates in Germany, confirming completion of the certified specialty training program according to the German system."
+        },
+        "c4": {
+          "title": "Specialty Training Certificate in Craniofacial Surgery",
+          "subtitle": "Munich Bogenhausen University Hospital – (TUM)",
+          "detail": "Demonstrates completion of advanced specialty training in craniofacial surgery, reconstructive surgery, burn and hand surgery (October 2009 - March 2010)."
+        },
+        "c5": {
+          "title": "Professional Classification Certificate – Saudi Commission for Health Specialties",
+          "subtitle": "Official Professional Classification and Accreditation (2010)",
+          "detail": "Classification as 'Plastic Surgery Specialist' based on scientific qualifications and international practical experience."
+        }
+      },
+      "consultancy": {
+        "items": {
+          "i1": "Consultant Accreditation from the Saudi Commission for Health Specialties",
+          "i2": "Consultant Accreditation from Dubai Health Authority (United Arab Emirates)",
+          "i3": "Consultant Accreditation from the National Health Regulatory Authority (Kingdom of Bahrain)"
+        }
+      },
+      "honorary": {
+        "title": "Honorary Visiting Professor (Gulf Medical College – UAE)",
+        "description": "Gulf Medical College – UAE (2008), in appreciation of scientific and research contributions."
+      }
+    },
+    "expertise": {
+      "title": "Areas of Expertise",
+      "description": "Dr. Saleh's expertise extends across the full range of plastic and reconstructive surgery, allowing him to treat elective and complex medical cases with equal confidence and care. His specialties include:",
+      "areas": {
+        "a1": "Cosmetic Surgery",
+        "a2": "Reconstructive Surgery",
+        "a3": "Burn Reconstruction",
+        "a4": "Hand Surgery",
+        "a5": "Craniofacial Reconstruction"
+      },
+      "footer": "This broad clinical background enhances decision-making precision and ensures that cosmetic results do not come at the expense of function or safety.",
+      "cta": "Discover More!"
+    },
+    "philosophy": {
+      "label": "Philosophy of Natural Beauty",
+      "heading": "Dr. Al-Ghamdi follows a philosophy of <strongInner>natural appearance</strongInner>, believing that the most successful cosmetic results are those that are subtle and balanced, respecting each patient's unique features. The goal is not to create a new face, but to restore harmony, symmetry, and confidence — while preserving expression, character, and identity.",
+      "evidenceBased": {
+        "title": "Evidence-Based Medical Approach",
+        "content": "All surgical decisions are based on evidence-based medicine, through the integration of: <strongInner>Scientific Research | Clinical Guidelines | Extensive Surgical Experience</strongInner>. Each treatment program is designed according to anatomy, function, and realistic expectations, ensuring responsible and predictable results."
+      },
+      "values": {
+        "title": "Professional Values",
+        "content": "Dr. Al-Ghamdi's practice is grounded in core medical values that guide every patient interaction:",
+        "items": {
+          "v1": "Safety as the top priority",
+          "v2": "Honesty in recommendations and expectations",
+          "v3": "Transparency throughout the treatment journey",
+          "v4": "Respect for patient autonomy and individuality"
+        },
+        "footer": "Patients are never pressured to undergo any procedure and are always encouraged to make conscious and informed decisions."
+      },
+      "academic": {
+        "title": "Academic and Professional Participation",
+        "content": "As a professor, Dr. Al-Ghamdi remains actively involved in:",
+        "items": {
+          "a1": "Teaching and training of residents and fellows",
+          "a2": "Participation in national and international conferences",
+          "a3": "Continuing medical education",
+          "a4": "Academic and professional development"
+        }
+      }
+    },
+    "ctaBanner": {
+      "title": "Informed Consultation is the First Step",
+      "subtitle": "Safe and meaningful results begin with clarity and building trust.",
+      "button": "Book an Appointment Now"
+    },
+    "certificatesGallery": {
+      "label": "Accreditations",
+      "title": "Medical Certifications and Accreditations",
+      "subtitle": "International and local certifications and accreditations in plastic and reconstructive surgery"
+    },
+    "finalCTA": {
+      "label": "Start with a knowledge-based consultation.",
+      "title": "Book a Consultation with Dr. Saleh Al-Khalaf!",
+      "subtitle": "The initial dialogue is the first step towards safe and meaningful results.",
+      "button": "Book an Appointment Now"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "subtitle": "We are here to answer your inquiries and help you book your appointment"
+    },
+    "form": {
+      "title": "Contact and Appointments",
+      "description": "If you are considering plastic or reconstructive surgery, the first step is a specialized medical consultation. Our team is available to help you book appointments and answer general inquiries.",
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "subject": "Subject",
+        "message": "Write your message here..."
+      },
+      "buttons": {
+        "submit": "Send Message",
+        "sending": "Sending..."
+      },
+      "validation": {
+        "messageTooLong": "Message must be less than 500 characters"
+      },
+      "feedback": {
+        "success": "Your message was sent successfully!",
+        "successDetails": "We will contact you soon",
+        "sendAnother": "Send another message",
+        "error": "Submission failed",
+        "errorDetails": "An error occurred while sending the form, please try again."
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "phone": {
+        "title": "Phone",
+        "value": "+966 50 827 7780"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "value": "+966 50 827 7780"
+      },
+      "email": {
+        "title": "Email",
+        "value": "support@drsalehalkhalaf.com"
+      },
+      "location": {
+        "title": "Location",
+        "value": "Clinic Address"
+      },
+      "workingHours": {
+        "title": "Working Hours",
+        "value": "Sun - Thu: 9AM - 9PM"
+      }
+    },
+    "disclaimers": {
+      "medical": {
+        "title": "Medical Disclaimer",
+        "content": "The information provided on this site is for educational purposes only and is not a substitute for direct medical consultation. Results of surgical procedures vary from patient to patient according to individual medical and anatomical factors, and specific results cannot be guaranteed."
+      },
+      "privacy": {
+        "title": "Privacy Notice",
+        "content": "All personal and medical information shared through this site is treated with complete confidentiality and is handled in accordance with the regulations and practices in force."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Sorry, Page Not Found",
+    "description": "The page you are looking for might have been removed or no longer exists. You can return to the homepage.",
+    "backHome": "Back to Home"
+  },
+  "faqsPage": {
+    "hero": {
+      "title": "Answers to Your Questions",
+      "subtitle": "We answer the most frequently asked questions about plastic and reconstructive surgery"
+    },
+    "general": "General Questions",
+    "noQuestions": "No questions found",
+    "stillHaveQuestions": {
+      "title": "Didn't find your answer?",
+      "description": "Do not hesitate to contact us directly. Our team is ready to answer all your inquiries",
+      "contact": "Contact Us",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "galleryPage": {
+    "hero": {
+      "subtitle": "Glimpses into the professional and academic career of Dr. Saleh Al-Ghamdi"
+    },
+    "section": {
+      "label": "Photo Gallery",
+      "heading": "Our Clinic & Results Tour",
+      "photoCount": "{count, plural, =1 {Photo} other {Photos}}",
+      "filters": {
+        "all": "All",
+        "academic": "Academic"
+      }
+    }
+  },
+  "operationsPage": {
+    "hero": {
+      "title": "Surgeries and Operations",
+      "subtitle": "We offer a comprehensive range of plastic and reconstructive surgeries with the highest standards of quality and safety"
+    },
+    "doctorIntro": {
+      "label": "About Dr. Saleh",
+      "heading": "A Surgeon Guided by Science, Judgment, and Responsibility",
+      "bio": "Dr. Saleh Al-Ghamdi is a Professor and Senior Consultant in Plastic, Reconstructive, and Cosmetic Surgery, with extensive experience in both refined aesthetics and complex reconstructive care. His practice is built on the firm conviction that plastic surgery is not about fashion or exaggerated change, but about precision, balance, and long-term function. Each patient is treated as an individual through careful assessment, honest discussion, and thoughtful planning. Patients choose Dr. Al-Ghamdi for his clear communication and commitment to natural, stable, and appropriate results — without exaggeration.",
+      "button": "Read More"
+    },
+    "whyChoose": {
+      "label": "Why Choose Us",
+      "heading": "What Distinguishes Our Surgeries",
+      "items": {
+        "safety": {
+          "title": "Complete Safety",
+          "desc": "We are committed to the highest safety standards in all our procedures"
+        },
+        "experience": {
+          "title": "Extensive Experience",
+          "desc": "Over 20 years of experience in plastic surgery"
+        },
+        "technology": {
+          "title": "Modern Technologies",
+          "desc": "We use the latest medical technologies and equipment"
+        },
+        "followup": {
+          "title": "Continuous Follow-up",
+          "desc": "We accompany you through all stages of recovery"
+        }
+      }
+    },
+    "cta": {
+      "label": "How to Book?",
+      "heading": "Simply. Directly. And Safely.",
+      "description": "Do you have an inquiry about any procedure? Contact us now to get a consultation and learn more about the right procedure for you",
+      "button": "Book a Consultation",
+      "whatsapp": "WhatsApp"
+    },
+    "specialties": {
+      "surgicalCare": {
+        "heading": "Purposeful and Precise Surgical Care",
+        "description": "Plastic and reconstructive surgery requires precise patient selection, detailed planning, and realistic expectations. Dr. Saleh offers a selection of cosmetic and reconstructive procedures, performed with high precision, ethical judgment, and individualized care tailored to each patient.",
+        "whatsapp": "Contact us via WhatsApp!"
+      },
+      "body": {
+        "label": "Body Surgeries",
+        "heading": "Body Contouring and Aesthetics",
+        "description": "We offer a complete range of body aesthetic surgeries to achieve the ideal silhouette you dream of",
+        "itemDescription": "A specialized procedure to improve body appearance and achieve natural, consistent results.",
+        "button": "Free Consultation",
+        "items": {
+          "tummyTuck": "Tummy Tuck",
+          "liposuction": "Liposuction",
+          "bodyContouring": "Body Contouring",
+          "armLift": "Arm Lift",
+          "thighLift": "Thigh Lift",
+          "breastSurgery": "Breast Surgery"
+        }
+      },
+      "face": {
+        "label": "Expertise",
+        "heading": "Experience Measured Not by Time, But by Medical Judgment and Responsibility",
+        "description": "Dr. Saleh Al-Khalaf's experience is measured not by number or time, but by medical judgment and responsibility — with a constant commitment to the principle of stability and quality that distinguishes superior surgical care solutions.",
+        "cosmetic": {
+          "title": "Cosmetic Surgeries",
+          "description": "Procedures aimed at improving appearance while maintaining natural balance and expression.",
+          "items": {
+            "rhinoplasty": {
+              "title": "Rhinoplasty",
+              "description": "Structural and aesthetic improvement of the nose with special care for appearance and breathing function."
+            },
+            "facelift": {
+              "title": "Facelift & Mini Facelift",
+              "description": "Techniques for facial rejuvenation addressing signs of aging while preserving natural facial movement and expressions."
+            },
+            "blepharoplasty": {
+              "title": "Eyelid Surgery (Blepharoplasty)",
+              "description": "Upper and lower eyelid procedures to restore a more refreshed appearance without changing the character of the eye."
+            },
+            "jawline": {
+              "title": "Chin and Jawline Definition",
+              "description": "Enhancing symmetry and definition through precise contouring of features."
+            },
+            "fatTransfer": {
+              "title": "Fat Transfer",
+              "description": "Restoring volume using the patient's own fat for natural-looking results."
+            },
+            "lipLift": {
+              "title": "Lip Lift",
+              "description": "Improving lip proportions to achieve a youthful and balanced look."
+            }
+          }
+        },
+        "reconstructive": {
+          "title": "Reconstructive Surgeries",
+          "description": "Procedures focused on restoring function, structure, and quality of life.",
+          "items": {
+            "trauma": {
+              "title": "Trauma Reconstruction",
+              "description": "Repairing injuries resulting from accidents or trauma considering both function and appearance."
+            },
+            "congenital": {
+              "title": "Congenital Deformities",
+              "description": "Correcting structural defects present since birth."
+            },
+            "functionalNose": {
+              "title": "Functional Nose Reconstruction",
+              "description": "Restoring airflow and structural support of the nose."
+            },
+            "scars": {
+              "title": "Scar Correction",
+              "description": "Improving the appearance and function of scars through customized surgical techniques."
+            }
+          }
+        }
+      },
+      "reconstructive": {
+        "label": "Medical Responsibility",
+        "heading": "Superior and Precise Surgical Care",
+        "description": "Every procedure — whether cosmetic or functional — is performed with the same level of attention to detail, focus on precision, and respect for the patient. Call the clinic to book a consultation!",
+        "burns": {
+          "title": "Burn Reconstruction and Scar Treatment",
+          "items": {
+            "trauma": "Reconstruction after accidents and trauma",
+            "congenital": "Treatment of congenital deformities",
+            "tumors": "Reconstruction after tumor resection",
+            "scars": "Scar correction and complex wound treatment",
+            "burns": "Burn reconstruction and scar treatment",
+            "function": "Function restoration",
+            "scarsImprovement": "Scar improvement and modification",
+            "movement": "Improving movement and appearance over time",
+            "qualityOfLife": "Considering psychological aspects and quality of life"
+          }
+        },
+        "hand": {
+          "title": "Hand Surgery and Surgical Microscopy",
+          "items": {
+            "repair": "Tendon and nerve repair",
+            "complex": "Complex hand injuries",
+            "microsurgery": "Micro-reconstructive surgeries",
+            "function": "Post-trauma function restoration"
+          }
+        }
+      }
+    },
+    "gallery": {
+      "label": "Operations",
+      "heading": "Explore All Surgeries",
+      "categories": {
+        "all": "All Operations",
+        "face": "Face Surgery",
+        "body": "Body Surgery",
+        "reconstructive": "Reconstructive Surgery",
+        "hand": "Hand Surgery"
+      },
+      "viewDetails": "View Details",
+      "error": "Error loading operations"
+    }
+  },
+  "mediaPage": {
+    "hero": {
+      "title": "Media Appearances",
+      "subtitle": "Watch Dr. Saleh Al-Khalaf's most prominent TV interviews and scientific participations",
+      "breadcrumb": {
+        "home": "Home",
+        "media": "Media Appearances"
+      }
+    },
+    "gallery": {
+      "label": "Video Library",
+      "heading": "Media Interviews & Participations",
+      "description": "Watch Dr. Saleh Al-Khalaf's most prominent TV interviews and scientific participations.",
+      "youtubeButton": "Our YouTube Channel"
+    }
+  },
+  "patientJourney": {
+    "hero": {
+      "title": "Patient Journey with Dr. Saleh",
+      "breadcrumb": {
+        "home": "Home",
+        "journey": "Patient Journey"
+      }
+    },
+    "intro": "We believe that the patient experience is not limited to the medical procedure only, but begins from the first contact and continues until the desired results are achieved. Therefore, the patient journey with Dr. Saleh is designed to be clear, organized, and human, with a focus on safety, understanding, and full respect for each patient's needs.",
+    "stepsSection": {
+      "label": "The Journey",
+      "heading": "Steps of the Patient Journey"
+    },
+    "steps": {
+      "step1": {
+        "title": "Booking the Consultation",
+        "stage": "Stage 1",
+        "description": "The journey begins by contacting the clinic to book an initial consultation appointment. During this stage:",
+        "details": [
+          "Patient needs and expectations are carefully listened to",
+          "Answering all questions and inquiries",
+          "Initial explanation of possible procedures and what to expect",
+          "Providing a comfortable environment that encourages honest dialogue without pressure"
+        ]
+      },
+      "step2": {
+        "title": "Comprehensive Medical Evaluation",
+        "stage": "Stage 2",
+        "description": "At the consultation appointment, Dr. Saleh performs a precise medical evaluation including:",
+        "details": [
+          "Reviewing medical history and general health",
+          "Precise anatomical evaluation related to the requested procedure",
+          "Understanding the patient's treatment goals",
+          "Discussing realistic expectations and possible outcomes",
+          "Clarifying appropriate medical options based on science and experience"
+        ],
+        "note": "Transparency here is a key element, because the right medical decision starts from a complete understanding of the case."
+      },
+      "step3": {
+        "title": "Creating a Personalized Treatment Plan",
+        "stage": "Stage 3",
+        "description": "After evaluation, a customized and integrated treatment plan is built:",
+        "details": [
+          "Specially designed according to the patient's health condition",
+          "Compliant with safe medical standards",
+          "Explaining the type of procedure, its stages, and duration",
+          "Clearly explaining potential benefits and risks",
+          "Answering any questions before making the decision"
+        ]
+      },
+      "step4": {
+        "title": "Medical Procedure",
+        "stage": "Stage 4",
+        "description": "The medical procedure is performed:",
+        "details": [
+          "According to the highest safety and quality standards",
+          "Using modern and certified techniques",
+          "In a fully equipped medical environment",
+          "With close attention to all details to ensure the best possible outcome"
+        ],
+        "note": "Patient comfort and safety is the top priority at this stage."
+      },
+      "step5": {
+        "title": "Follow-up After Treatment",
+        "stage": "Stage 5",
+        "description": "The journey does not end with the procedure, rather the follow-up phase begins:",
+        "details": [
+          "Regular follow-up visits according to the case",
+          "Monitoring recovery and ensuring the safety of results",
+          "Providing clear post-procedure care instructions",
+          "Quick handling of any observations or inquiries"
+        ]
+      },
+      "step6": {
+        "title": "Continuous Support",
+        "stage": "Stage 6",
+        "description": "We believe that true medical care is ongoing:",
+        "details": [
+          "Possibility of contacting the medical team when needed",
+          "Medical and psychological support that ensure the patient's comfort",
+          "Long-term follow-up to achieve the best possible results"
+        ],
+        "note": "Because our concern for you does not stop at the end of treatment."
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Dr. Saleh?",
+      "items": [
+        "Extensive experience in plastic and reconstructive surgery",
+        "Deep understanding of scar types and skin behavior",
+        "A realistic scientific approach focusing on improvement rather than inaccurate promises",
+        "Respect for skin nature and patient identity",
+        "Precise long-term follow-up after the procedure"
+      ]
+    },
+    "quote": {
+      "text": "Success in scar correction does not mean its disappearance, but rather that it becomes less visible, more flexible, and more harmonious with the skin.",
+      "author": "Dr. Saleh Al-Khalf",
+      "role": "Plastic and Reconstructive Surgeon"
+    },
+    "cta": {
+      "label": "Book Your Appointment",
+      "title": "Book a Consultation with Dr. Saleh",
+      "description": "Start with a knowledge-based consultation. Initial dialogue is the first step towards a safe treatment plan and meaningful results.",
+      "methodTitle": "How to Book",
+      "whatsapp": {
+        "label": "WhatsApp",
+        "text": "Direct communication via WhatsApp"
+      },
+      "contact": {
+        "label": "Contact Us",
+        "text": "Contact Page"
+      },
+      "footer": "Our team will guide you to next steps and preparation requirements."
+    },
+    "disclaimer": {
+      "title": "Medical Disclaimer",
+      "content": "The information on this site is for educational purposes only and does not replace direct medical consultation. Scar correction results vary from patient to patient depending on skin type, nature of the scar, and individual medical factors, and specific results cannot be guaranteed."
+    }
+  }
+}

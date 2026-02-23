@@ -1,0 +1,5028 @@
+﻿
+> dr-saleh-next@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env
+
+node.exe : ΓÜá The 
+"middleware" file 
+convention is 
+deprecated. Please 
+use "proxy" instead. 
+Learn more: https://ne
+xtjs.org/docs/messages
+/middleware-to-proxy
+At line:1 char:1
++ & "C:\Program Files\
+nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (ΓÜá The "m   
+ iddle...leware-to    
+-proxy:String) []    
+, RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack 
+build failed with 45 
+errors:
+./src/app/[locale]/ope
+rations/[slug]/page.js
+x:8:1
+Module not found: 
+Can't resolve '../../.
+./lib/api/operations'
+[0m [90m  6 |[39m  
+   [33mQueryClient[3
+9m[33m,[39m
+ [90m  7 |[39m } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m  8 |[39m 
+[36mimport[39m { 
+getOperationDetails } 
+[36mfrom[39m [32m'.
+./../../lib/api/operat
+ions'[39m[33m;[39m
+ [90m    |[39m [31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m
+ [90m  9 |[39m 
+[36mimport[39m [33m
+OperationDetailContent
+[39m [36mfrom[39m 
+[32m'../../components/
+operations/OperationDe
+tailContent'[39m[33m
+;[39m
+ [90m 10 |[39m
+ [90m 11 |[39m 
+[36mexport[39m 
+[36mconst[39m 
+dynamic [33m=[39m [
+32m'force-dynamic'[39
+m[33m;[39m[0m
+
+
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/faq
+s/page.jsx:4:1
+Module not found: 
+Can't resolve '@/app/[
+locale]/components/Faq
+Accordion'
+[0m [90m 2 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+ [90m 3 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m 4 |[39m 
+[36mimport[39m [33m
+FaqAccordion[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/FaqAccordion'[39m
+[33m;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+getFaqs } 
+[36mfrom[39m [32m'@
+/lib/api/faq'[39m[33
+m;[39m
+ [90m 6 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 7 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/blo
+gs/page.jsx:6:1
+Module not found: 
+Can't resolve '@/app/[
+locale]/components/hom
+e/ScrollingTicker'
+[0m [90m 4 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+getBlogs } 
+[36mfrom[39m [32m'@
+/lib/api/blogs'[39m[
+33m;[39m
+[31m[1m>[22m[39m[
+90m 6 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mBlogsPage[39m() 
+{
+ [90m 9 |[39m   
+[36mconst[39m 
+locale [33m=[39m use
+Locale()[33m;[39m[0
+m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/blogs/BlogDeta
+ilContent.jsx:7:1
+Module not found: 
+Can't resolve '@/app/[
+locale]/components/hom
+e/ScrollingTicker'
+[0m [90m  5 |[39m 
+[36mimport[39m { [3
+3mLink[39m[33m,[39m
+ useRouter } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m  6 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m  7 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+ [90m    |[39m [31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m
+ [90m  8 |[39m 
+[36mimport[39m { 
+getBlogDetails } 
+[36mfrom[39m [32m'@
+/lib/api/blogs'[39m[
+33m;[39m
+ [90m  9 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 10 |[39m 
+[36mimport[39m [33m
+FaqAccordion[39m 
+[36mfrom[39m [32m'.
+./FaqAccordion'[39m[
+33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/blogs/Blog
+DetailContent.jsx
+    ./src/app/[locale]
+/blogs/[slug]/page.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Ope
+rationDetailContent.js
+x:6:1
+Module not found: 
+Can't resolve '@/app/[
+locale]/components/hom
+e/ScrollingTicker'
+[0m [90m 4 |[39m 
+[36mimport[39m { [3
+3mLink[39m[33m,[39m
+ useRouter } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m 6 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+ [90m 7 |[39m 
+[36mimport[39m { 
+getOperationDetails } 
+[36mfrom[39m [32m'@
+/lib/api/operations'[
+39m[33m;[39m
+ [90m 8 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 9 |[39m 
+[36mimport[39m [33m
+FaqAccordion[39m 
+[36mfrom[39m [32m'.
+./FaqAccordion'[39m[
+33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/operations
+/OperationDetailConten
+t.jsx
+    ./src/app/[locale]
+/operations/[slug]/pag
+e.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/faq
+s/page.jsx:3:1
+Module not found: 
+Can't resolve '@/app/[
+locale]/components/hom
+e/ScrollingTicker'
+[0m [90m 1 |[39m 
+[32m'use client'[39m
+[33m;[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m 3 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+ [90m 4 |[39m 
+[36mimport[39m [33m
+FaqAccordion[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/FaqAccordion'[39m
+[33m;[39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+getFaqs } 
+[36mfrom[39m [32m'@
+/lib/api/faq'[39m[33
+m;[39m
+ [90m 6 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/Navbar.jsx:5:1
+Module not found: 
+Can't resolve '@/compo
+nents/LanguageSwitcher
+'
+[0m [90m 3 |[39m 
+[36mimport[39m { 
+useEffect[33m,[39m 
+useState[33m,[39m 
+useMemo } 
+[36mfrom[39m [32m'r
+eact'[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+[31m[1m>[22m[39m[
+90m 5 |[39m 
+[36mimport[39m [33m
+LanguageSwitcher[39m 
+[36mfrom[39m [32m'@
+/components/LanguageSw
+itcher'[39m[33m;[39
+m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m
+ [90m 6 |[39m
+ [90m 7 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mNavbar[39m() {
+ [90m 8 |[39m   
+[36mconst[39m 
+[scrolled[33m,[39m 
+setScrolled] 
+[33m=[39m useState(
+[36mfalse[39m)[33m;
+[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/Navbar.jsx
+    ./src/app/[locale]
+/layout.js
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/blo
+gs/[slug]/page.jsx:8:1
+Module not found: 
+Can't resolve 
+'@/lib/api/blogs'
+[0m [90m  6 |[39m  
+   [33mQueryClient[3
+9m[33m,[39m
+ [90m  7 |[39m } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m  8 |[39m 
+[36mimport[39m { 
+getBlogDetails } 
+[36mfrom[39m [32m'@
+/lib/api/blogs'[39m[
+33m;[39m
+ [90m    |[39m [31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m
+ [90m  9 |[39m 
+[36mimport[39m [33m
+BlogDetailContent[39m
+ [36mfrom[39m [32m'
+../../components/blogs
+/BlogDetailContent'[3
+9m[33m;[39m
+ [90m 10 |[39m 
+[36mexport[39m 
+[36mconst[39m 
+dynamic [33m=[39m [
+32m'force-dynamic'[39
+m[33m;[39m
+ [90m 11 |[39m[0m
+
+
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/blo
+gs/page.jsx:5:1
+Module not found: 
+Can't resolve 
+'@/lib/api/blogs'
+[0m [90m 3 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+[31m[1m>[22m[39m[
+90m 5 |[39m 
+[36mimport[39m { 
+getBlogs } 
+[36mfrom[39m [32m'@
+/lib/api/blogs'[39m[
+33m;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m
+ [90m 6 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mBlogsPage[39m() 
+{[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/blogs/BlogDeta
+ilContent.jsx:8:1
+Module not found: 
+Can't resolve 
+'@/lib/api/blogs'
+[0m [90m  6 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+ [90m  7 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m  8 |[39m 
+[36mimport[39m { 
+getBlogDetails } 
+[36mfrom[39m [32m'@
+/lib/api/blogs'[39m[
+33m;[39m
+ [90m    |[39m [31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m
+ [90m  9 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 10 |[39m 
+[36mimport[39m [33m
+FaqAccordion[39m 
+[36mfrom[39m [32m'.
+./FaqAccordion'[39m[
+33m;[39m
+ [90m 11 |[39m 
+[36mimport[39m [32m
+'./BlogDetail.css'[39
+m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/blogs/Blog
+DetailContent.jsx
+    ./src/app/[locale]
+/blogs/[slug]/page.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/home/BlogSecti
+on.jsx:5:1
+Module not found: 
+Can't resolve 
+'@/lib/api/blogs'
+[0m [90m 3 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+[31m[1m>[22m[39m[
+90m 5 |[39m 
+[36mimport[39m { 
+getBlogs } 
+[36mfrom[39m [32m'@
+/lib/api/blogs'[39m[
+33m;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mBlogSection[39m() {
+ [90m 8 |[39m     
+[36mconst[39m t 
+[33m=[39m useTransla
+tions([32m'home'[39m
+)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/home/BlogS
+ection.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/home/BlogS
+ection.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/faq
+s/page.jsx:5:1
+Module not found: 
+Can't resolve 
+'@/lib/api/faq'
+[0m [90m 3 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m [33m
+FaqAccordion[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/FaqAccordion'[39m
+[33m;[39m
+[31m[1m>[22m[39m[
+90m 5 |[39m 
+[36mimport[39m { 
+getFaqs } 
+[36mfrom[39m [32m'@
+/lib/api/faq'[39m[33
+m;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m
+ [90m 6 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 7 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m 8 |[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/gallery/Doctor
+GallerySection.jsx:7:1
+Module not found: 
+Can't resolve 
+'@/lib/api/galleries'
+[0m [90m  5 |[39m 
+[36mimport[39m { [3
+3mSwiper[39m[33m,[3
+9m 
+[33mSwiperSlide[39m 
+} [36mfrom[39m [32m
+'swiper/react'[39m[3
+3m;[39m
+ [90m  6 |[39m 
+[36mimport[39m { [3
+3mNavigation[39m[33m
+,[39m [33mAutoplay[
+39m[33m,[39m 
+[33mPagination[39m 
+} [36mfrom[39m [32m
+'swiper/modules'[39m
+[33m;[39m
+[31m[1m>[22m[39m[
+90m  7 |[39m 
+[36mimport[39m { 
+getGalleries } 
+[36mfrom[39m [32m'@
+/lib/api/galleries'[3
+9m[33m;[39m
+ [90m    |[39m [31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m
+ [90m  8 |[39m 
+[36mimport[39m { 
+useLocale[33m,[39m 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m  9 |[39m
+ [90m 10 |[39m 
+[90m// Import Swiper 
+styles[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/gallery/Do
+ctorGallerySection.jsx
+ [Client Component 
+Browser]
+    ./src/app/[locale]
+/gallery/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/gallery/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/gallery/Do
+ctorGallerySection.jsx
+ [Client Component 
+SSR]
+    ./src/app/[locale]
+/gallery/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/gallery/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Ope
+rationDetailContent.js
+x:7:1
+Module not found: 
+Can't resolve 
+'@/lib/api/operations'
+[0m [90m  5 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+ [90m  6 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m  7 |[39m 
+[36mimport[39m { 
+getOperationDetails } 
+[36mfrom[39m [32m'@
+/lib/api/operations'[
+39m[33m;[39m
+ [90m    |[39m [31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m
+ [90m  8 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m  9 |[39m 
+[36mimport[39m [33m
+FaqAccordion[39m 
+[36mfrom[39m [32m'.
+./FaqAccordion'[39m[
+33m;[39m
+ [90m 10 |[39m 
+[36mimport[39m [32m
+'../blogs/BlogDetail.c
+ss'[39m[33m;[39m[0
+m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/operations
+/OperationDetailConten
+t.jsx
+    ./src/app/[locale]
+/operations/[slug]/pag
+e.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Ope
+rationsGallerySection.
+jsx:4:1
+Module not found: 
+Can't resolve 
+'@/lib/api/operations'
+[0m [90m 2 |[39m 
+[36mimport[39m { 
+useState } 
+[36mfrom[39m [32m'r
+eact'[39m[33m;[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m 4 |[39m 
+[36mimport[39m { 
+getOperations } 
+[36mfrom[39m [32m'@
+/lib/api/operations'[
+39m[33m;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m
+ [90m 5 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 6 |[39m
+ [90m 7 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mOperationsGallerySec
+tion[39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/operations
+/OperationsGallerySect
+ion.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/operations
+/OperationsGallerySect
+ion.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/media/VideosGa
+llerySection.jsx:4:1
+Module not found: 
+Can't resolve 
+'@/lib/api/videos'
+[0m [90m 2 |[39m 
+[36mimport[39m { 
+useState[33m,[39m 
+useContext } 
+[36mfrom[39m [32m'r
+eact'[39m[33m;[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m 4 |[39m 
+[36mimport[39m { 
+getVideos } 
+[36mfrom[39m [32m'@
+/lib/api/videos'[39m
+[33m;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 6 |[39m
+ [90m 7 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mVideosGallerySection
+[39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/media/Vide
+osGallerySection.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/media/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/media/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/media/Vide
+osGallerySection.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/media/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/media/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/blo
+gs/page.jsx:2:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m [90m 1 |[39m 
+[32m'use client'[39m
+[33m;[39m
+[31m[1m>[22m[39m[
+90m 2 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+getBlogs } 
+[36mfrom[39m [32m'@
+/lib/api/blogs'[39m[
+33m;[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/blogs/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/AppointmentCTA
+.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mAppointmentCTA[39m(
+) {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/Appointmen
+tCTA.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/Appointmen
+tCTA.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/Footer.jsx:3:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m [90m 1 |[39m 
+[32m'use client'[39m
+[33m;[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+[31m[1m>[22m[39m[
+90m 3 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mFooter[39m() {
+ [90m 6 |[39m   
+[36mconst[39m t 
+[33m=[39m useTransla
+tions([32m'footer'[3
+9m)[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/Footer.jsx
+    ./src/app/[locale]
+/layout.js
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/Navbar.jsx:2:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m [90m 1 |[39m 
+[32m'use client'[39m
+[33m;[39m
+[31m[1m>[22m[39m[
+90m 2 |[39m 
+[36mimport[39m { [3
+3mLink[39m[33m,[39m
+ usePathname } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+useEffect[33m,[39m 
+useState[33m,[39m 
+useMemo } 
+[36mfrom[39m [32m'r
+eact'[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 5 |[39m 
+[36mimport[39m [33m
+LanguageSwitcher[39m 
+[36mfrom[39m [32m'@
+/components/LanguageSw
+itcher'[39m[33m;[39
+m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/Navbar.jsx
+    ./src/app/[locale]
+/layout.js
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/about/AboutHer
+oSection.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mAboutHeroSection[39
+m() {[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/about/Abou
+tHeroSection.jsx
+    ./src/app/[locale]
+/about/page.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/about/CTABanne
+r.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mCTABanner[39m() 
+{[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/about/CTAB
+anner.jsx
+    ./src/app/[locale]
+/about/page.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/about/DoctorPr
+ofileSection.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mDoctorProfileSection
+[39m() {[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/about/Doct
+orProfileSection.jsx
+    ./src/app/[locale]
+/about/page.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/about/Expertis
+eSection.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mExpertiseSection[39
+m() {[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/about/Expe
+rtiseSection.jsx
+    ./src/app/[locale]
+/about/page.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/about/FinalCTA
+Section.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mFinalCTASection[39m
+() {[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/about/Fina
+lCTASection.jsx
+    ./src/app/[locale]
+/about/page.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/blogs/BlogDeta
+ilContent.jsx:5:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m [90m 3 |[39m 
+[36mimport[39m [33m
+React[39m[33m,[39m 
+{ useEffect } 
+[36mfrom[39m [32m'r
+eact'[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m 
+[33mImage[39m 
+[36mfrom[39m [32m'n
+ext/image'[39m[33m;
+[39m
+[31m[1m>[22m[39m[
+90m 5 |[39m 
+[36mimport[39m { [3
+3mLink[39m[33m,[39m
+ useRouter } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 6 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+ [90m 7 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+ [90m 8 |[39m 
+[36mimport[39m { 
+getBlogDetails } 
+[36mfrom[39m [32m'@
+/lib/api/blogs'[39m[
+33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/blogs/Blog
+DetailContent.jsx
+    ./src/app/[locale]
+/blogs/[slug]/page.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/contact/Contac
+tHeroSection.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mContactHeroSection[
+39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/contact/Co
+ntactHeroSection.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/contact/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/contact/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/contact/Co
+ntactHeroSection.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/contact/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/contact/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/gallery/Galler
+yHeroSection.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mGalleryHeroSection[
+39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/gallery/Ga
+lleryHeroSection.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/gallery/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/gallery/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/gallery/Ga
+lleryHeroSection.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/gallery/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/gallery/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/home/AboutSect
+ion.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mAboutSection[39m() 
+{[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/home/About
+Section.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/home/About
+Section.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/home/BlogSecti
+on.jsx:2:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m [90m 1 |[39m 
+[32m'use client'[39m
+[33m;[39m
+[31m[1m>[22m[39m[
+90m 2 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+getBlogs } 
+[36mfrom[39m [32m'@
+/lib/api/blogs'[39m[
+33m;[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/home/BlogS
+ection.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/home/BlogS
+ection.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/home/DoctorInt
+roSection.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mDoctorIntroSection[
+39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/home/Docto
+rIntroSection.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/page.js [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/home/Docto
+rIntroSection.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/page.js [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/home/HeroSecti
+on.jsx:2:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m [90m 1 |[39m 
+[32m'use client'[39m
+[33m;[39m
+[31m[1m>[22m[39m[
+90m 2 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+useState[33m,[39m 
+useEffect[33m,[39m 
+useMemo } 
+[36mfrom[39m [32m'r
+eact'[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 5 |[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/home/HeroS
+ection.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/home/HeroS
+ection.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/home/MediaSect
+ion.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mMediaSection[39m({ 
+videos[33m,[39m 
+onVideoClick }) {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/home/Media
+Section.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/home/Media
+Section.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/home/ServicesS
+ection.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useTranslations } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mServicesSection[39m
+() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/home/Servi
+cesSection.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/page.js [Client 
+Component Browser]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/home/Servi
+cesSection.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/page.js [Client 
+Component SSR]
+    ./src/app/[locale]
+/page.js [Server 
+Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/media/MediaHer
+oSection.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mMediaHeroSection[39
+m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/media/Medi
+aHeroSection.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/media/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/media/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/media/Medi
+aHeroSection.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/media/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/media/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Bod
+ySurgerySection.jsx:1:
+1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mBodySurgerySection[
+39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/operations
+/BodySurgerySection.js
+x [Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/operations
+/BodySurgerySection.js
+x [Client Component 
+SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Doc
+torIntroOperationsSect
+ion.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mDoctorIntroOperation
+sSection[39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/operations
+/DoctorIntroOperations
+Section.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/operations
+/DoctorIntroOperations
+Section.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Fac
+eSurgerySection.jsx:1:
+1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mFaceSurgerySection[
+39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/operations
+/FaceSurgerySection.js
+x [Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/operations
+/FaceSurgerySection.js
+x [Client Component 
+SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Ope
+rationDetailContent.js
+x:4:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m [90m 2 |[39m
+ [90m 3 |[39m 
+[36mimport[39m [33m
+React[39m[33m,[39m 
+{ useEffect } 
+[36mfrom[39m [32m'r
+eact'[39m[33m;[39m
+[31m[1m>[22m[39m[
+90m 4 |[39m 
+[36mimport[39m { [3
+3mLink[39m[33m,[39m
+ useRouter } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+ [90m 6 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'@
+/app/[locale]/componen
+ts/home/ScrollingTicke
+r'[39m[33m;[39m
+ [90m 7 |[39m 
+[36mimport[39m { 
+getOperationDetails } 
+[36mfrom[39m [32m'@
+/lib/api/operations'[
+39m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/[locale]
+/components/operations
+/OperationDetailConten
+t.jsx
+    ./src/app/[locale]
+/operations/[slug]/pag
+e.jsx
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Ope
+rationsCTASection.jsx:
+1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mOperationsCTASection
+[39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/operations
+/OperationsCTASection.
+jsx [Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/operations
+/OperationsCTASection.
+jsx [Client Component 
+SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Ope
+rationsGallerySection.
+jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useState } 
+[36mfrom[39m [32m'r
+eact'[39m[33m;[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+useQuery } 
+[36mfrom[39m [32m'@
+tanstack/react-query'
+[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+getOperations } 
+[36mfrom[39m [32m'@
+/lib/api/operations'[
+39m[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/operations
+/OperationsGallerySect
+ion.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/operations
+/OperationsGallerySect
+ion.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Ope
+rationsHeroSection.jsx
+:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mOperationsHeroSectio
+n[39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/operations
+/OperationsHeroSection
+.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/operations
+/OperationsHeroSection
+.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/com
+ponents/operations/Rec
+onstructiveSurgerySect
+ion.jsx:1:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m[31m[1m>[22m[3
+9m[90m 1 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m [3
+3mReconstructiveSurger
+ySection[39m() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/components/operations
+/ReconstructiveSurgery
+Section.jsx [Client 
+Component Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/components/operations
+/ReconstructiveSurgery
+Section.jsx [Client 
+Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/operations/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/faq
+s/page.jsx:7:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m [90m  5 |[39m 
+[36mimport[39m { 
+getFaqs } 
+[36mfrom[39m [32m'@
+/lib/api/faq'[39m[33
+m;[39m
+ [90m  6 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+[31m[1m>[22m[39m[
+90m  7 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m    |[39m [31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m
+^[22m[39m
+ [90m  8 |[39m
+ [90m  9 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mFaqsPage[39m() {
+ [90m 10 |[39m   
+[36mconst[39m 
+locale [33m=[39m use
+Locale()[33m;[39m[0
+m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Client Component 
+Browser]
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Client Component SSR]
+    ./src/app/[locale]
+/faqs/page.jsx 
+[Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+./src/app/[locale]/pat
+ient-journey/page.jsx:
+3:1
+Module not found: 
+Can't resolve 
+'@/navigation'
+[0m [90m 1 |[39m 
+[32m'use client'[39m
+[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39m[
+90m 3 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32m'@
+/navigation'[39m[33m
+;[39m
+ [90m   |[39m [31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^
+[22m[39m
+ [90m 4 |[39m 
+[36mimport[39m { use
+Translations[33m,[39
+m useLocale } 
+[36mfrom[39m [32m'n
+ext-intl'[39m[33m;[
+39m
+ [90m 5 |[39m 
+[36mimport[39m [33m
+ScrollTicker[39m 
+[36mfrom[39m [32m'.
+./components/home/Scro
+llingTicker'[39m[33m
+;[39m
+ [90m 6 |[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/app/[locale]
+/patient-journey/page.
+jsx [Client Component 
+Browser]
+    ./src/app/[locale]
+/patient-journey/page.
+jsx [Server Component]
+
+  Client Component 
+SSR:
+    ./src/app/[locale]
+/patient-journey/page.
+jsx [Client Component 
+SSR]
+    ./src/app/[locale]
+/patient-journey/page.
+jsx [Server Component]
+
+https://nextjs.org/doc
+s/messages/module-not-
+found
+
+
+    at <unknown> (./sr
+c/app/[locale]/operati
+ons/[slug]/page.jsx:8:
+1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/faqs/pa
+ge.jsx:4:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/blogs/p
+age.jsx:6:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/blogs/BlogDetailCo
+ntent.jsx:7:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/Operati
+onDetailContent.jsx:6:
+1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/faqs/pa
+ge.jsx:3:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/Navbar.jsx:5:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/blogs/[
+slug]/page.jsx:8:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/blogs/p
+age.jsx:5:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/blogs/BlogDetailCo
+ntent.jsx:8:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/home/BlogSection.j
+sx:5:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/faqs/pa
+ge.jsx:5:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/gallery/DoctorGall
+erySection.jsx:7:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/Operati
+onDetailContent.jsx:7:
+1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/Operati
+onsGallerySection.jsx:
+4:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/media/VideosGaller
+ySection.jsx:4:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/blogs/p
+age.jsx:2:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/AppointmentCTA.jsx
+:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/Footer.jsx:3:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/Navbar.jsx:2:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/about/AboutHeroSec
+tion.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/about/CTABanner.js
+x:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/about/DoctorProfil
+eSection.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/about/ExpertiseSec
+tion.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/about/FinalCTASect
+ion.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/blogs/BlogDetailCo
+ntent.jsx:5:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/contact/ContactHer
+oSection.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/gallery/GalleryHer
+oSection.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/home/AboutSection.
+jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/home/BlogSection.j
+sx:2:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/home/DoctorIntroSe
+ction.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/home/HeroSection.j
+sx:2:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/home/MediaSection.
+jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/home/ServicesSecti
+on.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/media/MediaHeroSec
+tion.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/BodySur
+gerySection.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/DoctorI
+ntroOperationsSection.
+jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/FaceSur
+gerySection.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/Operati
+onDetailContent.jsx:4:
+1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/Operati
+onsCTASection.jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/Operati
+onsGallerySection.jsx:
+1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/Operati
+onsHeroSection.jsx:1:1
+)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/compone
+nts/operations/Reconst
+ructiveSurgerySection.
+jsx:1:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/faqs/pa
+ge.jsx:7:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
+    at <unknown> (./sr
+c/app/[locale]/patient
+-journey/page.jsx:3:1)
+    at <unknown> (http
+s://nextjs.org/docs/me
+ssages/module-not-foun
+d)
