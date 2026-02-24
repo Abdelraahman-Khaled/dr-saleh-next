@@ -36,7 +36,7 @@ export default function HeroSection() {
     }, [heroTexts]);
 
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden">
+        <section className="relative max-[768px]:pt-18  min-[1537px]:h-[65vh] flex items-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
@@ -51,7 +51,7 @@ export default function HeroSection() {
             <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-40 h-40 sm:w-72 sm:h-72 bg-white/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-52 h-52 sm:w-96 sm:h-96 bg-white/5 rounded-full blur-3xl"></div>
 
-            <div className="container mx-auto px-3 sm:px-4 relative z-10 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-0 lg:pb-0">
+            <div className="container mx-auto px-3 sm:px-4 relative z-10 pt-16 sm:pt-20 lg:pt-0 pb-8 sm:pb-0 lg:pb-0">
                 <div className="grid lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-center min-h-[calc(100vh-8rem)] sm:min-h-[calc(100vh-120px)]">
                     {/* Content */}
                     <div className="text-white order-1 lg:order-1 lg:col-span-5 px-2 sm:px-0">
@@ -113,7 +113,7 @@ export default function HeroSection() {
                             <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-2xl"></div>
 
                             {/* Image Container */}
-                            <div className="relative w-[400px] h-[380px] xs:w-[320px] xs:h-[420px] sm:w-[380px] sm:h-[500px] md:w-[440px] md:h-[580px] lg:w-[460px] lg:h-[560px] xl:w-[520px] xl:h-[680px] 2xl:w-[580px] 2xl:h-[760px]">
+                            <div className="relative w-[400px] h-[440px] xs:w-[320px] xs:h-[420px] sm:w-[380px] sm:h-[500px] md:w-[440px] md:h-[580px] lg:w-[460px] lg:h-[560px] xl:w-[520px] xl:h-[680px] 2xl:w-[580px] 2xl:h-[820px]">
                                 <img
                                     src="/doctor/pic-20.png"
                                     alt="د. صالح الخلف"
@@ -122,7 +122,7 @@ export default function HeroSection() {
                             </div>
 
                             {/* Floating Badge */}
-                            <div className="absolute -left-1 xs:-left-2 sm:-left-10 lg:-left-10 top-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl">
+                            <div className="absolute left-7 xs:-left-2 sm:-left-10 lg:-left-2 top-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl">
                                 <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center">
                                         <i className="ri-award-line text-[#17a2b8] text-base sm:text-xl lg:text-2xl"></i>

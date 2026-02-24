@@ -47,8 +47,8 @@ export async function generateMetadata({ params }) {
         title: `Dr.saleh | ${title}`,
         description,
         icons: {
-            icon: '/images/icons/favicon.ico',
-            shortcut: '/images/icons/favicon.ico',
+            icon: '/logo.png',
+            shortcut: '/logo.png',
         },
         openGraph: {
             title: `Dr.saleh | ${title}`,
@@ -56,10 +56,10 @@ export async function generateMetadata({ params }) {
             images: photoUrl ? [photoUrl] : ["/images/icons/favicon.ico"],
         },
         alternates: {
-            canonical: `/operations/${operation.slug}`,
+            canonical: `https://drsalehalkhalaf.com/${language}/operations/${operation.slug}`,
             languages: {
-                ar: `/operations/${operation.slug_ar || operation.slug}`,
-                en: `/operations/${operation.slug || operation.slug_ar}`,
+                ar: `https://drsalehalkhalaf.com/ar/operations/${operation.slug_ar || operation.slug}`,
+                en: `https://drsalehalkhalaf.com/en/operations/${operation.slug || operation.slug_ar}`,
             }
         }
     }

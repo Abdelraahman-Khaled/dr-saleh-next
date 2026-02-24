@@ -126,3 +126,9 @@ html {
     -o-transform: translateX(calc(-100% - var(--gap)));
   }
 }
+
+@media (min-width: 96rem) {
+  .container {
+    max-width: 90rem;
+  }
+}

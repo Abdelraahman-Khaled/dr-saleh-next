@@ -56,7 +56,7 @@ export default function TestimonialsSection({ title, desc, bg = "bg-white" }) {
                             {t('testimonials.label')}
                         </span>
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-                            {t('testimonials.title')}
+                            {t('testimonials.subtitle')}
                         </h2>
 
                         <div className="relative">

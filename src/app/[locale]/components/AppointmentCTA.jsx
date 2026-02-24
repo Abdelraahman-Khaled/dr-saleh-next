@@ -5,7 +5,7 @@ export default function AppointmentCTA() {
     const t = useTranslations('home');
     return (
         <section
-            className="md:py-8 lg:py-16 xl:py-24 bg-[#17a2b8] overflow-visible relative flex items-center"
+            className="md:pt-8 lg:pt-16 xl:pt-24 bg-[#17a2b8] overflow-visible relative flex items-center"
             style={{ backgroundImage: 'url(/assets/pattern.webp)' }}
         >
             <div className="absolute inset-0 bg-gradient-to-r from-[#17a2b8]/95 to-[#138496]/95 z-0"></div>

@@ -17,15 +17,12 @@ export default function Footer() {
     { href: '/contact', label: tNav('links.contact') },
   ];
 
-  const operations = [0, 1, 2, 3, 4, 5].map((i) => ({
-    href: '/operations',
-    label: t(`operationList.${i}`)
-  }));
+
 
   return (
     <footer className="bg-[#1a1f2e] text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div>
             <img
               src="https://dr-saaleh.netlify.app/assets/img/footer-logo.png"
@@ -39,7 +36,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-bold mb-4">{t('quickLinks')}</h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="grid grid-cols-2 gap-2 text-sm">
               {links.map((link) => (
                 <li key={link.label}>
                   <Link
@@ -47,22 +44,6 @@ export default function Footer() {
                     className="text-gray-400 hover:text-[#17a2b8] transition-colors"
                   >
                     {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-bold mb-4">{t('operations')}</h3>
-            <ul className="space-y-2 text-sm">
-              {operations.map((op, idx) => (
-                <li key={idx}>
-                  <Link
-                    href={op.href}
-                    className="text-gray-400 hover:text-[#17a2b8] transition-colors"
-                  >
-                    {op.label}
                   </Link>
                 </li>
               ))}
@@ -134,14 +115,14 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            {t('rights')} |
+             جميع الحقوق محفوظة ©
             <a
-              href="https://readdy.ai/?ref=logo"
+              href="https://mila-knight.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#17a2b8] hover:underline ml-1"
+              className="text-[#17a2b8] hover:underline mx-1"
             >
-              Website Builder
+              Milaknight LLC-FZ 2026
             </a>
           </p>
         </div>
