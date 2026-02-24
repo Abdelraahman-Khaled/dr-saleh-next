@@ -3,7 +3,7 @@ export default function robots() {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/private/",
+      disallow: "/cdn-cgi/",
     },
     sitemap: `https://drsalehalkhalaf.com/sitemap.xml`,
   };
