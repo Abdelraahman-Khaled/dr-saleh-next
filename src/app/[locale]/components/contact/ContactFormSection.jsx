@@ -1,5 +1,7 @@
+'use client';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 export default function ContactFormSection() {
     const t = useTranslations('contactPage.form');
@@ -101,19 +103,31 @@ export default function ContactFormSection() {
     ];
 
     return (
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 overflow-hidden">
             <div className="container mx-auto px-4">
                 {/* Section Title */}
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t('title')}</h2>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-12"
+                >
+                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">{t('title')}</h2>
                     <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         {t('description')}
                     </p>
-                </div>
+                </motion.div>
 
                 <div className="grid lg:grid-cols-3 gap-8">
                     {/* Contact Form */}
-                    <div className="lg:col-span-2 bg-white rounded-2xl shadow-lg p-8">
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="lg:col-span-2 bg-white rounded-2xl shadow-lg p-8"
+                    >
                         {submitted ? (
                             <div className="text-center py-12">
                                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -224,20 +238,28 @@ export default function ContactFormSection() {
                                 </button>
                             </form>
                         )}
-                    </div>
+                    </motion.div>
 
                     {/* Contact Info Sidebar */}
-                    <div className="space-y-4">
-                        <h3 className="text-xl font-bold text-gray-900 mb-6">{tInfo('title')}</h3>
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="space-y-4"
+                    >
+                        <h3 className="text-xl font-bold text-gray-900 mb-6 font-heading">{tInfo('title')}</h3>
                         {contactInfo.map((item, index) => (
-                            <a
+                            <motion.a
+                                whileHover={{ scale: 1.02, x: 5 }}
+                                transition={{ duration: 0.2 }}
                                 key={index}
                                 href={item.link}
                                 target={item.link.startsWith('http') ? '_blank' : '_self'}
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all group cursor-pointer"
+                                className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all group cursor-pointer border border-gray-100"
                             >
-                                <div className={`w-12 h-12 ${item.color} rounded-full flex items-center justify-center flex-shrink-0`}>
+                                <div className={`w-12 h-12 ${item.color} rounded-full flex items-center justify-center flex-shrink-0 shadow-sm`}>
                                     <i className={`${item.icon} text-white text-xl`}></i>
                                 </div>
                                 <div>
@@ -246,9 +268,9 @@ export default function ContactFormSection() {
                                         {item.value}
                                     </span>
                                 </div>
-                            </a>
+                            </motion.a>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

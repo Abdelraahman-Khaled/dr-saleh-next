@@ -1,13 +1,21 @@
+'use client';
 import { Link } from '../../../../navigation';
 import { useTranslations, useLocale } from 'next-intl';
+import { motion } from 'framer-motion';
 
 export default function DoctorIntroOperationsSection() {
     const locale = useLocale();
     const t = useTranslations('operationsPage.doctorIntro');
     return (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white overflow-hidden">
             <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-4xl mx-auto"
+                >
                     <div className="text-center mb-8">
                         <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
                             {t('label')}
@@ -21,7 +29,11 @@ export default function DoctorIntroOperationsSection() {
                         {t('bio')}
                     </p>
 
-                    <div className="text-center">
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="text-center"
+                    >
                         <Link
                             href="/about"
                             className="inline-flex items-center gap-2 px-8 py-4 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors shadow-lg hover:shadow-xl whitespace-nowrap cursor-pointer"
@@ -29,8 +41,8 @@ export default function DoctorIntroOperationsSection() {
                             {t('button')}
                             <i className={locale === 'ar' ? "ri-arrow-left-line" : "ri-arrow-right-line"}></i>
                         </Link>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );

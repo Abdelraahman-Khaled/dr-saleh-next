@@ -15,7 +15,7 @@ export default function AboutPage() {
   return (
     <>
       <AboutHeroSection />
-      <ScrollingTicker/>
+      <ScrollingTicker />
       <DoctorProfileSection />
       <CTABanner />
       <CertificationsSection />

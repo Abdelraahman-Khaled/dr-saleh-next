@@ -3,6 +3,7 @@
 import { Link } from '../../../navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import ScrollTicker from '../components/home/ScrollingTicker';
+import { motion } from 'framer-motion';
 
 export default function PatientJourneyPage() {
   const t = useTranslations('patientJourney');
@@ -74,22 +75,39 @@ export default function PatientJourneyPage() {
     <>
       {/* Hero Section with Background Image */}
       <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
+        <motion.div
+          initial={{ scale: 1.15, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.8, ease: "easeOut" }}
+          className="absolute inset-0"
+        >
           <img
             src="https://readdy.ai/api/search-image?query=Patient%20care%20journey%20concept%20with%20warm%20welcoming%20medical%20environment%20showing%20pathway%20steps%20consultation%20room%20elegant%20teal%20and%20white%20color%20scheme%20professional%20healthcare%20setting%20with%20soft%20lighting%20and%20modern%20clean%20aesthetic&width=1920&height=600&seq=patient-journey-hero-new-1&orientation=landscape"
             alt={t('hero.title')}
             className="w-full h-full object-cover object-top"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#17a2b8]/80 via-[#17a2b8]/70 to-[#138496]/80"></div>
-        </div>
+        </motion.div>
         <div className="container mx-auto px-4 relative z-10 pt-32 pb-16">
           <div className="text-center text-white">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-4 font-heading">{t('hero.title')}</h1>
-            <div className="flex items-center justify-center gap-2 text-white/90">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl lg:text-5xl font-bold mb-4 font-heading"
+            >
+              {t('hero.title')}
+            </motion.h1>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex items-center justify-center gap-2 text-white/90"
+            >
               <Link href="/" className="hover:text-white transition-colors">{t('hero.breadcrumb.home')}</Link>
               <span>/</span>
               <span>{t('hero.breadcrumb.journey')}</span>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -97,32 +115,50 @@ export default function PatientJourneyPage() {
       {/* Scrolling Ticker */}
       <ScrollTicker />
 
-      {/* Intro Section */}
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
             <div className={`bg-white rounded-3xl shadow-xl p-8 lg:p-12 border-[#17a2b8] ${locale === 'ar' ? 'border-r-4' : 'border-l-4'}`}>
               <p className="text-gray-700 text-lg leading-relaxed">
                 {t('intro')}
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Journey Timeline */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
             <span className="inline-block px-4 py-2 bg-[#17a2b8]/10 text-[#17a2b8] rounded-full text-sm font-semibold mb-4">
               {t('stepsSection.label')}
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 font-heading">{t('stepsSection.heading')}</h2>
-          </div>
+          </motion.div>
 
           <div className="max-w-6xl mx-auto">
             {journeySteps.map((step, index) => (
-              <div key={step.number} className="relative mb-12 last:mb-0">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                key={step.number}
+                className="relative mb-12 last:mb-0"
+              >
                 {/* Connector Line */}
                 {index < journeySteps.length - 1 && (
                   <div className={`hidden lg:block absolute ${locale === 'ar' ? 'right-1/2' : 'left-1/2'} top-full w-1 h-12 bg-gradient-to-b from-[#17a2b8] to-[#17a2b8]/30 transform ${locale === 'ar' ? 'translate-x-1/2' : '-translate-x-1/2'}`}></div>
@@ -154,50 +190,52 @@ export default function PatientJourneyPage() {
                     </div>
                   </div>
                   <div className="w-full lg:w-2/5">
-                    <Link href="/contact" className="block h-full cursor-pointer">
-                      <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-shadow border border-gray-100">
-                        {/* Mobile Step Number */}
-                        <div className="lg:hidden flex items-center gap-3 mb-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-[#17a2b8] to-[#138496] rounded-full flex items-center justify-center">
-                            <span className="text-white text-xl font-bold">{step.number}</span>
+                    <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
+                      <Link href="/contact" className="block h-full cursor-pointer">
+                        <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-shadow border border-gray-100">
+                          {/* Mobile Step Number */}
+                          <div className="lg:hidden flex items-center gap-3 mb-4">
+                            <div className="w-12 h-12 bg-gradient-to-br from-[#17a2b8] to-[#138496] rounded-full flex items-center justify-center">
+                              <span className="text-white text-xl font-bold">{step.number}</span>
+                            </div>
+                            <span className="text-[#17a2b8] font-semibold">{step.stage}</span>
                           </div>
-                          <span className="text-[#17a2b8] font-semibold">{step.stage}</span>
-                        </div>
 
-                        <div className="flex items-start gap-4 mb-6">
-                          <div className="w-14 h-14 bg-[#17a2b8]/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                            <i className={`${step.icon} text-[#17a2b8] text-2xl`}></i>
+                          <div className="flex items-start gap-4 mb-6">
+                            <div className="w-14 h-14 bg-[#17a2b8]/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                              <i className={`${step.icon} text-[#17a2b8] text-2xl`}></i>
+                            </div>
+                            <div>
+                              <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2 font-heading">{step.title}</h3>
+                              <p className="text-gray-600 leading-relaxed text-sm">{step.description}</p>
+                            </div>
                           </div>
-                          <div>
-                            <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2 font-heading">{step.title}</h3>
-                            <p className="text-gray-600 leading-relaxed text-sm">{step.description}</p>
-                          </div>
-                        </div>
 
-                        <div className="space-y-2">
-                          {step.details.map((detail, idx) => (
-                            <div key={idx} className="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-                              <div className="w-6 h-6 bg-[#17a2b8] rounded-full flex items-center justify-center flex-shrink-0">
-                                <i className="ri-check-line text-white text-xs"></i>
+                          <div className="space-y-2">
+                            {step.details.map((detail, idx) => (
+                              <div key={idx} className="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
+                                <div className="w-6 h-6 bg-[#17a2b8] rounded-full flex items-center justify-center flex-shrink-0">
+                                  <i className="ri-check-line text-white text-xs"></i>
+                                </div>
+                                <span className="text-gray-700 text-sm">{detail}</span>
                               </div>
-                              <span className="text-gray-700 text-sm">{detail}</span>
-                            </div>
-                          ))}
-                        </div>
-
-                        {step.note && (
-                          <div className={`mt-4 bg-[#17a2b8]/5 border-[#17a2b8] rounded-xl p-4 ${locale === 'ar' ? 'border-r-4' : 'border-l-4'}`}>
-                            <div className="flex items-start gap-3">
-                              <i className="ri-information-line text-[#17a2b8] text-xl mt-0.5"></i>
-                              <p className="text-gray-600 text-sm">{step.note}</p>
-                            </div>
+                            ))}
                           </div>
-                        )}
-                      </div>
-                    </Link>
+
+                          {step.note && (
+                            <div className={`mt-4 bg-[#17a2b8]/5 border-[#17a2b8] rounded-xl p-4 ${locale === 'ar' ? 'border-r-4' : 'border-l-4'}`}>
+                              <div className="flex items-start gap-3">
+                                <i className="ri-information-line text-[#17a2b8] text-xl mt-0.5"></i>
+                                <p className="text-gray-600 text-sm">{step.note}</p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </Link>
+                    </motion.div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -210,13 +248,23 @@ export default function PatientJourneyPage() {
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 font-heading">{t('whyChoose.title')}</h2>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {whyChooseItems.map((item, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all border border-white/20"
               >
@@ -227,16 +275,22 @@ export default function PatientJourneyPage() {
                     <span className="text-white font-medium">{item}</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Doctor Quote */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
             <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12 relative">
               <div className={`absolute top-6 ${locale === 'ar' ? 'right-6' : 'left-6'} text-[#17a2b8]/20`}>
                 <i className={`${locale === 'ar' ? 'ri-double-quotes-r' : 'ri-double-quotes-l'} text-8xl`}></i>
@@ -254,7 +308,7 @@ export default function PatientJourneyPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -317,9 +371,15 @@ export default function PatientJourneyPage() {
       </section>
 
       {/* Medical Disclaimer */}
-      <section className="py-12 bg-amber-50">
+      <section className="py-12 bg-amber-50 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
             <div className={`flex items-start gap-4 bg-white rounded-2xl p-6 shadow-lg border-amber-500 ${locale === 'ar' ? 'border-r-4' : 'border-l-4'}`}>
               <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <i className="ri-error-warning-line text-amber-600 text-2xl"></i>
@@ -331,20 +391,9 @@ export default function PatientJourneyPage() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
-
-      {/* Custom Styles */}
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.33%); }
-        }
-        .animate-marquee {
-          animation: marquee 20s linear infinite;
-        }
-      `}</style>
     </>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 export default function CertificatesGallery() {
     const t = useTranslations('aboutPage.certificatesGallery');
@@ -23,7 +24,12 @@ export default function CertificatesGallery() {
     return (
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-12"
+                >
                     <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
                         {t('label')}
                     </span>
@@ -33,12 +39,16 @@ export default function CertificatesGallery() {
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         {t('subtitle')}
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Certificates Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {certificates.map((cert) => (
-                        <div
+                    {certificates.map((cert, index) => (
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: index * 0.05 }}
                             key={cert.id}
                             className="relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 aspect-[3/4]"
                             onClick={() => setSelectedImage(cert)}
@@ -51,7 +61,7 @@ export default function CertificatesGallery() {
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                                 <i className="ri-zoom-in-line text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

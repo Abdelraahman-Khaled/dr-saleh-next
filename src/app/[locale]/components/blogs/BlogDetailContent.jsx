@@ -8,6 +8,7 @@ import ScrollTicker from '../home/ScrollingTicker';
 import { getBlogDetails } from '../../../../lib/api/blogs';
 import { useTranslations, useLocale } from 'next-intl';
 import FaqAccordion from '../FaqAccordion';
+import { motion } from 'framer-motion';
 import './BlogDetail.css';
 
 const BlogDetailContent = ({ slug, initialBlog }) => {
@@ -34,7 +35,14 @@ const BlogDetailContent = ({ slug, initialBlog }) => {
         console.log(blog);
         if (blog?.contents && Array.isArray(blog.contents)) {
             return blog.contents.map((section, index) => (
-                <div key={index} className="mb-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    key={index}
+                    className="mb-8"
+                >
                     {/* Render HTML content */}
                     {section.content_ar || section.content_en ? (
                         <div
@@ -49,18 +57,23 @@ const BlogDetailContent = ({ slug, initialBlog }) => {
                             {section.photos.map((img, imgIndex) => {
                                 if (!img.url || img.url === "") return null;
                                 return (
-                                    <div key={imgIndex} className="rounded-2xl overflow-hidden shadow-lg">
+                                    <motion.div
+                                        whileHover={{ scale: 1.02 }}
+                                        transition={{ duration: 0.3 }}
+                                        key={imgIndex}
+                                        className="rounded-2xl overflow-hidden shadow-lg"
+                                    >
                                         <img
                                             src={img.url}
                                             alt={img.alt || ''}
                                             className="w-full h-auto object-cover"
                                         />
-                                    </div>
+                                    </motion.div>
                                 );
                             })}
                         </div>
                     )}
-                </div>
+                </motion.div>
             ));
         }
         return null;
@@ -72,7 +85,10 @@ const BlogDetailContent = ({ slug, initialBlog }) => {
             <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden">
                 {/* Background Image */}
                 {photo?.url && (
-                    <img
+                    <motion.img
+                        initial={{ scale: 1.15, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 1.8, ease: "easeOut" }}
                         src={photo.url}
                         alt={photo.alt || title}
                         className="absolute inset-0 w-full h-full object-cover"
@@ -84,7 +100,12 @@ const BlogDetailContent = ({ slug, initialBlog }) => {
                 {/* Content */}
                 <div className="container mx-auto px-4 relative py-32" style={{ zIndex: 2 }}>
                     <div className="text-center text-white">
-                        <nav className="flex items-center justify-center gap-2 text-sm mb-6 opacity-90">
+                        <motion.nav
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="flex items-center justify-center gap-2 text-sm mb-6 opacity-90"
+                        >
                             <Link href="/" className="hover:underline cursor-pointer">
                                 {t('breadcrumb.home')}
                             </Link>
@@ -94,8 +115,15 @@ const BlogDetailContent = ({ slug, initialBlog }) => {
                             </Link>
                             <i className={locale === 'ar' ? "ri-arrow-left-s-line" : "ri-arrow-right-s-line"}></i>
                             <span>{title}</span>
-                        </nav>
-                        <h1 className="text-4xl lg:text-5xl font-bold mb-6 font-heading">{title}</h1>
+                        </motion.nav>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className="text-4xl lg:text-5xl font-bold mb-6 font-heading"
+                        >
+                            {title}
+                        </motion.h1>
                     </div>
                 </div>
             </section>
@@ -109,13 +137,18 @@ const BlogDetailContent = ({ slug, initialBlog }) => {
                     <div className="max-w-8xl mx-auto">
                         {/* Featured Image */}
                         {photo?.url && (
-                            <div className="mb-12 rounded-2xl overflow-hidden shadow-xl">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.8 }}
+                                className="mb-12 rounded-2xl overflow-hidden shadow-xl"
+                            >
                                 <img
                                     src={photo.url}
                                     alt={photo.alt || title}
-                                    className="w-full h-auto object-cover max-h-[714px]"
+                                    className="w-full h-auto object-cover max-h-[714px] hover:scale-105 transition-transform duration-700"
                                 />
-                            </div>
+                            </motion.div>
                         )}
 
                         {/* Blog Content */}
@@ -126,7 +159,13 @@ const BlogDetailContent = ({ slug, initialBlog }) => {
 
                                 {/* FAQs Section */}
                                 {blog.faqs && blog.faqs.length > 0 && (
-                                    <div className="mt-16 pt-16 border-t border-gray-200">
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.6 }}
+                                        className="mt-16 pt-16 border-t border-gray-200"
+                                    >
                                         <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3 font-heading">
                                             <div className="w-12 h-12 bg-[#17a2b8] rounded-full flex items-center justify-center">
                                                 <i className="ri-question-line text-white text-xl"></i>
@@ -134,25 +173,33 @@ const BlogDetailContent = ({ slug, initialBlog }) => {
                                             {t('faqs')}
                                         </h2>
                                         <FaqAccordion faqs={blog.faqs} />
-                                    </div>
+                                    </motion.div>
                                 )}
 
                                 {/* CTA Section */}
-                                <div className="mt-16 pt-16 border-t border-gray-200 text-center">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.8 }}
+                                    className="mt-16 pt-16 border-t border-gray-200 text-center"
+                                >
                                     <h3 className="text-2xl font-bold text-gray-900 mb-4 font-heading">
                                         {t('cta.title')}
                                     </h3>
                                     <p className="text-gray-600 mb-8">
                                         {t('cta.description')}
                                     </p>
-                                    <Link
-                                        href="/contact"
-                                        className="inline-flex items-center gap-2 px-8 py-3 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors shadow-md cursor-pointer"
-                                    >
-                                        {t('cta.button')}
-                                        <i className="ri-calendar-check-line"></i>
-                                    </Link>
-                                </div>
+                                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                                        <Link
+                                            href="/contact"
+                                            className="inline-flex items-center gap-2 px-8 py-3 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors shadow-md cursor-pointer whitespace-nowrap"
+                                        >
+                                            {t('cta.button')}
+                                            <i className="ri-calendar-check-line"></i>
+                                        </Link>
+                                    </motion.div>
+                                </motion.div>
                             </>
                         )}
                     </div>

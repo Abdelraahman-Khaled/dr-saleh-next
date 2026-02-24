@@ -1,19 +1,31 @@
+'use client';
 import { Link } from '../../../../navigation';
 import { useTranslations, useLocale } from 'next-intl';
+import { motion } from 'framer-motion';
 
 export default function OperationsCTASection() {
     const locale = useLocale();
     const t = useTranslations('operationsPage.cta');
     return (
         <section className="py-20 relative overflow-hidden">
-            <div
+            <motion.div
+                initial={{ scale: 1.1, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.5 }}
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: 'url(https://dr-saaleh.netlify.app/assets/img/appointment.webp)' }}
             />
             <div className="absolute inset-0 bg-gradient-to-l from-[#17a2b8]/95 to-[#138496]/95" />
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center gap-12">
-                    <div className="lg:w-1/2">
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="lg:w-1/2"
+                    >
                         <span className="text-white/80 font-semibold text-sm mb-3 block">{t('label')}</span>
                         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                             {t('heading')}
@@ -22,14 +34,17 @@ export default function OperationsCTASection() {
                             {t('description')}
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#17a2b8] rounded-full font-bold hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer"
-                            >
-                                {t('button')}
-                                <i className="ri-calendar-check-line"></i>
-                            </Link>
-                            <a
+                            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#17a2b8] rounded-full font-bold hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer"
+                                >
+                                    {t('button')}
+                                    <i className="ri-calendar-check-line"></i>
+                                </Link>
+                            </motion.div>
+                            <motion.a
+                                whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
                                 href="https://wa.me/966508277780"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -37,16 +52,22 @@ export default function OperationsCTASection() {
                             >
                                 <i className="ri-whatsapp-line text-xl"></i>
                                 {t('whatsapp')}
-                            </a>
+                            </motion.a>
                         </div>
-                    </div>
-                    <div className="flex justify-end lg:w-1/2">
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8, y: 50 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="flex justify-end lg:w-1/2"
+                    >
                         <img
                             src="/dr/1.png"
                             alt={t('button')}
                             className="rounded-3xl shadow-xl"
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

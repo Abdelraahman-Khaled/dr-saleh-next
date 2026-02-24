@@ -3,6 +3,7 @@ import { useState, useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getVideos } from '../../../../lib/api/videos';
 import { useLocale, useTranslations } from 'next-intl';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function VideosGallerySection() {
     const [activeVideo, setActiveVideo] = useState(null);
@@ -86,9 +87,15 @@ export default function VideosGallerySection() {
 
     return (
         <>
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-gray-50 overflow-hidden">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-16"
+                    >
                         <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
                             {t('label')}
                         </span>
@@ -98,47 +105,64 @@ export default function VideosGallerySection() {
                         <p className="text-gray-600 max-w-2xl mx-auto">
                             {t('description')}
                         </p>
-                    </div>
+                    </motion.div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {videos.map((video) => (
-                            <div
-                                key={video.id}
-                                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer"
-                                onClick={() => setActiveVideo(video.embedUrl)}
-                            >
-                                <div className="relative h-[328px] overflow-hidden">
-                                    <img
-                                        src={video.thumbnail}
-                                        alt={video.alt || video.title}
-                                        className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
-                                    />
-                                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
-                                            <i className="ri-play-fill text-[#17a2b8] text-2xl"></i>
+                    <motion.div
+                        layout
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    >
+                        <AnimatePresence mode="popLayout">
+                            {videos.map((video, idx) => (
+                                <motion.div
+                                    layout
+                                    initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                    key={video.id}
+                                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer"
+                                    onClick={() => setActiveVideo(video.embedUrl)}
+                                >
+                                    <div className="relative h-[328px] overflow-hidden">
+                                        <img
+                                            src={video.thumbnail}
+                                            alt={video.alt || video.title}
+                                            className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
+                                        />
+                                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
+                                                <i className="ri-play-fill text-[#17a2b8] text-2xl"></i>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="text-sm font-bold text-gray-900 group-hover:text-[#17a2b8] transition-colors line-clamp-2">
-                                        {video.title}
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                                    <div className="p-4">
+                                        <h3 className="text-sm font-bold text-gray-900 group-hover:text-[#17a2b8] transition-colors line-clamp-2">
+                                            {video.title}
+                                        </h3>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </motion.div>
 
-                    <div className="text-center mt-12">
-                        <a
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="text-center mt-12"
+                    >
+                        <motion.a
+                            whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
                             href="https://www.youtube.com/@dr.salehalkhalaf"
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-3 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors whitespace-nowrap cursor-pointer hover:shadow-lg transform hover:-translate-y-1 shadow-md"
+                            className="inline-flex items-center gap-2 px-8 py-3 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors whitespace-nowrap cursor-pointer shadow-md"
                         >
                             {t('youtubeButton')}
                             <i className={locale === 'ar' ? 'ri-arrow-left-line' : 'ri-arrow-right-line'}></i>
-                        </a>
-                    </div>
+                        </motion.a>
+                    </motion.div>
                 </div>
             </section>
 

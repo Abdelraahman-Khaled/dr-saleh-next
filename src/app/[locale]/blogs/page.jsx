@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useTranslations, useLocale } from 'next-intl';
 import { getBlogs } from '../../../lib/api/blogs';
 import ScrollTicker from '../components/home/ScrollingTicker';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function BlogsPage() {
   const locale = useLocale();
@@ -19,26 +20,44 @@ export default function BlogsPage() {
     <>
       {/* Hero Section with Background Image */}
       <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div
+        <motion.div
+          initial={{ scale: 1.15, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.8, ease: "easeOut" }}
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://readdy.ai/api/search-image?query=Modern%20medical%20blog%20and%20healthcare%20articles%20concept%20with%20elegant%20teal%20and%20white%20color%20scheme%20showing%20medical%20journals%20stethoscope%20and%20digital%20tablet%20on%20clean%20desk%20professional%20medical%20writing%20aesthetic&width=1920&height=600&seq=blog-hero-1&orientation=landscape)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#17a2b8]/85 via-[#17a2b8]/75 to-[#138496]/85" />
         <div className="container mx-auto px-4 relative z-10 py-32">
           <div className="text-center text-white">
-            <nav className="flex items-center justify-center gap-2 text-sm mb-6 opacity-90">
+            <motion.nav
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex items-center justify-center gap-2 text-sm mb-6 opacity-90"
+            >
               <Link href="/" className="hover:underline cursor-pointer">
                 {t('breadcrumb.home')}
               </Link>
               <i className={locale === 'ar' ? 'ri-arrow-left-s-line' : 'ri-arrow-right-s-line'}></i>
               <span>{t('breadcrumb.blog')}</span>
-            </nav>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 font-heading">
+            </motion.nav>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-4xl lg:text-5xl font-bold mb-6 font-heading"
+            >
               {t('title')}
-            </h1>
-            <p className="text-xl opacity-95 max-w-2xl mx-auto">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-xl opacity-95 max-w-2xl mx-auto"
+            >
               {t('subtitle')}
-            </p>
+            </motion.p>
           </div>
         </div>
       </section>
@@ -77,44 +96,54 @@ export default function BlogsPage() {
 
           {/* Blogs Grid */}
           {blogs && blogs.length > 0 && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogs.map((blog) => {
-                const photo = blog.photos?.find(p => p.is_arabic === (locale === 'ar')) || blog.photos?.[0];
-                const title = locale === 'ar' ? blog.title_ar : blog.title_en;
-                const description = locale === 'ar' ? blog.description_ar : blog.description_en;
-                const slug = locale === 'ar' ? blog.slug_ar : blog.slug;
+            <motion.div
+              layout
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              <AnimatePresence mode="popLayout">
+                {blogs.map((blog, idx) => {
+                  const photo = blog.photos?.find(p => p.is_arabic === (locale === 'ar')) || blog.photos?.[0];
+                  const title = locale === 'ar' ? blog.title_ar : blog.title_en;
+                  const description = locale === 'ar' ? blog.description_ar : blog.description_en;
+                  const slug = locale === 'ar' ? blog.slug_ar : blog.slug;
 
-                return (
-                  <article
-                    key={blog.id}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group flex flex-col"
-                  >
-                    <div className="relative h-56 overflow-hidden">
-                      <img
-                        src={photo?.url || '/placeholder-blog.jpg'}
-                        alt={photo?.alt || title}
-                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-6 flex flex-col flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#17a2b8] transition-colors font-heading">
-                        {title}
-                      </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-1">
-                        {description}
-                      </p>
-                      <Link
-                        href={`/blogs/${slug}`}
-                        className="inline-flex items-center gap-2 text-[#17a2b8] font-bold hover:gap-3 transition-all cursor-pointer"
-                      >
-                        {t('readMore')}
-                        <i className={locale === 'ar' ? "ri-arrow-left-line" : "ri-arrow-right-line"}></i>
-                      </Link>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
+                  return (
+                    <motion.article
+                      layout
+                      initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                      animate={{ opacity: 1, scale: 1, y: 0 }}
+                      exit={{ opacity: 0, scale: 0.9, y: 30 }}
+                      transition={{ duration: 0.5, delay: idx * 0.1 }}
+                      key={blog.id}
+                      className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group flex flex-col"
+                    >
+                      <div className="relative h-56 overflow-hidden">
+                        <img
+                          src={photo?.url || '/placeholder-blog.jpg'}
+                          alt={photo?.alt || title}
+                          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6 flex flex-col flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#17a2b8] transition-colors font-heading">
+                          {title}
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-1">
+                          {description}
+                        </p>
+                        <Link
+                          href={`/blogs/${slug}`}
+                          className="inline-flex items-center gap-2 text-[#17a2b8] font-bold hover:gap-3 transition-all cursor-pointer"
+                        >
+                          {t('readMore')}
+                          <i className={locale === 'ar' ? "ri-arrow-left-line" : "ri-arrow-right-line"}></i>
+                        </Link>
+                      </div>
+                    </motion.article>
+                  );
+                })}
+              </AnimatePresence>
+            </motion.div>
           )}
 
           {/* No Blogs */}
@@ -129,9 +158,15 @@ export default function BlogsPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-2xl mx-auto text-center"
+          >
             <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
               {t('newsletter.label')}
             </span>
@@ -147,11 +182,14 @@ export default function BlogsPage() {
                 placeholder={t('newsletter.placeholder')}
                 className="px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#17a2b8] text-sm flex-1 max-w-md shadow-sm"
               />
-              <button className="px-8 py-3 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors whitespace-nowrap cursor-pointer shadow-md">
+              <motion.button
+                whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors whitespace-nowrap cursor-pointer shadow-md"
+              >
                 {t('newsletter.button')}
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

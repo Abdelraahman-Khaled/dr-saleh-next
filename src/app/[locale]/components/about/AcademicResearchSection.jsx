@@ -1,4 +1,6 @@
+'use client';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 export default function AcademicResearchSection() {
     const t = useTranslations('aboutPage.academic');
@@ -22,7 +24,13 @@ export default function AcademicResearchSection() {
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-8">
                     {/* Academic Leadership */}
-                    <div className="bg-gradient-to-br from-[#17a2b8]/5 to-[#17a2b8]/10 rounded-3xl p-8">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="bg-gradient-to-br from-[#17a2b8]/5 to-[#17a2b8]/10 rounded-3xl p-8"
+                    >
                         <div className="flex items-center gap-3 mb-6">
                             <div className="w-12 h-12 bg-[#17a2b8] rounded-full flex items-center justify-center">
                                 <i className="ri-building-line text-white text-xl"></i>
@@ -43,10 +51,16 @@ export default function AcademicResearchSection() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
                     {/* Research */}
-                    <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8">
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8"
+                    >
                         <div className="flex items-center gap-3 mb-6">
                             <div className="w-12 h-12 bg-[#17a2b8] rounded-full flex items-center justify-center">
                                 <i className="ri-microscope-line text-white text-xl"></i>
@@ -70,7 +84,7 @@ export default function AcademicResearchSection() {
                         <p className="text-gray-500 text-sm border-t border-gray-200 pt-4">
                             {t('research.footer')}
                         </p>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

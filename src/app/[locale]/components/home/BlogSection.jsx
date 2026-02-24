@@ -3,6 +3,7 @@ import { Link } from '../../../../navigation';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslations, useLocale } from 'next-intl';
 import { getBlogs } from '../../../../lib/api/blogs';
+import { motion } from 'framer-motion';
 
 export default function BlogSection() {
     const t = useTranslations('home');
@@ -14,17 +15,41 @@ export default function BlogSection() {
         queryFn: getBlogs,
     });
 
+    if (!isLoading && !error && (!blogs || blogs.length === 0)) {
+        return null;
+    }
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 }
+    };
+
     return (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white overflow-hidden">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
                     <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
                         {t('blog.title')}
                     </span>
                     <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                         {t('blog.subtitle')}
                     </h2>
-                </div>
+                </motion.div>
 
                 {/* Loading State */}
                 {isLoading && (
@@ -51,7 +76,13 @@ export default function BlogSection() {
 
                 {/* Blogs Grid */}
                 {blogs && blogs.length > 0 && (
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    >
                         {blogs.slice(0, 3).map((blog) => {
                             // Get the appropriate photo based on language
                             const photo = blog.photos?.find(p => p.is_arabic === (locale === 'ar')) || blog.photos?.[0];
@@ -60,8 +91,9 @@ export default function BlogSection() {
                             const slug = locale === 'ar' ? blog.slug_ar : blog.slug;
 
                             return (
-                                <div
+                                <motion.div
                                     key={blog.id}
+                                    variants={itemVariants}
                                     className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                                 >
                                     <div className="w-full h-48 bg-gray-100">
@@ -81,24 +113,29 @@ export default function BlogSection() {
                                             className="text-[#17a2b8] font-medium text-sm hover:underline inline-flex items-center gap-1"
                                         >
                                             {t('blog.readMore')}
-                                            <i className="ri-arrow-left-line"></i>
+                                            <i className={locale === 'ar' ? "ri-arrow-left-line" : "ri-arrow-right-line"}></i>
                                         </Link>
                                     </div>
-                                </div>
+                                </motion.div>
                             );
                         })}
-                    </div>
+                    </motion.div>
                 )}
 
-                <div className="text-center mt-12">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    className="text-center mt-12"
+                >
                     <Link
                         href="/blogs"
                         className="inline-flex items-center gap-2 px-8 py-3 bg-[#17a2b8] text-white rounded-full font-medium hover:bg-[#138496] transition-colors whitespace-nowrap"
                     >
                         {t('blog.viewAll')}
-                        <i className="ri-arrow-left-line"></i>
+                        <i className={locale === 'ar' ? "ri-arrow-left-line" : "ri-arrow-right-line"}></i>
                     </Link>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

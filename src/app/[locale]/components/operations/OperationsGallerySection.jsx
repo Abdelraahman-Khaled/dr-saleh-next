@@ -1,8 +1,10 @@
+'use client';
 import { Link } from '../../../../navigation';
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getOperations } from '../../../../lib/api/operations';
 import { useTranslations, useLocale } from 'next-intl';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function OperationsGallerySection() {
     const locale = useLocale();
@@ -87,9 +89,15 @@ export default function OperationsGallerySection() {
     }
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white overflow-hidden">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-12"
+                >
                     <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
                         {t('label')}
                     </span>
@@ -112,56 +120,68 @@ export default function OperationsGallerySection() {
                             </button>
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {currentOperations.map((operation) => {
-                        const title = getLang(operation.title_ar, operation.title_en);
-                        const description = getLang(operation.description_ar, operation.description_en) || operation.description;
+                <motion.div
+                    layout
+                    className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+                >
+                    <AnimatePresence mode="popLayout">
+                        {currentOperations.map((operation, idx) => {
+                            const title = getLang(operation.title_ar, operation.title_en);
+                            const description = getLang(operation.description_ar, operation.description_en) || operation.description;
 
-                        const photo = operation.photos?.find(p => p.is_landing) ||
-                            operation.photos?.find(p => p.is_arabic === (locale === 'ar')) ||
-                            operation.photos?.[0];
+                            const photo = operation.photos?.find(p => p.is_landing) ||
+                                operation.photos?.find(p => p.is_arabic === (locale === 'ar')) ||
+                                operation.photos?.[0];
 
-                        const imageUrl = photo?.url || operation.image;
-                        const slug = locale === 'ar' ? (operation.slug_ar || operation.slug) : (operation.slug || operation.slug_ar);
+                            const imageUrl = photo?.url || operation.image;
+                            const slug = locale === 'ar' ? (operation.slug_ar || operation.slug) : (operation.slug || operation.slug_ar);
 
-                        return (
-                            <div
-                                key={operation.id}
-                                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
-                            >
-                                <div className="relative h-48 overflow-hidden">
-                                    <Link href={`/operations/${slug}`}>
-                                        <img
-                                            src={imageUrl}
-                                            alt={title}
-                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 block"
-                                        />
-                                    </Link>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                        <Link
-                                            href={`/operations/${slug}`}
-                                            className="inline-flex items-center gap-2 px-4 py-2 bg-white text-[#17a2b8] rounded-full font-bold text-sm hover:bg-[#17a2b8] hover:text-white transition-colors whitespace-nowrap cursor-pointer"
-                                        >
-                                            {t('viewDetails')}
-                                            <i className={locale === 'ar' ? "ri-arrow-left-line" : "ri-arrow-right-line"}></i>
+                            return (
+                                <motion.div
+                                    layout
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.9 }}
+                                    transition={{ duration: 0.4 }}
+                                    key={operation.id}
+                                    className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                                >
+                                    <div className="relative h-48 overflow-hidden">
+                                        <Link href={`/operations/${slug}`}>
+                                            <motion.img
+                                                whileHover={{ scale: 1.1 }}
+                                                transition={{ duration: 0.7 }}
+                                                src={imageUrl}
+                                                alt={title}
+                                                className="w-full h-full object-cover block"
+                                            />
                                         </Link>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                                        <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                            <Link
+                                                href={`/operations/${slug}`}
+                                                className="inline-flex items-center gap-2 px-4 py-2 bg-white text-[#17a2b8] rounded-full font-bold text-sm hover:bg-[#17a2b8] hover:text-white transition-colors whitespace-nowrap cursor-pointer"
+                                            >
+                                                {t('viewDetails')}
+                                                <i className={locale === 'ar' ? "ri-arrow-left-line" : "ri-arrow-right-line"}></i>
+                                            </Link>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="p-5">
-                                    <Link href={`/operations/${slug}`}>
-                                        <h3 className="text-lg font-bold text-gray-900 mb-2 hover:text-[#17a2b8] transition-colors">{title}</h3>
-                                    </Link>
-                                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
-                                        {description ? description.replace(/<[^>]*>/g, '').substring(0, 100) + '...' : ''}
-                                    </p>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
+                                    <div className="p-5">
+                                        <Link href={`/operations/${slug}`}>
+                                            <h3 className="text-lg font-bold text-gray-900 mb-2 hover:text-[#17a2b8] transition-colors">{title}</h3>
+                                        </Link>
+                                        <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+                                            {description ? description.replace(/<[^>]*>/g, '').substring(0, 100) + '...' : ''}
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
+                    </AnimatePresence>
+                </motion.div>
 
                 {/* Pagination Controls */}
                 {totalPages > 1 && (

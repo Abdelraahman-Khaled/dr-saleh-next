@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Cairo } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import FloatingButtons from "./components/FloatingButtons";
 import ReactQueryProvider from "./providers/ReactQueryProvider";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -121,6 +122,7 @@ export default async function RootLayout({ children, params }) {
             <Navbar />
             {children}
             <Footer />
+            <FloatingButtons />
           </NextIntlClientProvider>
         </ReactQueryProvider>
       </body>

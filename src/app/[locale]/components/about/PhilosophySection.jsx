@@ -1,4 +1,6 @@
+'use client';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 export default function PhilosophySection() {
     const t = useTranslations('aboutPage.philosophy');
@@ -20,17 +22,28 @@ export default function PhilosophySection() {
     return (
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-12"
+                >
                     <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">{t('label')}</span>
                     <p className="text-gray-600 max-w-3xl mx-auto">
                         {t.rich('heading', {
                             strongInner: (chunks) => <strong>{chunks}</strong>
                         })}
                     </p>
-                </div>
+                </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-6">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="space-y-6"
+                    >
                         {/* Evidence-Based Approach */}
                         <div className="bg-gray-50 rounded-2xl p-6">
                             <div className="flex items-center gap-3 mb-4">
@@ -90,15 +103,21 @@ export default function PhilosophySection() {
                                 ))}
                             </ul>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="flex justify-end">
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="flex justify-end"
+                    >
                         <img
                             src="/doctor/pic-6.jpg"
                             alt="Vision"
                             className="w-[63%] rounded-3xl shadow-xl"
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

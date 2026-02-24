@@ -1,4 +1,6 @@
+'use client';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 export default function CertificationsSection() {
     const t = useTranslations('aboutPage.certifications');
@@ -38,18 +40,30 @@ export default function CertificationsSection() {
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-12"
+                >
                     <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">{t('label')}</span>
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 max-w-3xl mx-auto">
                         {t('heading')}
                     </h3>
-                </div>
+                </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-8">
                     {/* Certifications List */}
                     <div className="space-y-4">
                         {certifications.map((cert, idx) => (
-                            <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow">
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                                key={idx}
+                                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow"
+                            >
                                 <div className="flex items-start gap-4">
                                     <div className="w-12 h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i className="ri-award-line text-[#17a2b8] text-xl"></i>
@@ -60,12 +74,17 @@ export default function CertificationsSection() {
                                         {cert.detail && <p className="text-gray-500 text-sm">{cert.detail}</p>}
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
 
                     {/* Consultancy Box */}
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         <div className="bg-white rounded-2xl p-8 shadow-lg h-full">
                             <ul className="space-y-4 mb-8">
                                 {consultancyList.map((item, idx) => (
@@ -83,7 +102,7 @@ export default function CertificationsSection() {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

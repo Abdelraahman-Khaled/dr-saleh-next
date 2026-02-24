@@ -2,21 +2,22 @@
 import { Link } from '../../../../navigation';
 import { useState, useEffect, useMemo } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function HeroSection() {
     const [textIndex, setTextIndex] = useState(0);
-    const [fade, setFade] = useState(true);
     const t = useTranslations('home.hero');
     const locale = useLocale();
 
-    // Mapping texts from the JSON structure
     const heroTexts = useMemo(() => [
         {
+            id: 0,
             title: t('texts.0.title'),
             subtitle: t('texts.0.subtitle'),
             description: t('texts.0.description')
         },
         {
+            id: 1,
             title: t('texts.1.title'),
             subtitle: t('texts.1.subtitle'),
             description: t('texts.1.description')
@@ -25,21 +26,33 @@ export default function HeroSection() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setFade(false);
-            setTimeout(() => {
-                setTextIndex((prev) => (prev + 1) % heroTexts.length);
-                setFade(true);
-            }, 500);
-        }, 5000);
-
+            setTextIndex((prev) => (prev + 1) % heroTexts.length);
+        }, 6000);
         return () => clearInterval(interval);
     }, [heroTexts]);
 
+    const fadeInUp = {
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6 }
+    };
+
+    const staggerContainer = {
+        animate: {
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
     return (
-        <section className="relative max-[768px]:pt-18  min-[1537px]:h-[65vh] flex items-center overflow-hidden">
+        <section className="relative max-[768px]:pt-18 min-[1537px]:h-[65vh] flex items-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
-                <img
+                <motion.img
+                    initial={{ scale: 1.1 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 2 }}
                     src="https://readdy.ai/api/search-image?query=Modern%20luxury%20medical%20clinic%20interior%20with%20elegant%20teal%20and%20white%20color%20scheme%20soft%20ambient%20lighting%20premium%20healthcare%20environment%20clean%20minimalist%20design%20professional%20medical%20aesthetic%20clinic%20background&width=1920&height=1080&seq=hero-bg-001&orientation=landscape"
                     alt="Background"
                     className="w-full h-full object-cover object-center"
@@ -48,29 +61,72 @@ export default function HeroSection() {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-40 h-40 sm:w-72 sm:h-72 bg-white/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-52 h-52 sm:w-96 sm:h-96 bg-white/5 rounded-full blur-3xl"></div>
+            <motion.div
+                animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.05, 0.1, 0.05]
+                }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-10 sm:top-20 right-10 sm:right-20 w-40 h-40 sm:w-72 sm:h-72 bg-white/5 rounded-full blur-3xl"
+            ></motion.div>
+            <motion.div
+                animate={{
+                    scale: [1.2, 1, 1.2],
+                    opacity: [0.05, 0.1, 0.05]
+                }}
+                transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-52 h-52 sm:w-96 sm:h-96 bg-white/5 rounded-full blur-3xl"
+            ></motion.div>
 
             <div className="container mx-auto px-3 sm:px-4 relative z-10 pt-16 sm:pt-20 lg:pt-0 pb-8 sm:pb-0 lg:pb-0">
                 <div className="grid lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-center min-h-[calc(100vh-8rem)] sm:min-h-[calc(100vh-120px)]">
                     {/* Content */}
-                    <div className="text-white order-1 lg:order-1 lg:col-span-5 px-2 sm:px-0">
-                        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/15 backdrop-blur-sm rounded-full mb-3 sm:mb-5">
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="initial"
+                        animate="animate"
+                        className="text-white order-1 lg:order-1 lg:col-span-5 px-2 sm:px-0"
+                    >
+                        <motion.div variants={fadeInUp} className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/15 backdrop-blur-sm rounded-full mb-3 sm:mb-5">
                             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-emerald-400 rounded-full animate-pulse"></span>
                             <span className="text-xs sm:text-sm font-medium">{t('badge')}</span>
+                        </motion.div>
+
+                        <div className="relative h-[120px] sm:h-[160px] lg:h-[200px] mb-3 sm:mb-5">
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={textIndex}
+                                    initial={{ opacity: 0, x: locale === 'ar' ? 20 : -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: locale === 'ar' ? -20 : 20 }}
+                                    transition={{ duration: 0.6 }}
+                                    className="absolute inset-0"
+                                >
+                                    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
+                                        {heroTexts[textIndex].title}
+                                        <br />
+                                        <span className="text-white/90">{heroTexts[textIndex].subtitle}</span>
+                                    </h1>
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
 
-                        <h1 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-5 leading-tight transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
-                            {heroTexts[textIndex].title}
-                            <br />
-                            <span className="text-white/90">{heroTexts[textIndex].subtitle}</span>
-                        </h1>
+                        <div className="relative h-[80px] sm:h-[100px] lg:h-[120px] mb-4 sm:mb-6">
+                            <AnimatePresence mode="wait">
+                                <motion.p
+                                    key={textIndex}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.6 }}
+                                    className="absolute inset-0 text-sm sm:text-base lg:text-lg leading-relaxed text-white/90 max-w-md"
+                                >
+                                    {heroTexts[textIndex].description}
+                                </motion.p>
+                            </AnimatePresence>
+                        </div>
 
-                        <p className={`text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 leading-relaxed text-white/90 max-w-md transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
-                            {heroTexts[textIndex].description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-3 mb-6">
+                        <motion.div variants={fadeInUp} className="flex flex-wrap gap-3 mb-6">
                             <Link
                                 href="/contact"
                                 className="px-6 py-3 bg-white text-[#17a2b8] rounded-full font-bold hover:bg-gray-100 transition-all duration-300 inline-flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105 whitespace-nowrap text-sm"
@@ -87,10 +143,10 @@ export default function HeroSection() {
                                 <i className="ri-whatsapp-line text-lg"></i>
                                 {t('buttons.contactClinic')}
                             </a>
-                        </div>
+                        </motion.div>
 
                         {/* Stats */}
-                        <div className="flex flex-wrap justify-start xs:justify-start gap-4 sm:gap-6 pt-4 sm:pt-5 border-t border-white/20">
+                        <motion.div variants={fadeInUp} className="flex flex-wrap justify-start xs:justify-start gap-4 sm:gap-6 pt-4 sm:pt-5 border-t border-white/20">
                             <div className="text-center">
                                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">+15</div>
                                 <div className="text-[10px] sm:text-xs text-white/70">{t('stats.experience')}</div>
@@ -103,26 +159,48 @@ export default function HeroSection() {
                                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">100%</div>
                                 <div className="text-[10px] sm:text-xs text-white/70">{t('stats.satisfaction')}</div>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
                     {/* Doctor Image */}
                     <div className="relative order-2 lg:order-2 lg:col-span-7 flex justify-center lg:justify-end">
-                        <div className="relative">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, x: 50 }}
+                            animate={{ opacity: 1, scale: 1, x: 0 }}
+                            transition={{ duration: 1, delay: 0.2 }}
+                            className="relative"
+                        >
                             {/* Decorative Circle */}
-                            <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-2xl"></div>
+                            <motion.div
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                                className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-2xl"
+                            ></motion.div>
 
                             {/* Image Container */}
-                            <div className="relative w-[400px] h-[440px] xs:w-[320px] xs:h-[420px] sm:w-[380px] sm:h-[500px] md:w-[440px] md:h-[580px] lg:w-[460px] lg:h-[560px] xl:w-[520px] xl:h-[680px] 2xl:w-[580px] 2xl:h-[820px]">
+                            <motion.div
+                                animate={{ y: [0, -15, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                className="relative w-[400px] h-[440px] xs:w-[320px] xs:h-[420px] sm:w-[380px] sm:h-[500px] md:w-[440px] md:h-[580px] lg:w-[460px] lg:h-[560px] xl:w-[520px] xl:h-[680px] 2xl:w-[580px] 2xl:h-[820px]"
+                            >
                                 <img
                                     src="/doctor/pic-20.png"
                                     alt="د. صالح الخلف"
                                     className="w-full h-full object-contain drop-shadow-2xl"
                                 />
-                            </div>
+                            </motion.div>
 
                             {/* Floating Badge */}
-                            <div className="absolute left-7 xs:-left-2 sm:-left-10 lg:-left-2 top-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl">
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                animate={{ opacity: 1, x: 0, y: [0, -10, 0] }}
+                                transition={{
+                                    opacity: { delay: 1, duration: 0.5 },
+                                    x: { delay: 1, duration: 0.5 },
+                                    y: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                                }}
+                                className="absolute left-7 xs:-left-2 sm:-left-10 lg:-left-2 top-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl z-20"
+                            >
                                 <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center">
                                         <i className="ri-award-line text-[#17a2b8] text-base sm:text-xl lg:text-2xl"></i>
@@ -132,10 +210,19 @@ export default function HeroSection() {
                                         <div className="text-[8px] sm:text-[10px] lg:text-xs text-gray-500">{t('badges.specialty')}</div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
 
                             {/* Floating Badge 2 */}
-                            <div className="absolute -right-1 xs:-right-2 sm:-right-2 lg:-right-8 bottom-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl">
+                            <motion.div
+                                initial={{ opacity: 0, x: 30 }}
+                                animate={{ opacity: 1, x: 0, y: [0, 10, 0] }}
+                                transition={{
+                                    opacity: { delay: 1.2, duration: 0.5 },
+                                    x: { delay: 1.2, duration: 0.5 },
+                                    y: { duration: 3.5, repeat: Infinity, ease: "easeInOut" }
+                                }}
+                                className="absolute -right-1 xs:-right-2 sm:-right-2 lg:-right-8 bottom-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl z-20"
+                            >
                                 <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-emerald-100 rounded-full flex items-center justify-center">
                                         <i className="ri-verified-badge-line text-emerald-500 text-base sm:text-xl lg:text-2xl"></i>
@@ -145,14 +232,17 @@ export default function HeroSection() {
                                         <div className="text-[8px] sm:text-[10px] lg:text-xs text-gray-500">{t('badges.certified')}</div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
 
             {/* Scroll Indicator */}
-            <button
+            <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.5 }}
                 onClick={() => {
                     const nextSection = document.querySelector('section:nth-of-type(2)');
                     if (nextSection) {
@@ -163,7 +253,8 @@ export default function HeroSection() {
                 aria-label="Scroll down"
             >
                 <i className="ri-arrow-down-line text-2xl"></i>
-            </button>
+            </motion.button>
         </section>
     );
 }
+

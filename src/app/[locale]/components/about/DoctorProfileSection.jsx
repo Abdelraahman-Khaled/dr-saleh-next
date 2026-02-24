@@ -1,5 +1,7 @@
+'use client';
 import { Link } from '../../../../navigation';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 export default function DoctorProfileSection() {
     const t = useTranslations('aboutPage.doctorProfile');
@@ -17,7 +19,13 @@ export default function DoctorProfileSection() {
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-5 gap-12 items-start">
                     {/* Doctor Image & Info */}
-                    <div className="lg:col-span-2">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="lg:col-span-2"
+                    >
                         <div className="bg-gray-50 rounded-3xl p-6 text-center sticky top-24">
                             <img
                                 src="/doctor/pic-9.jpg"
@@ -48,10 +56,16 @@ export default function DoctorProfileSection() {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Doctor Details */}
-                    <div className="lg:col-span-3">
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="lg:col-span-3"
+                    >
                         <span className="inline-block px-4 py-2 bg-[#17a2b8]/10 text-[#17a2b8] rounded-full text-sm font-semibold mb-4">
                             {t('details.title')}
                         </span>
@@ -110,7 +124,7 @@ export default function DoctorProfileSection() {
                                 className="h-8"
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 import { getGalleries } from '../../../../lib/api/galleries';
 import { useLocale, useTranslations } from 'next-intl';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -72,7 +73,13 @@ export default function DoctorGallerySection() {
         <>
             <section className="py-20 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-4 relative z-10">
-                    <div className="text-center mb-16">
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-16"
+                    >
                         <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
                             {t('label')}
                         </span>
@@ -83,21 +90,29 @@ export default function DoctorGallerySection() {
                         {/* Filter Buttons */}
                         <div className="flex flex-wrap justify-center gap-3 mb-10">
                             {filters.map((f) => (
-                                <button
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
                                     key={f.id}
                                     onClick={() => setFilter(f.id)}
-                                    className={`px-8 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border-2 ${filter === f.id
+                                    className={`px-8 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border-2 cursor-pointer ${filter === f.id
                                         ? 'bg-[#17a2b8] border-[#17a2b8] text-white shadow-lg'
                                         : 'bg-white border-[#17a2b8]/20 text-gray-600 hover:border-[#17a2b8] hover:text-[#17a2b8]'
                                         }`}
                                 >
                                     {f.label}
-                                </button>
+                                </motion.button>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="relative group">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="relative group"
+                    >
                         <Swiper
                             modules={[Navigation, Autoplay, Pagination]}
                             spaceBetween={24}
@@ -157,48 +172,56 @@ export default function DoctorGallerySection() {
                         <button className="gallery-next absolute top-1/2 -right-4 z-20 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-800 hover:bg-[#17a2b8] hover:text-white transition-all transform -translate-y-1/2 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 duration-300 hidden md:flex cursor-pointer">
                             <i className={locale === 'ar' ? "ri-arrow-left-s-line text-2xl" : "ri-arrow-right-s-line text-2xl"}></i>
                         </button>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* Lightbox Modal */}
-            {selectedGallery && (
-                <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center fade-in">
-                    <button
-                        className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors z-[60]"
-                        onClick={() => setSelectedGallery(null)}
+            <AnimatePresence>
+                {selectedGallery && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center fade-in"
                     >
-                        <i className="ri-close-line text-4xl"></i>
-                    </button>
-
-                    <div className="w-full h-full max-w-[90vw] max-h-[85vh] relative">
-                        <Swiper
-                            modules={[Navigation, Pagination]}
-                            navigation
-                            pagination={{ clickable: true, type: 'fraction' }}
-                            className="h-full w-full gallery-lightbox-swiper"
-                            spaceBetween={30}
+                        <button
+                            className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors z-[60]"
+                            onClick={() => setSelectedGallery(null)}
                         >
-                            {selectedGallery.photos.map((photo) => (
-                                <SwiperSlide key={photo.id} className="flex items-center justify-center bg-black">
-                                    <div className="relative w-full h-full flex items-center justify-center">
-                                        <img
-                                            src={photo.url}
-                                            alt={photo.alt || selectedGallery.title}
-                                            className="object-contain"
-                                            sizes="90vw"
-                                        />
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    </div>
+                            <i className="ri-close-line text-4xl"></i>
+                        </button>
 
-                    <div className="absolute bottom-6 left-0 right-0 text-center text-white z-[60]">
-                        <h3 className="text-xl font-bold mb-1">{selectedGallery.title}</h3>
-                    </div>
-                </div>
-            )}
+                        <div className="w-full h-full max-w-[90vw] max-h-[85vh] relative">
+                            <Swiper
+                                modules={[Navigation, Pagination]}
+                                navigation
+                                pagination={{ clickable: true, type: 'fraction' }}
+                                className="h-full w-full gallery-lightbox-swiper"
+                                spaceBetween={30}
+                            >
+                                {selectedGallery.photos.map((photo) => (
+                                    <SwiperSlide key={photo.id} className="flex items-center justify-center bg-black">
+                                        <div className="relative w-full h-full flex items-center justify-center">
+                                            <img
+                                                src={photo.url}
+                                                alt={photo.alt || selectedGallery.title}
+                                                className="object-contain"
+                                                sizes="90vw"
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
+
+                        <div className="absolute bottom-6 left-0 right-0 text-center text-white z-[60]">
+                            <h3 className="text-xl font-bold mb-1">{selectedGallery.title}</h3>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             <style jsx global>{`
                 .gallery-lightbox-swiper .swiper-button-next,

@@ -1,5 +1,7 @@
+'use client';
 import { Link } from '../../../../navigation';
 import { useTranslations, useLocale } from 'next-intl';
+import { motion } from 'framer-motion';
 
 export default function FaceSurgerySection() {
     const locale = useLocale();
@@ -62,10 +64,16 @@ export default function FaceSurgerySection() {
     ];
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row gap-12 items-center">
-                    <div className="lg:w-1/2">
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="lg:w-1/2"
+                    >
                         <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">{t('label')}</span>
                         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
                             {t('heading')}
@@ -122,24 +130,40 @@ export default function FaceSurgerySection() {
                             </div>
                         </div>
 
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors whitespace-nowrap cursor-pointer"
-                        >
-                            {useTranslations('operationsPage.cta')('button')}
-                            <i className={locale === 'ar' ? "ri-arrow-left-line" : "ri-arrow-right-line"}></i>
-                        </Link>
-                    </div>
-                    <div className="lg:w-1/2">
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors shadow-md whitespace-nowrap cursor-pointer"
+                            >
+                                {useTranslations('operationsPage.cta')('button')}
+                                <i className={locale === 'ar' ? "ri-arrow-left-line" : "ri-arrow-right-line"}></i>
+                            </Link>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="lg:w-1/2"
+                    >
                         <div className="relative">
-                            <div className="absolute -top-4 -right-4 w-full h-full bg-[#17a2b8]/10 rounded-3xl"></div>
-                            <img
+                            <motion.div
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                whileInView={{ scale: 1, opacity: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8, delay: 0.3 }}
+                                className="absolute -top-4 -right-4 w-full h-full bg-[#17a2b8]/10 rounded-3xl"
+                            ></motion.div>
+                            <motion.img
+                                whileHover={{ scale: 1.02 }}
+                                transition={{ duration: 0.5 }}
                                 src="/doctor/pic-23.jpg"
                                 alt={t('heading')}
                                 className="relative z-10 w-full rounded-3xl shadow-2xl"
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
