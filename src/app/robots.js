@@ -5,6 +5,6 @@ export default function robots() {
       allow: "/",
       disallow: "/cdn-cgi/",
     },
-    sitemap: `https://drsalehalkhalaf.com/sitemap.xml`,
+    sitemap: `https://www.drsalehalkhalaf.com/sitemap.xml`,
   };
 }

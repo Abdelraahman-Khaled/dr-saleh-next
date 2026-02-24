@@ -42,10 +42,10 @@ export async function generateMetadata({ params }) {
             images: photoUrl ? [photoUrl] : ["/images/icons/favicon.ico"],
         },
         alternates: {
-            canonical: `https://drsalehalkhalaf.com/${language}/blogs/${blog.slug}`,
+            canonical: `https://www.drsalehalkhalaf.com/${language}/blogs/${blog.slug}`,
             languages: {
-                ar: `https://drsalehalkhalaf.com/ar/blogs/${blog.slug_ar || blog.slug}`,
-                en: `https://drsalehalkhalaf.com/en/blogs/${blog.slug_en || blog.slug}`,
+                ar: `https://www.drsalehalkhalaf.com/ar/blogs/${blog.slug_ar || blog.slug}`,
+                en: `https://www.drsalehalkhalaf.com/en/blogs/${blog.slug_en || blog.slug}`,
             }
         }
     }
