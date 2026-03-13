@@ -146,7 +146,7 @@ export default function HeroSection() {
                             </AnimatePresence>
                         </div>
 
-                        <motion.div variants={fadeInUp} className="flex flex-wrap gap-3 mb-6">
+                        <motion.div variants={fadeInUp} className="flex flex-wrap gap-3 mb-6 pt-6">
                             <Link
                                 href="/contact"
                                 className="px-6 py-3 bg-white text-[#17a2b8] rounded-full font-bold hover:bg-gray-100 transition-all duration-300 inline-flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105 whitespace-nowrap text-sm"
