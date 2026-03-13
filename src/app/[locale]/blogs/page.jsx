@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import { Link } from '../../../navigation';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslations, useLocale } from 'next-intl';
@@ -15,6 +16,44 @@ export default function BlogsPage() {
     queryKey: ['blogs-landing'],
     queryFn: getBlogs,
   });
+
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(null);
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    setErrorMsg(null);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: 'Newsletter Subscriber',
+          email: newsletterEmail,
+          phone_number: 'N/A',
+          msg_subject: 'New Newsletter Subscription',
+          message: `New subscription request from: ${newsletterEmail}`,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setNewsletterEmail('');
+      } else {
+        throw new Error();
+      }
+    } catch (err) {
+      setErrorMsg(locale === 'ar' ? 'حدث خطأ ما، يرجى المحاولة مرة أخرى.' : 'Something went wrong, please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -117,7 +156,7 @@ export default function BlogsPage() {
                       key={blog.id}
                       className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group flex flex-col"
                     >
-                      <div className="relative h-56 overflow-hidden">
+                      <div className="relative h-64 overflow-hidden">
                         <img
                           src={photo?.url || '/placeholder-blog.jpg'}
                           alt={photo?.alt || title}
@@ -176,19 +215,59 @@ export default function BlogsPage() {
             <p className="text-gray-600 mb-8">
               {t('newsletter.description')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <input
-                type="email"
-                placeholder={t('newsletter.placeholder')}
-                className="px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#17a2b8] text-sm flex-1 max-w-md shadow-sm"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors whitespace-nowrap cursor-pointer shadow-md"
+
+            {submitted ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="bg-white p-8 rounded-3xl shadow-lg border border-green-100"
               >
-                {t('newsletter.button')}
-              </motion.button>
-            </div>
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="ri-checkbox-circle-fill text-green-500 text-3xl"></i>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {locale === 'ar' ? 'شكراً لاشتراكك!' : 'Thank you for subscribing!'}
+                </h3>
+                <p className="text-gray-600">
+                  {locale === 'ar' ? 'تم تسجيل بريدك الإلكتروني بنجاح.' : 'Your email has been registered successfully.'}
+                </p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="mt-6 text-[#17a2b8] font-medium hover:underline cursor-pointer"
+                >
+                  {locale === 'ar' ? 'الاشتراك ببريد آخر' : 'Subscribe with another email'}
+                </button>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubscribe} className="space-y-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <input
+                    type="email"
+                    required
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    placeholder={t('newsletter.placeholder')}
+                    className="px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#17a2b8] text-sm flex-1 max-w-md shadow-sm bg-white"
+                  />
+                  <motion.button
+                    type="submit"
+                    disabled={isSubmitting}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 bg-[#17a2b8] text-white rounded-full font-bold hover:bg-[#138496] transition-colors whitespace-nowrap cursor-pointer shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <i className="ri-loader-4-line animate-spin text-xl"></i>
+                    ) : (
+                      t('newsletter.button')
+                    )}
+                  </motion.button>
+                </div>
+                {errorMsg && (
+                  <p className="text-red-500 text-sm mt-2">{errorMsg}</p>
+                )}
+              </form>
+            )}
           </motion.div>
         </div>
       </section>

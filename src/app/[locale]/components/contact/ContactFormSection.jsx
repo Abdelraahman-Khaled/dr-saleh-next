@@ -29,19 +29,18 @@ export default function ContactFormSection() {
         }
 
         try {
-            const formBody = new URLSearchParams();
-            formBody.append('name', formData.name);
-            formBody.append('email', formData.email);
-            formBody.append('phone_number', formData.phone_number);
-            formBody.append('msg_subject', formData.msg_subject);
-            formBody.append('message', formData.message);
-
-            const response = await fetch('https://readdy.ai/api/form/d62fhvgr3m6fkobknsa0', {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Content-Type': 'application/json',
                 },
-                body: formBody.toString(),
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone_number: formData.phone_number,
+                    msg_subject: formData.msg_subject,
+                    message: formData.message,
+                }),
             });
 
             if (response.ok) {

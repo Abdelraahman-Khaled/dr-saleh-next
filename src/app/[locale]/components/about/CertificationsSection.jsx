@@ -7,10 +7,6 @@ export default function CertificationsSection() {
 
     const certifications = [
         {
-            title: t('items.c1.title'),
-            subtitle: t('items.c1.subtitle'),
-        },
-        {
             title: t('items.c2.title'),
             subtitle: t('items.c2.subtitle'),
         },

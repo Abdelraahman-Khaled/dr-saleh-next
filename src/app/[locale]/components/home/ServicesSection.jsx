@@ -57,50 +57,72 @@ export default function ServicesSection() {
                             {t('services.description')}
                         </motion.p>
 
-                        <div className="grid md:grid-cols-2 gap-6 items-center">
-                            <div className="space-y-6">
-                                <motion.div variants={fadeInUp} className="flex gap-4">
-                                    <div className="w-12 h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <i className="ri-puzzle-line text-[#17a2b8] text-xl"></i>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 mb-2">
-                                            {t('services.reconstructive.title')}
-                                        </h3>
-                                        <ul className="space-y-2 text-gray-600 text-sm">
-                                            {[0, 1, 2, 3].map((i) => (
-                                                <li key={i} className="flex items-start gap-2">
-                                                    <i className="ri-check-line text-[#17a2b8] mt-1"></i>
-                                                    <span>{t(`services.reconstructive.items.${i}`)}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </motion.div>
-
-                                <motion.div variants={fadeInUp} className="flex gap-4">
-                                    <div className="w-12 h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <i className="ri-hand-heart-line text-[#17a2b8] text-xl"></i>
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 mb-2">
-                                            {t('services.hand.title')}
-                                        </h3>
-                                        <ul className="space-y-2 text-gray-600 text-sm">
-                                            {[0, 1, 2, 3].map((i) => (
-                                                <li key={i} className="flex items-start gap-2">
-                                                    <i className="ri-check-line text-[#17a2b8] mt-1"></i>
-                                                    <span>{t(`services.hand.items.${i}`)}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </motion.div>
-                            </div>
-
+                        <div className="grid md:grid-cols-2 gap-8 mt-10">
+                            {/* Reconstructive */}
                             <motion.div variants={fadeInUp} className="flex gap-4">
                                 <div className="w-12 h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i className="ri-stethoscope-line text-[#17a2b8] text-xl"></i>                                </div>
+                                    <i className="ri-puzzle-line text-[#17a2b8] text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2">
+                                        {t('services.reconstructive.title')}
+                                    </h3>
+                                    <ul className="space-y-2 text-gray-600 text-sm">
+                                        {[0, 1, 2, 3].map((i) => (
+                                            <li key={i} className="flex items-start gap-2">
+                                                <i className="ri-check-line text-[#17a2b8] mt-1"></i>
+                                                <span>{t(`services.reconstructive.items.${i}`)}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </motion.div>
+
+                            {/* Hand Surgery */}
+                            <motion.div variants={fadeInUp} className="flex gap-4">
+                                <div className="w-12 h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i className="ri-hand-heart-line text-[#17a2b8] text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2">
+                                        {t('services.hand.title')}
+                                    </h3>
+                                    <ul className="space-y-2 text-gray-600 text-sm">
+                                        {[0, 1, 2, 3].map((i) => (
+                                            <li key={i} className="flex items-start gap-2">
+                                                <i className="ri-check-line text-[#17a2b8] mt-1"></i>
+                                                <span>{t(`services.hand.items.${i}`)}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </motion.div>
+
+                            {/* Aesthetic & Body Contouring */}
+                            <motion.div variants={fadeInUp} className="flex gap-4">
+                                <div className="w-12 h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i className="ri-magic-line text-[#17a2b8] text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2">
+                                        {t('services.aesthetic.title')}
+                                    </h3>
+                                    <ul className="space-y-2 text-gray-600 text-sm">
+                                        {[0, 1, 2, 3].map((i) => (
+                                            <li key={i} className="flex items-start gap-2">
+                                                <i className="ri-check-line text-[#17a2b8] mt-1"></i>
+                                                <span>{t(`services.aesthetic.items.${i}`)}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </motion.div>
+
+                            {/* Burns */}
+                            <motion.div variants={fadeInUp} className="flex gap-4">
+                                <div className="w-12 h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i className="ri-stethoscope-line text-[#17a2b8] text-xl"></i>
+                                </div>
                                 <div>
                                     <h3 className="font-bold text-gray-900 mb-2">
                                         {t('services.burns.title')}

@@ -92,7 +92,20 @@ export default function HeroSection() {
                             <span className="text-xs sm:text-sm font-medium">{t('badge')}</span>
                         </motion.div>
 
-                        <div className="relative h-[120px] sm:h-[160px] lg:h-[200px] mb-3 sm:mb-5">
+                        <div className="relative mb-3 sm:mb-5">
+                            {/* Invisible placeholder to set height dynamically based on the longest text */}
+                            <div className="invisible pointer-events-none" aria-hidden="true">
+                                <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
+                                    {locale === 'en' ? "Dr. Saleh Al-Khalaf" : "د. صالح الخلف"}
+                                    <br />
+                                    <span className="text-white/90">
+                                        {locale === 'en'
+                                            ? "Senior Consultant of Plastic & Reconstructive Surgery"
+                                            : "استشاري أول جراحة التجميل والترميم"}
+                                    </span>
+                                </h1>
+                            </div>
+
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={textIndex}
@@ -100,7 +113,7 @@ export default function HeroSection() {
                                     animate={{ opacity: 1, x: 0 }}
                                     exit={{ opacity: 0, x: locale === 'ar' ? -20 : 20 }}
                                     transition={{ duration: 0.6 }}
-                                    className="absolute inset-0"
+                                    className="absolute inset-0 w-full"
                                 >
                                     <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
                                         {heroTexts[textIndex].title}
@@ -111,7 +124,14 @@ export default function HeroSection() {
                             </AnimatePresence>
                         </div>
 
-                        <div className="relative h-[80px] sm:h-[100px] lg:h-[120px] mb-4 sm:mb-6">
+                        <div className="relative mb-4 sm:mb-6">
+                            {/* Invisible placeholder for description */}
+                            <div className="invisible pointer-events-none text-sm sm:text-base lg:text-lg leading-relaxed max-w-md" aria-hidden="true">
+                                {locale === 'en'
+                                    ? "German specialized expertise in rhinoplasty, facelift, and burn reconstruction using the latest international techniques."
+                                    : "خبرة ألمانية متخصصة في تجميل الأنف، شد الوجه، وترميم الحروق باستخدام أحدث التقنيات العالمية."}
+                            </div>
+
                             <AnimatePresence mode="wait">
                                 <motion.p
                                     key={textIndex}
@@ -119,7 +139,7 @@ export default function HeroSection() {
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
                                     transition={{ duration: 0.6 }}
-                                    className="absolute inset-0 text-sm sm:text-base lg:text-lg leading-relaxed text-white/90 max-w-md"
+                                    className="absolute inset-0 w-full text-sm sm:text-base lg:text-lg leading-relaxed text-white/90 max-w-md"
                                 >
                                     {heroTexts[textIndex].description}
                                 </motion.p>
@@ -181,7 +201,7 @@ export default function HeroSection() {
                             <motion.div
                                 animate={{ y: [0, -15, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="relative w-[400px] h-[440px] xs:w-[320px] xs:h-[420px] sm:w-[380px] sm:h-[500px] md:w-[440px] md:h-[580px] lg:w-[460px] lg:h-[560px] xl:w-[520px] xl:h-[680px] 2xl:w-[580px] 2xl:h-[820px]"
+                                className="relative w-[280px] h-[340px] xs:w-[320px] xs:h-[420px] sm:w-[380px] sm:h-[500px] md:w-[440px] md:h-[580px] lg:w-[460px] lg:h-[560px] xl:w-[520px] xl:h-[680px] 2xl:w-[580px] 2xl:h-[820px]"
                             >
                                 <img
                                     src="/doctor/pic-20.png"
@@ -199,13 +219,13 @@ export default function HeroSection() {
                                     x: { delay: 1, duration: 0.5 },
                                     y: { duration: 3, repeat: Infinity, ease: "easeInOut" }
                                 }}
-                                className="absolute left-7 xs:-left-2 sm:-left-10 lg:-left-2 top-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl z-20"
+                                className={`absolute ${locale === 'en' ? '-left-20 xs:-left-6 sm:-left-20 lg:-left-16' : 'left-7 xs:-left-2 sm:-left-10 lg:-left-2'} top-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl z-20 border border-gray-100 max-w-[85vw] ml-2 xs:ml-0`}
                             >
                                 <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-[#17a2b8]/10 rounded-full flex items-center justify-center">
                                         <i className="ri-award-line text-[#17a2b8] text-base sm:text-xl lg:text-2xl"></i>
                                     </div>
-                                    <div>
+                                    <div className="max-w-[140px] sm:max-w-[180px]">
                                         <div className="text-[10px] sm:text-xs lg:text-sm font-bold text-gray-900 leading-tight">{t('badges.saudiBoard')}</div>
                                         <div className="text-[8px] sm:text-[10px] lg:text-xs text-gray-500">{t('badges.specialty')}</div>
                                     </div>
@@ -221,13 +241,13 @@ export default function HeroSection() {
                                     x: { delay: 1.2, duration: 0.5 },
                                     y: { duration: 3.5, repeat: Infinity, ease: "easeInOut" }
                                 }}
-                                className="absolute -right-1 xs:-right-2 sm:-right-2 lg:-right-8 bottom-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl z-20"
+                                className={`absolute ${locale === 'en' ? 'right-0 xs:right-0 sm:-right-8 lg:-right-12' : '-right-1 xs:-right-2 sm:-right-2 lg:-right-8'} bottom-1/4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 lg:p-4 shadow-2xl z-20 border border-gray-100 max-w-[85vw] mr-2 xs:mr-0`}
                             >
                                 <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-emerald-100 rounded-full flex items-center justify-center">
                                         <i className="ri-verified-badge-line text-emerald-500 text-base sm:text-xl lg:text-2xl"></i>
                                     </div>
-                                    <div>
+                                    <div className="max-w-[120px] sm:max-w-[160px]">
                                         <div className="text-[10px] sm:text-xs lg:text-sm font-bold text-gray-900 leading-tight">{t('badges.germanBoard')}</div>
                                         <div className="text-[8px] sm:text-[10px] lg:text-xs text-gray-500">{t('badges.certified')}</div>
                                     </div>

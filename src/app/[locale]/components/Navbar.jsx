@@ -129,7 +129,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-4 border-t border-gray-100 space-y-4">
-                <LanguageSwitcher />
+                <LanguageSwitcher className="px-4 py-2 text-sm font-medium transition-colors bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full flex items-center gap-2 border border-gray-200 shadow-sm w-fit" />
                 <Link
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-[#17a2b8] text-white rounded-full font-medium hover:bg-[#138496] transition-colors mt-2 whitespace-nowrap"

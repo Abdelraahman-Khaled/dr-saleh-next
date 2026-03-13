@@ -8,7 +8,6 @@ export default function AcademicResearchSection() {
     const academicRoles = [
         t('leadership.roles.r1'),
         t('leadership.roles.r2'),
-        t('leadership.roles.r3'),
         t('leadership.roles.r4'),
         t('leadership.roles.r5'),
     ];

@@ -96,7 +96,7 @@ export default function BlogSection() {
                                     variants={itemVariants}
                                     className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                                 >
-                                    <div className="w-full h-48 bg-gray-100">
+                                    <div className="w-full h-64 bg-gray-100">
                                         <img
                                             src={photo?.url || '/placeholder-blog.jpg'}
                                             alt={photo?.alt || title}

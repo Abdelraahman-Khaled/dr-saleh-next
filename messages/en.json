@@ -1,6 +1,6 @@
 {
   "footer": {
-    "description": "The official website of Dr. Saleh Al-Khalaf. Consultant of Plastic and Reconstructive Surgery. We aim to provide the best aesthetic medical care with an artistic touch and global expertise.",
+    "description": "The official website of Dr. Saleh Al-Khalaf. Consultant of Improving and Reconstructive Surgery. We aim to provide the best medical care with an artistic touch and global expertise.",
     "quickLinks": "Quick Links",
     "operations": "Surgical Operations",
     "socialMedia": "Connect With Us",
@@ -31,7 +31,7 @@
       ],
       "buttons": {
         "bookConsultation": "Book a Consultation",
-        "contactClinic": "Contact Clinic"
+        "contactClinic": "Contact the Doctor"
       },
       "stats": {
         "experience": "Years of Experience",
@@ -39,15 +39,15 @@
         "satisfaction": "Patient Satisfaction"
       },
       "badges": {
-        "saudiBoard": "Saudi Board",
-        "specialty": "Plastic Surgery",
+        "saudiBoard": "Honorary Visiting Professor",
+        "specialty": "Improving Surgeries",
         "germanBoard": "German Board",
         "certified": "Certified Surgeon"
       }
     },
     "scrollingTicker": {
       "items": [
-        "Advanced Cosmetic Surgery",
+        "Advanced Improving Surgeries",
         "Natural and Harmonious Results",
         "Distinguished Personal Care",
         "Modern and Innovative Techniques",
@@ -56,8 +56,8 @@
     },
     "doctorIntro": {
       "title": "About Dr. Saleh Al-Khalaf",
-      "subtitle": "Professor & Senior Consultant of Plastic, Reconstructive & Hand Surgery",
-      "description": "Dr. Saleh Al-Khalaf is considered one of the leading national talents in the field of complex plastic and reconstructive surgeries, with extensive scientific and practical experience gained through working in the most prestigious medical centers and university hospitals in Germany and Saudi Arabia. His approach focuses on combining precise medical standards with a natural aesthetic touch.",
+      "subtitle": "Professor & Senior Consultant of Improving & Reconstructive Surgery",
+      "description": "Dr. Saleh Al-Khalaf is considered one of the leading national talents in the field of complex improving and reconstructive surgeries, with extensive scientific and practical experience gained through working in the most prestigious international medical centers and university hospitals. His approach focuses on combining precise medical standards with a natural aesthetic touch.",
       "button": "Read more about scientific biography",
       "whatsapp": "Contact via WhatsApp"
     },
@@ -71,7 +71,7 @@
           "title": "Extensive Experience",
           "items": [
             "Over 15 years in cosmetic surgery",
-            "Certified Saudi and German Board",
+            "Certified German Board",
             "International medical and scientific meetings",
             "Latest surgical techniques",
             "Natural and stable results"
@@ -109,6 +109,15 @@
           "Complex hand injuries",
           "Micro-reconstructive surgeries",
           "Function restoration after trauma"
+        ]
+      },
+      "aesthetic": {
+        "title": "Improving Surgeries & Body Contouring",
+        "items": [
+          "Liposuction & body sculpting",
+          "Face & eyelid rejuvenation",
+          "Breast surgery & reconstruction",
+          "Body lift after weight loss"
         ]
       },
       "burns": {
@@ -271,7 +280,7 @@
         "heading": "About Dr. Saleh Al-Khalaf",
         "bio": {
           "p1": "Dr. Saleh Al-Ghamdi is a professor and senior consultant in plastic and reconstructive surgery and cosmetic surgery, with extensive experience in both precise cosmetics and complex reconstructive care. His practice is based on the firm conviction that plastic surgery is not about fashion or excessive change, but about precision, balance, and long-term function. Each patient is treated as an individual through careful assessment, honest discussion, and thoughtful planning. Patients choose Dr. Al-Ghamdi for his clear communication and commitment to natural, stable, and appropriate results — without exaggeration.",
-          "p2": "Dr. Al-Ghamdi completed the plastic surgery residency program at the Military Hospitals in Riyadh, then obtained the board and advanced professional certifications from the Saudi Commission for Health Specialties, being recognized at the level of consultant in plastic and reconstructive surgery. He also expanded his experience through international fellowships in Germany at the Munich Bogenhausen University Hospital of the Technical University of Munich, where he completed advanced programs in craniofacial surgery, reconstructive microsurgery, hand surgery, and burn reconstruction. This advanced European experience has shaped his precise surgical style and deep understanding of anatomy, tissue behavior, and long-term functional results."
+          "p2": "Dr. Al-Ghamdi completed advanced specialized training programs in plastic surgery, following the highest international professional standards. He also expanded his experience through international fellowships in Germany at the Munich Bogenhausen University Hospital of the Technical University of Munich, where he completed advanced programs in craniofacial surgery, reconstructive microsurgery, hand surgery, and burn reconstruction. This advanced European experience has shaped his precise surgical style and deep understanding of anatomy, tissue behavior, and long-term functional results."
         },
         "cta": {
           "whatsapp": "Connect via WhatsApp"
@@ -328,10 +337,6 @@
       "label": "Certifications & Professional Accreditations",
       "heading": "Dr. Al-Ghamdi holds several high-level certifications and accreditations, reflecting his commitment to the highest standards of international surgical competence.",
       "items": {
-        "c1": {
-          "title": "Saudi Board Equivalence",
-          "subtitle": "Plastic and Reconstructive Surgery"
-        },
         "c2": {
           "title": "German Board (FACHARZT)",
           "subtitle": "Plastic and Aesthetic Surgery"
@@ -464,7 +469,7 @@
       },
       "email": {
         "title": "Email",
-        "value": "support@drsalehalkhalaf.com"
+        "value": "info@drsalehalkhalaf.com"
       },
       "location": {
         "title": "Location",
