@@ -1,5 +1,5 @@
 export default async function sitemap() {
-  const BASE_URL = "https://www.drsalehalkhalaf.com";
+  const BASE_URL = "https://drsalehalkhalaf.com";
   const locales = ["ar", "en"];
   const API_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 

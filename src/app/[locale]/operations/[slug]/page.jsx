@@ -56,10 +56,10 @@ export async function generateMetadata({ params }) {
             images: photoUrl ? [photoUrl] : ["/images/icons/favicon.ico"],
         },
         alternates: {
-            canonical: `https://www.drsalehalkhalaf.com/${language}/operations/${operation.slug}`,
+            canonical: `https://drsalehalkhalaf.com/${language}/operations/${operation.slug}`,
             languages: {
-                ar: `https://www.drsalehalkhalaf.com/ar/operations/${operation.slug_ar || operation.slug}`,
-                en: `https://www.drsalehalkhalaf.com/en/operations/${operation.slug || operation.slug_ar}`,
+                ar: `https://drsalehalkhalaf.com/ar/operations/${operation.slug_ar || operation.slug}`,
+                en: `https://drsalehalkhalaf.com/en/operations/${operation.slug || operation.slug_ar}`,
             }
         }
     }
