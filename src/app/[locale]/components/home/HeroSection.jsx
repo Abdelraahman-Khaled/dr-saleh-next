@@ -172,7 +172,7 @@ export default function HeroSection() {
                                 <div className="text-[10px] sm:text-xs text-white/70">{t('stats.experience')}</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">+5000</div>
+                                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">+10,000</div>
                                 <div className="text-[10px] sm:text-xs text-white/70">{t('stats.operations')}</div>
                             </div>
                             <div className="text-center">

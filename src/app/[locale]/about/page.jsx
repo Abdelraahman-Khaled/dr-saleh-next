@@ -19,7 +19,7 @@ export default function AboutPage() {
       <DoctorProfileSection />
       <CTABanner />
       <CertificationsSection />
-      <CertificatesGallery />
+      {/* <CertificatesGallery /> */}
       <AcademicResearchSection />
       <ExpertiseSection />
       <PhilosophySection />
