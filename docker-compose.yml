@@ -7,6 +7,9 @@ services:
       # NEXT_PUBLIC_* variables are inlined into the JavaScript bundle
       args:
         - NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}
+        - EMAIL_USER=${EMAIL_USER}
+        - EMAIL_PASS=${EMAIL_PASS}
+
     container_name: Dr.saleh
     restart: always
     ports:
@@ -17,3 +20,5 @@ services:
     environment:
       - NODE_ENV=production
       - NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}
+      - EMAIL_USER=${EMAIL_USER}
+      - EMAIL_PASS=${EMAIL_PASS}
