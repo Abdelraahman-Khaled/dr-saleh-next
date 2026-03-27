@@ -27,7 +27,7 @@ export default function OperationsHeroSection() {
                     >
                         <Link href="/" className="hover:text-white/80 transition-colors cursor-pointer">{tNav('links.home')}</Link>
                         <i className={`${locale === 'ar' ? "ri-arrow-left-s-line" : "ri-arrow-right-s-line"} text-white/60`}></i>
-                        <span className="text-white/90">{tNav('links.surgeries')}</span>
+                        <span className="text-white/90">{t('hero.title')}</span>
                     </motion.nav>
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
