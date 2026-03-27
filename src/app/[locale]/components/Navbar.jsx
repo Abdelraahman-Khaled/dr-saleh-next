@@ -63,7 +63,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-6">
               {navLinks.map((link) => (
                 <Link
-                  key={link.path}
+                  key={`${locale}${link.path}`}
                   href={link.path}
                   className={`text-sm font-medium transition-colors hover:text-[#17a2b8] text-white ${pathname === link.path ? 'text-[#17a2b8]' : ''}`}
                 >

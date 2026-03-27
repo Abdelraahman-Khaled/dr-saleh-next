@@ -1,0 +1,16 @@
+# Dr. Saleh Alkhalaf Clinic
+
+## Sitemaps
+[XML Sitemap](https://drsalehalkhalaf.com/sitemap.xml): Includes all crawlable and indexable pages.
+
+## Pages
+- [Home](https://drsalehalkhalaf.com/): Leading clinic specialized in advanced surgical techniques.
+- [About Us](https://drsalehalkhalaf.com/ar/about): Learn more about Dr. Al Saigh and the clinic’s expertise.
+- [Services](https://drsalehalkhalaf.com/ar/operations): Medical and surgical services provided by the clinic.
+- [Contact](https://drsalehalkhalaf.com/ar/contact): Get in touch or book an appointment.
+- [Blog](https://drsalehalkhalaf.com/ar/blogs): Latest medical articles and updates.
+
+## Important Notes
+- All medical content is intended for informational purposes only.
+- Appointment booking and private patient data are not publicly accessible.
+- Administrative and restricted areas are excluded from AI training access.
