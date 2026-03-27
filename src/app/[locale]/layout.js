@@ -26,15 +26,18 @@ const cairo = Cairo({
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+  if (!["en", "ar"].includes(locale)) return {};
   const messages = await getMessages();
-  const meta = messages.home.meta;
+  const meta = messages?.home?.meta;
+
+  if (!meta) return {};
 
   return {
     title: {
-      default: meta.title,
-      template: `%s | ${meta.title}`,
+      default: meta?.title || "Dr. Saleh Al-Khalaf",
+      template: `%s | ${meta?.title || "Dr. Saleh Al-Khalaf"}`,
     },
-    description: meta.description,
+    description: meta?.description || "",
     keywords:
       locale === "ar"
         ? ["جراحة التجميل", "تجميل الأنف", "ترميم الحروق", "د. صالح الخلف"]
@@ -46,8 +49,8 @@ export async function generateMetadata({ params }) {
           ],
     authors: [{ name: "Dr. Saleh Al-Khalaf" }],
     openGraph: {
-      title: meta.title,
-      description: meta.description,
+      title: meta?.title || "Dr. Saleh Al-Khalaf",
+      description: meta?.description || "",
       type: "website",
       locale: locale === "ar" ? "ar_SA" : "en_US",
     },

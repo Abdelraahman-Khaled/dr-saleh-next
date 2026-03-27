@@ -2,8 +2,10 @@ import { getMessages } from "next-intl/server";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+  if (!["en", "ar"].includes(locale)) return {};
   const messages = await getMessages();
-  const meta = messages.faqsPage.meta;
+  const meta = messages?.faqsPage?.meta;
+  if (!meta) return {};
 
   return {
     title: meta.title,

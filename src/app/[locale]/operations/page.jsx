@@ -4,18 +4,17 @@ import { useQuery } from '@tanstack/react-query';
 import { useTranslations, useLocale } from 'next-intl';
 import OperationsHeroSection from '../components/operations/OperationsHeroSection';
 import DoctorIntroOperationsSection from '../components/operations/DoctorIntroOperationsSection';
-import WhyChooseSection from '../components/operations/WhyChooseSection';
-import SpecialtiesSection from '../components/operations/SpecialtiesSection';
 import OperationsGallerySection from '../components/operations/OperationsGallerySection';
-import AppointmentCTA from '../components/operations/AppointmentCTA';
 import ScrollingTicker from '../components/home/ScrollingTicker';
 import PatientJourneySection from '../components/home/PatientJourneySection';
 import BlogSection from '../components/home/BlogSection';
 import MediaSection from '../components/home/MediaSection';
-import FaqAccordion from '../components/faqs/FaqAccordion';
 import { getVideos } from '../../../lib/api/videos';
-import { getFaqs } from '../../../lib/api/faqs';
+import { getFaqs } from '../../../lib/api/faq';
 import { motion, AnimatePresence } from 'framer-motion';
+import FaqAccordion from '../components/FaqAccordion';
+import AppointmentCTA from '../components/AppointmentCTA';
+import WhyChooseUsSection from '../components/operations/WhyChooseUsSection';
 
 export default function OperationsPage() {
     const t = useTranslations('operationsPage');
@@ -63,8 +62,8 @@ export default function OperationsPage() {
             <OperationsHeroSection />
             <ScrollingTicker />
             <DoctorIntroOperationsSection />
-            <WhyChooseSection />
-            <SpecialtiesSection />
+            <WhyChooseUsSection />
+            {/* <SpecialtiesSection /> */}
             <OperationsGallerySection />
             
             {/* Patient Journey Section */}
