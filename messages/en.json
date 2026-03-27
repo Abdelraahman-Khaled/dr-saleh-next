@@ -202,6 +202,10 @@
     "common": {
       "scrollToTop": "Back to Top",
       "scrollDown": "Scroll Down"
+    },
+    "meta": {
+      "title": "Dr Saleh Professor plastic and reconstructive surgery",
+      "description": "Dr. Al-Ghamdi completed advanced specialized training programs in plastic surgery, following the highest international professional standards"
     }
   },
   "navbar": {
@@ -236,6 +240,10 @@
     "backToBlog": "Back to Blog"
   },
   "blogsPage": {
+    "meta": {
+      "title": "Explore the latest articles and information - Dr. Saleh",
+      "description": "Latest Articles And Explore the latest articles and information about plastic surgery and aesthetic care"
+    },
     "breadcrumb": {
       "home": "Home",
       "blog": "Blog"
@@ -267,6 +275,10 @@
     "backToOperations": "Back to All Operations"
   },
   "aboutPage": {
+    "meta": {
+      "title": "A Surgeon Guided by Science, Judgment, and Responsibility",
+      "description": "Dr. Saleh Al-Ghamdi is a professor and senior consultant in plastic and reconstructive surgery and cosmetic surgery, with experience in precise cosmetics"
+    },
     "hero": {
       "subtitle": "A surgeon driven by science, judgment and responsibility"
     },
@@ -429,6 +441,10 @@
     }
   },
   "contactPage": {
+    "meta": {
+      "title": "Contact us to help you book your appointment",
+      "description": "If you are considering plastic or reconstructive surgery, the first step is a specialized medical consultation. We are available to help you book appointments"
+    },
     "hero": {
       "subtitle": "We are here to answer your inquiries and help you book your appointment"
     },
@@ -497,6 +513,10 @@
     "backHome": "Back to Home"
   },
   "faqsPage": {
+    "meta": {
+      "title": "the most frequently asked questions about plastic surgery",
+      "description": "Dr. Saleh Al-Ghamdi answers the most frequently asked questions about plastic and reconstructive surgery"
+    },
     "hero": {
       "title": "Answers to Your Questions",
       "subtitle": "We answer the most frequently asked questions about plastic and reconstructive surgery"
@@ -511,6 +531,10 @@
     }
   },
   "galleryPage": {
+    "meta": {
+      "title": "Watch Dr. Saleh Al-Khalaf's most prominent Gallery",
+      "description": "Gallery Glimpses into the professional and academic career of Dr. Saleh Al-Ghamdi"
+    },
     "hero": {
       "subtitle": "Glimpses into the professional and academic career of Dr. Saleh Al-Ghamdi"
     },
@@ -525,6 +549,10 @@
     }
   },
   "operationsPage": {
+    "meta": {
+      "title": "Dr. Saleh Al-Ghamdi - Surgeries and Operations",
+      "description": "Dr. Saleh Al-Khalaf is considered one of the leading national talents in the field of complex improving and reconstructive surgeries"
+    },
     "hero": {
       "title": "Surgeries and Operations",
       "subtitle": "We offer a comprehensive range of plastic and reconstructive surgeries with the highest standards of quality and safety"
@@ -532,7 +560,7 @@
     "doctorIntro": {
       "label": "About Dr. Saleh",
       "heading": "A Surgeon Guided by Science, Judgment, and Responsibility",
-      "bio": "Dr. Saleh Al-Ghamdi is a Professor and Senior Consultant in Plastic, Reconstructive, and Cosmetic Surgery, with extensive experience in both refined aesthetics and complex reconstructive care. His practice is built on the firm conviction that plastic surgery is not about fashion or exaggerated change, but about precision, balance, and long-term function. Each patient is treated as an individual through careful assessment, honest discussion, and thoughtful planning. Patients choose Dr. Al-Ghamdi for his clear communication and commitment to natural, stable, and appropriate results — without exaggeration.",
+      "bio": "Dr. Saleh Al-Ghamdi is a professor and senior consultant in plastic and reconstructive surgery and cosmetic surgery, with experience in precise cosmetics",
       "button": "Read More"
     },
     "whyChoose": {
@@ -557,12 +585,28 @@
         }
       }
     },
+    "faq": {
+      "title": "the most frequently asked questions about plastic surgery",
+      "description": "Dr. Saleh Al-Ghamdi answers the most frequently asked questions about plastic and reconstructive surgery"
+    },
+    "media": {
+      "title": "Watch Dr. Saleh Al-Khalaf's most prominent TV interviews",
+      "description": "Media Interviews & Participations Watch Dr. Saleh Al-Khalaf's most prominent TV interviews and scientific participations."
+    },
     "cta": {
       "label": "How to Book?",
-      "heading": "Simply. Directly. And Safely.",
-      "description": "Do you have an inquiry about any procedure? Contact us now to get a consultation and learn more about the right procedure for you",
+      "heading": "Contact us to help you book your appointment",
+      "description": "If you are considering plastic or reconstructive surgery, the first step is a specialized medical consultation. We are available to help you book appointments",
       "button": "Book a Consultation",
       "whatsapp": "WhatsApp"
+    },
+    "patientJourney": {
+      "title": "Know More About Patient Journey with Dr. Saleh",
+      "description": "We believe that the patient experience is not limited to the medical procedure only, but begins from the first contact and continues until the desired results"
+    },
+    "blogs": {
+      "title": "Explore the latest articles and information - Dr. Saleh",
+      "description": "Latest Articles And Explore the latest articles and information about plastic surgery and aesthetic care"
     },
     "specialties": {
       "surgicalCare": {
@@ -673,7 +717,8 @@
     },
     "gallery": {
       "label": "Operations",
-      "heading": "Explore All Surgeries",
+      "heading": "Watch Dr. Saleh Al-Khalaf's most prominent Gallery",
+      "description": "Gallery Glimpses into the professional and academic career of Dr. Saleh Al-Ghamdi",
       "categories": {
         "all": "All Operations",
         "face": "Face Surgery",
@@ -686,6 +731,10 @@
     }
   },
   "mediaPage": {
+    "meta": {
+      "title": "Watch Dr. Saleh Al-Khalaf's most prominent TV interviews",
+      "description": "Media Interviews & Participations Watch Dr. Saleh Al-Khalaf's most prominent TV interviews and scientific participations."
+    },
     "hero": {
       "title": "Media Appearances",
       "subtitle": "Watch Dr. Saleh Al-Khalaf's most prominent TV interviews and scientific participations",
@@ -702,6 +751,10 @@
     }
   },
   "patientJourney": {
+    "meta": {
+      "title": "Know More About Patient Journey with Dr. Saleh",
+      "description": "We believe that the patient experience is not limited to the medical procedure only, but begins from the first contact and continues until the desired results"
+    },
     "hero": {
       "title": "Patient Journey with Dr. Saleh",
       "breadcrumb": {

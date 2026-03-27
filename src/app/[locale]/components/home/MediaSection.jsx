@@ -2,9 +2,12 @@ import { Link } from '../../../../navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 
-export default function MediaSection({ videos, onVideoClick }) {
+export default function MediaSection({ videos, onVideoClick, title, subtitle }) {
     const t = useTranslations('home');
     const locale = useLocale();
+
+    const displayTitle = title || t('media.title');
+    const displaySubtitle = subtitle || t('media.subtitle');
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -37,7 +40,7 @@ export default function MediaSection({ videos, onVideoClick }) {
                     className="text-center mb-16"
                 >
                     <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
-                        {t('media.title')}
+                        {displayTitle}
                     </span>
                     <motion.h2
                         initial={{ opacity: 0 }}
@@ -45,7 +48,7 @@ export default function MediaSection({ videos, onVideoClick }) {
                         transition={{ delay: 0.2 }}
                         className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
                     >
-                        {t('media.subtitle')}
+                        {displaySubtitle}
                     </motion.h2>
                 </motion.div>
 

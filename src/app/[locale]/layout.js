@@ -27,31 +27,7 @@ const cairo = Cairo({
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const messages = await getMessages();
-  const meta =
-    locale === "ar"
-      ? {
-          title: "د. صالح الخلف | أستاذ واستشاري أول جراحة التجميل والترميم",
-          description:
-            "الموقع الرسمي للدكتور صالح الخلف. متخصص في جراحات التجميل والترميم، تجميل الأنف، وشد الوجه بأحدث الخبرات والتقنيات الألمانية.",
-          keywords: [
-            "جراحة التجميل",
-            "تجميل الأنف",
-            "ترميم الحروق",
-            "د. صالح الخلف",
-          ],
-        }
-      : {
-          title:
-            "Dr. Saleh Al-Khalaf | Professor & Senior Consultant of Plastic & Reconstructive Surgery",
-          description:
-            "The official website of Dr. Saleh Al-Khalaf. Specialist in plastic and reconstructive surgery, rhinoplasty, and facelift with the latest German expertise.",
-          keywords: [
-            "Plastic Surgery",
-            "Rhinoplasty",
-            "Burn Reconstruction",
-            "Dr. Saleh Al-Khalaf",
-          ],
-        };
+  const meta = messages.home.meta;
 
   return {
     title: {
@@ -59,7 +35,15 @@ export async function generateMetadata({ params }) {
       template: `%s | ${meta.title}`,
     },
     description: meta.description,
-    keywords: meta.keywords,
+    keywords:
+      locale === "ar"
+        ? ["جراحة التجميل", "تجميل الأنف", "ترميم الحروق", "د. صالح الخلف"]
+        : [
+            "Plastic Surgery",
+            "Rhinoplasty",
+            "Burn Reconstruction",
+            "Dr. Saleh Al-Khalaf",
+          ],
     authors: [{ name: "Dr. Saleh Al-Khalaf" }],
     openGraph: {
       title: meta.title,

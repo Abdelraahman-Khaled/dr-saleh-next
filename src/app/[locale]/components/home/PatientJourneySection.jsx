@@ -1,8 +1,11 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 
-export default function PatientJourneySection() {
+export default function PatientJourneySection({ title, subtitle }) {
     const t = useTranslations('home');
+
+    const displayTitle = title || t('patientJourney.title');
+    const displaySubtitle = subtitle || t('patientJourney.subtitle');
 
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
@@ -34,10 +37,10 @@ export default function PatientJourneySection() {
                     className="text-center mb-16"
                 >
                     <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
-                        {t('patientJourney.title')}
+                        {displayTitle}
                     </span>
                     <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                        {t('patientJourney.subtitle')}
+                        {displaySubtitle}
                     </h2>
                 </motion.div>
 

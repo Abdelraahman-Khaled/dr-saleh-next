@@ -5,9 +5,12 @@ import { useTranslations, useLocale } from 'next-intl';
 import { getBlogs } from '../../../../lib/api/blogs';
 import { motion } from 'framer-motion';
 
-export default function BlogSection() {
+export default function BlogSection({ title, subtitle }) {
     const t = useTranslations('home');
     const locale = useLocale();
+
+    const displayTitle = title || t('blog.title');
+    const displaySubtitle = subtitle || t('blog.subtitle');
 
     // Fetch blogs from API
     const { data: blogs, isLoading, error } = useQuery({
@@ -44,10 +47,10 @@ export default function BlogSection() {
                     className="text-center mb-16"
                 >
                     <span className="text-[#17a2b8] font-semibold text-sm mb-3 block">
-                        {t('blog.title')}
+                        {displayTitle}
                     </span>
                     <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                        {t('blog.subtitle')}
+                        {displaySubtitle}
                     </h2>
                 </motion.div>
 
