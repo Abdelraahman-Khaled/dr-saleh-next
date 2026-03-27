@@ -34,8 +34,8 @@ export async function generateMetadata({ params }) {
 
   return {
     title: {
-      default: meta?.title || "Dr. Saleh Al-Khalaf",
-      template: `%s | ${meta?.title || "Dr. Saleh Al-Khalaf"}`,
+      default: meta?.title,
+      template: `%s`,
     },
     description: meta?.description || "",
     keywords:
